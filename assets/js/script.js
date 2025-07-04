@@ -1,9 +1,3 @@
-/**
- * Discord Bot Website By Anomus.LY
- * Repo URL: https://github.com/AnomusLY/CandyWeb
- * © 2025 Anomus.LY
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header');
   window.addEventListener('scroll', () => {
@@ -290,93 +284,173 @@ const economy = `
       </div>
     </div>
   </div>`;
-  const moderation = `
+const moderation = `
   <div class="command-group" data-group="moderation">
     <h3 class="command-category-title"><i class="fas fa-gavel"></i> Moderation Commands</h3>
     <div class="command-category-list">
       <div class="command-item">
         <div class="command-name"><i class="fas fa-hammer"></i> ban</div>
-        <div class="command-description">Ban a user from the server</div>
+        <div class="command-description">Ban a user from the server.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-list"></i> banlist</div>
-        <div class="command-description">Show a list of banned users</div>
+        <div class="command-description">Show a list of banned users.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-broom"></i> clear</div>
+        <div class="command-description">Clear messages from a channel.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-user-slash"></i> kick</div>
-        <div class="command-description">Kick a user from the server</div>
+        <div class="command-description">Kick a user from the server.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-lock"></i> lock</div>
-        <div class="command-description">Lock a channel to prevent messages</div>
+        <div class="command-description">Lock a channel to prevent messages.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-unlock"></i> unlock</div>
-        <div class="command-description">Unlock a previously locked channel</div>
+        <div class="command-description">Unlock a previously locked channel.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-id-card-alt"></i> nick</div>
-        <div class="command-description">Change a user's nickname</div>
+        <div class="command-description">Change a user's nickname.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-hourglass-half"></i> slowmode</div>
+        <div class="command-description">Set slowmode duration for a channel.</div>
       </div>
     </div>
   </div>`;
-  const fun = `
-    <div class="command-group" data-group="fun">
-      <h3 class="command-category-title"><i class="fas fa-list"></i> Fun Commands</h3>
-      <div class="command-category-list">
-        <div class="command-item">
-          <div class="command-name"><i class="fas fa-plus-circle"></i> FUN COMMANDS</div>
-          <div class="command-description">COMING SOON!</div>
-        </div>
+const entertainment = `
+  <div class="command-group" data-group="entertainment">
+    <h3 class="command-category-title"><i class="fas fa-list"></i> Entertainment Commands</h3>
+    <div class="command-category-list">
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-circle-question"></i> 8ball</div>
+        <div class="command-description">Ask the magic 8ball a question.</div>
       </div>
-    </div>`;
-  const utility = `
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-heart"></i> compliment</div>
+        <div class="command-description">Send someone a nice compliment.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-hand-holding-heart"></i> cuddle</div>
+        <div class="command-description">Send a cuddle to someone!</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-music"></i> dance</div>
+        <div class="command-description">Show off some dance moves.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-utensils"></i> feed</div>
+        <div class="command-description">Feed someone something tasty.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-rainbow"></i> gay</div>
+        <div class="command-description">Check someone's gay percentage (funny).</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-user-secret"></i> hack</div>
+        <div class="command-description">Fake hack a user (for fun).</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-hands"></i> hug</div>
+        <div class="command-description">Give someone a warm hug.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-kiss-wink-heart"></i> kiss</div>
+        <div class="command-description">Send a kiss to someone!</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-hand-back-fist"></i> pat</div>
+        <div class="command-description">Pat someone's head.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-fingerprint"></i> poke</div>
+        <div class="command-description">Poke someone playfully.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-angry"></i> punch</div>
+        <div class="command-description">Throw a playful punch.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-fire"></i> roast</div>
+        <div class="command-description">Roast someone with humor.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fa-hand-back-fist"></i> slap</div>
+        <div class="command-description">Give someone a slap!</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-feather"></i> tickle</div>
+        <div class="command-description">Tickle someone!</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-question"></i> truth</div>
+        <div class="command-description">Ask a truth question!</div>
+      </div>
+    </div>
+  </div>`;
+const utility = `
   <div class="command-group" data-group="utility">
     <h3 class="command-category-title"><i class="fas fa-tools"></i> Utility Commands</h3>
     <div class="command-category-list">
       <div class="command-item">
         <div class="command-name"><i class="fas fa-moon"></i> afk</div>
-        <div class="command-description">Set your AFK status</div>
+        <div class="command-description">Set your AFK status.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-user-circle"></i> avatar</div>
-        <div class="command-description">View your or someone else's avatar</div>
+        <div class="command-description">View your or someone else's avatar.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-image"></i> banner</div>
+        <div class="command-description">See your or someone else's banner.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-info-circle"></i> botinfo</div>
-        <div class="command-description">View detailed information about the bot</div>
+        <div class="command-description">View detailed information about the bot.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-lightbulb"></i> botsuggest</div>
-        <div class="command-description">Send a suggestion for the bot</div>
+        <div class="command-description">Send a suggestion for the bot.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-calculator"></i> calc</div>
+        <div class="command-description">Perform a simple calculation.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-cogs"></i> config</div>
-        <div class="command-description">Edit bot configuration for your server</div>
+        <div class="command-description">Edit bot configuration for your server.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-smile"></i> emojis</div>
-        <div class="command-description">List or search server emojis</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-terminal"></i> eval</div>
-        <div class="command-description">Execute JavaScript code (Developer only)</div>
+        <div class="command-description">List or search server emojis.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-question-circle"></i> help</div>
-        <div class="command-description">Display all available commands</div>
+        <div class="command-description">Display all available commands.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-id-card"></i> perfil</div>
+        <div class="command-description">Show your user profile.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-id-badge"></i> userinfo</div>
+        <div class="command-description">Get information about a user.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-server"></i> serverinfo</div>
-        <div class="command-description">Show information about the current server</div>
+        <div class="command-description">Show information about the current server.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-cloud-sun"></i> weather</div>
-        <div class="command-description">Check the weather in a specific location</div>
+        <div class="command-description">Check the weather in a specific location.</div>
       </div>
     </div>
   </div>`;
-  commandList.innerHTML = economy + moderation + fun + utility;
+  commandList.innerHTML = economy + moderation + entertainment + utility;
 }
 
 function generateIconGrid() {
