@@ -247,6 +247,14 @@ const economy = `
         <div class="command-description">Check your current balance</div>
       </div>
       <div class="command-item">
+        <div class="command-name"><i class="fas fa-gamepad"></i> blackjack</div>
+        <div class="command-description">Play a game of blackjack and bet your money</div>
+      </div>
+     <div class="command-item">
+        <div class="command-name"><i class="fas fa-coins"></i> coinflip</div>
+        <div class="command-description">Flip a coin and gamble your balance</div>
+      </div>
+      <div class="command-item">
         <div class="command-name"><i class="fas fa-calendar-day"></i> daily</div>
         <div class="command-description">Claim your daily reward</div>
       </div>
