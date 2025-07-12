@@ -320,6 +320,14 @@ const moderation = `
         <div class="command-name"><i class="fas fa-hourglass-half"></i> slowmode</div>
         <div class="command-description">Set slowmode duration for a channel.</div>
       </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-robot"></i> set-botlist</div>
+        <div class="command-description">Configure the channel for the bot list system.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-door-open"></i> set-welcome</div>
+        <div class="command-description">Configure the welcome message and channel.</div>
+      </div>
     </div>
   </div>`;
 const entertainment = `
@@ -398,7 +406,7 @@ const utility = `
     <div class="command-category-list">
       <div class="command-item">
         <div class="command-name"><i class="fas fa-plus-circle"></i> addbot</div>
-        <div class="command-description">Add a bot to your server.</div>
+        <div class="command-description">Submit a bot to the bot list.</div>
       </div>
       <div class="command-item">
         <div class="command-name"><i class="fas fa-moon"></i> afk</div>
