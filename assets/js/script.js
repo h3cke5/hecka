@@ -397,6 +397,10 @@ const utility = `
     <h3 class="command-category-title"><i class="fas fa-tools"></i> Utility Commands</h3>
     <div class="command-category-list">
       <div class="command-item">
+        <div class="command-name"><i class="fas fa-plus-circle"></i> addbot</div>
+        <div class="command-description">Add a bot to your server.</div>
+      </div>
+      <div class="command-item">
         <div class="command-name"><i class="fas fa-moon"></i> afk</div>
         <div class="command-description">Set your AFK status.</div>
       </div>
