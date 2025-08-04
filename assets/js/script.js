@@ -408,68 +408,71 @@ const entertainment = `
       </div>
     </div>
   </div>`;
-const utility = `
-  <div class="command-group" data-group="utility">
-    <h3 class="command-category-title"><i class="fas fa-tools"></i> Utility Commands</h3>
-    <div class="command-category-list">
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-plus-circle"></i> addbot</div>
-        <div class="command-description">Submit a bot to the bot list.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-moon"></i> afk</div>
-        <div class="command-description">Set your AFK status.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-user-circle"></i> avatar</div>
-        <div class="command-description">View your or someone else's avatar.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-image"></i> banner</div>
-        <div class="command-description">See your or someone else's banner.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-info-circle"></i> botinfo</div>
-        <div class="command-description">View detailed information about the bot.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-lightbulb"></i> botsuggest</div>
-        <div class="command-description">Send a suggestion for the bot.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-calculator"></i> calc</div>
-        <div class="command-description">Perform a simple calculation.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-cogs"></i> config</div>
-        <div class="command-description">Edit bot configuration for your server.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-smile"></i> emojis</div>
-        <div class="command-description">List or search server emojis.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-question-circle"></i> help</div>
-        <div class="command-description">Display all available commands.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-id-card"></i> perfil</div>
-        <div class="command-description">Show your user profile.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-id-badge"></i> userinfo</div>
-        <div class="command-description">Get information about a user.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-server"></i> serverinfo</div>
-        <div class="command-description">Show information about the current server.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-cloud-sun"></i> weather</div>
-        <div class="command-description">Check the weather in a specific location.</div>
-      </div>
+<div class="command-group" data-group="utility">
+  <h3 class="command-category-title"><i class="fas fa-tools"></i> Utility Commands</h3>
+  <div class="command-category-list">
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-moon"></i> afk</div>
+      <div class="command-description">Set your AFK status.</div>
     </div>
-  </div>`;
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-user-circle"></i> avatar</div>
+      <div class="command-description">View your or someone else's avatar.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-image"></i> banner</div>
+      <div class="command-description">See your or someone else's banner.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-info-circle"></i> botinfo</div>
+      <div class="command-description">View detailed information about the bot.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-lightbulb"></i> botsuggest</div>
+      <div class="command-description">Send a suggestion for the bot.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-calculator"></i> calc</div>
+      <div class="command-description">Perform a simple calculation.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-hashtag"></i> channelinfo</div>
+      <div class="command-description">Show information about a channel.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-smile"></i> emojis</div>
+      <div class="command-description">List or search server emojis.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-question-circle"></i> help</div>
+      <div class="command-description">Display all available commands.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-robot"></i> ia</div>
+      <div class="command-description">Ask something to the bot AI.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-id-card"></i> perfil</div>
+      <div class="command-description">Show your user profile.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-stopwatch"></i> ping</div>
+      <div class="command-description">Check the bot's latency.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-server"></i> serverinfo</div>
+      <div class="command-description">Show information about the current server.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-id-badge"></i> userinfo</div>
+      <div class="command-description">Get information about a user.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-cloud-sun"></i> weather</div>
+      <div class="command-description">Check the weather in a specific location.</div>
+    </div>
+  </div>
+</div>;
   commandList.innerHTML = economy + moderation + entertainment + utility;
 }
 
