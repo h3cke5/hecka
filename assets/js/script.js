@@ -239,59 +239,63 @@ document.addEventListener('DOMContentLoaded', () => {
 function generateCommandGroups() {
   const commandList = document.querySelector('.command-list');
 const economy = `
-  <div class="command-group active" data-group="economy">
-    <h3 class="command-category-title"><i class="fas fa-coins"></i> Economy Commands</h3>
-    <div class="command-category-list">
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-wallet"></i> bal</div>
-        <div class="command-description">Check your current balance</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-gamepad"></i> blackjack</div>
-        <div class="command-description">Play a game of blackjack and bet your money</div>
-      </div>
-     <div class="command-item">
-        <div class="command-name"><i class="fas fa-coins"></i> coinflip</div>
-        <div class="command-description">Flip a coin and gamble your balance</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-calendar-day"></i> daily</div>
-        <div class="command-description">Claim your daily reward</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-briefcase"></i> work</div>
-        <div class="command-description">Work a job to earn some money</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-hand-holding-usd"></i> pay</div>
-        <div class="command-description">Send money to another user</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-exchange-alt"></i> transfer</div>
-        <div class="command-description">Securely transfer money with confirmation</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-trophy"></i> leaderboard</div>
-        <div class="command-description">View the richest users in the server</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-user-secret"></i> crime</div>
-        <div class="command-description">Commit a crime and risk losing or gaining money</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-skull-crossbones"></i> rob</div>
-        <div class="command-description">Attempt to rob another user</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-ticket-alt"></i> raspadinha</div>
-        <div class="command-description">Buy a scratch card and test your luck</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-dice"></i> roulette</div>
-        <div class="command-description">Play roulette and bet your coins</div>
-      </div>
+<div class="command-group active" data-group="economy">
+  <h3 class="command-category-title"><i class="fas fa-coins"></i> Economy Commands</h3>
+  <div class="command-category-list">
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-wallet"></i> bal</div>
+      <div class="command-description">Check your current balance</div>
     </div>
-  </div>`;
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-gamepad"></i> blackjack</div>
+      <div class="command-description">Play a game of blackjack and bet your money</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-coins"></i> coinflip</div>
+      <div class="command-description">Flip a coin and gamble your balance</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-user-secret"></i> crime</div>
+      <div class="command-description">Commit a crime and risk losing or gaining money</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-calendar-day"></i> daily</div>
+      <div class="command-description">Claim your daily reward</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-hand-holding-usd"></i> pay</div>
+      <div class="command-description">Send money to another user</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-chart-line"></i> rank</div>
+      <div class="command-description">Check your economy rank</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-ticket-alt"></i> raspadinha</div>
+      <div class="command-description">Buy a scratch card and test your luck</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-skull-crossbones"></i> rob</div>
+      <div class="command-description">Attempt to rob another user</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-dice"></i> roulette</div>
+      <div class="command-description">Play roulette and bet your coins</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-exchange-alt"></i> transfers</div>
+      <div class="command-description">Securely transfer money with confirmation</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-briefcase"></i> work</div>
+      <div class="command-description">Work a job to earn some money</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-trophy"></i> leaderboard</div>
+      <div class="command-description">View the richest users in the server</div>
+    </div>
+  </div>
+</div>`;
 const moderation = `
 <div class="command-group" data-group="moderation">
   <h3 class="command-category-title"><i class="fas fa-gavel"></i> Moderation Commands</h3>
@@ -348,7 +352,7 @@ const moderation = `
 </div>`;
 const entertainment = `
   <div class="command-group" data-group="entertainment">
-    <h3 class="command-category-title"><i class="fas fa-list"></i> Entertainment Commands</h3>
+    <h3 class="command-category-title"><i class="fas fa-icons"></i> Entertainment Commands</h3>
     <div class="command-category-list">
       <div class="command-item">
         <div class="command-name"><i class="fas fa-circle-question"></i> 8ball</div>
@@ -379,7 +383,7 @@ const entertainment = `
         <div class="command-description">Fake hack a user (for fun).</div>
       </div>
       <div class="command-item">
-        <div class="command-name"><i class="fas fa-hands"></i> hug</div>
+        <div class="command-name"><i class="fas fa-hands-helping"></i> hug</div>
         <div class="command-description">Give someone a warm hug.</div>
       </div>
       <div class="command-item">
@@ -387,7 +391,7 @@ const entertainment = `
         <div class="command-description">Send a kiss to someone!</div>
       </div>
       <div class="command-item">
-        <div class="command-name"><i class="fas fa-hand-back-fist"></i> pat</div>
+        <div class="command-name"><i class="fas fa-hand-paper"></i> pat</div>
         <div class="command-description">Pat someone's head.</div>
       </div>
       <div class="command-item">
@@ -403,7 +407,11 @@ const entertainment = `
         <div class="command-description">Roast someone with humor.</div>
       </div>
       <div class="command-item">
-        <div class="command-name"><i class="fa-hand-back-fist"></i> slap</div>
+        <div class="command-name"><i class="fas fa-heart-broken"></i> ship</div>
+        <div class="command-description">Ship two users together.</div>
+      </div>
+      <div class="command-item">
+        <div class="command-name"><i class="fas fa-hand-rock"></i> slap</div>
         <div class="command-description">Give someone a slap!</div>
       </div>
       <div class="command-item">
