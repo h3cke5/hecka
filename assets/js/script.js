@@ -408,6 +408,7 @@ const entertainment = `
       </div>
     </div>
   </div>`;
+const utility = `
 <div class="command-group" data-group="utility">
   <h3 class="command-category-title"><i class="fas fa-tools"></i> Utility Commands</h3>
   <div class="command-category-list">
@@ -472,7 +473,7 @@ const entertainment = `
       <div class="command-description">Check the weather in a specific location.</div>
     </div>
   </div>
-</div>;
+</div>`;
   commandList.innerHTML = economy + moderation + entertainment + utility;
 }
 
