@@ -293,51 +293,59 @@ const economy = `
     </div>
   </div>`;
 const moderation = `
-  <div class="command-group" data-group="moderation">
-    <h3 class="command-category-title"><i class="fas fa-gavel"></i> Moderation Commands</h3>
-    <div class="command-category-list">
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-hammer"></i> ban</div>
-        <div class="command-description">Ban a user from the server.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-list"></i> banlist</div>
-        <div class="command-description">Show a list of banned users.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-broom"></i> clear</div>
-        <div class="command-description">Clear messages from a channel.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-user-slash"></i> kick</div>
-        <div class="command-description">Kick a user from the server.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-lock"></i> lock</div>
-        <div class="command-description">Lock a channel to prevent messages.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-unlock"></i> unlock</div>
-        <div class="command-description">Unlock a previously locked channel.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-id-card-alt"></i> nick</div>
-        <div class="command-description">Change a user's nickname.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-hourglass-half"></i> slowmode</div>
-        <div class="command-description">Set slowmode duration for a channel.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-robot"></i> set-botlist</div>
-        <div class="command-description">Configure the channel for the bot list system.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-door-open"></i> set-welcome</div>
-        <div class="command-description">Configure the welcome message and channel.</div>
-      </div>
+<div class="command-group" data-group="moderation">
+  <h3 class="command-category-title"><i class="fas fa-gavel"></i> Moderation Commands</h3>
+  <div class="command-category-list">
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-hammer"></i> ban</div>
+      <div class="command-description">Ban a user from the server.</div>
     </div>
-  </div>`;
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-list"></i> banlist</div>
+      <div class="command-description">Show a list of banned users.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-broom"></i> clear</div>
+      <div class="command-description">Clear messages from a channel.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-cogs"></i> config</div>
+      <div class="command-description">Configure moderation settings.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-user-slash"></i> kick</div>
+      <div class="command-description">Kick a user from the server.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-lock"></i> lock</div>
+      <div class="command-description">Lock a channel to prevent messages.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-id-card-alt"></i> nick</div>
+      <div class="command-description">Change a user's nickname.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-shield-alt"></i> set-badwords</div>
+      <div class="command-description">Configure filtered bad words.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-shield-virus"></i> set-captcha</div>
+      <div class="command-description">Enable and configure captcha verification.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-door-open"></i> set-welcome</div>
+      <div class="command-description">Configure the welcome message and channel.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-hourglass-half"></i> slowmode</div>
+      <div class="command-description">Set slowmode duration for a channel.</div>
+    </div>
+    <div class="command-item">
+      <div class="command-name"><i class="fas fa-unlock"></i> unlock</div>
+      <div class="command-description">Unlock a previously locked channel.</div>
+    </div>
+  </div>
+</div>`;
 const entertainment = `
   <div class="command-group" data-group="entertainment">
     <h3 class="command-category-title"><i class="fas fa-list"></i> Entertainment Commands</h3>
