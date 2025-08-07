@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Primary Meta Tags -->
   <title>HECKA - Premium Experience for Discord</title>
-  <meta name="title" content="HECKA - Premium Experience for Discord">
-  <meta name="description" content="HECKA - A premium experience for your Discord server with the best commands!">
+  <meta name="title" content="HECKA - Premium Experience for Discord" />
+  <meta
+    name="description"
+    content="HECKA - A premium experience for your Discord server with the best commands!"
+  />
 
   <!-- Open Graph / Facebook / Discord -->
   <meta property="og:type" content="website">
@@ -51,7 +54,12 @@
       <div class="loader-circle"></div>
       <div class="loader-circle"></div>
 
-      <img src="./assets/images/Hecka.png" alt="HECKA Logo" class="loader-logo" style="height: 150px; width: auto;">
+      <img
+        src="./assets/images/Hecka.png"
+        alt="HECKA Logo"
+        class="loader-logo"
+        style="height: 150px; width: auto"
+      />
     </div>
   </div>
 
@@ -59,9 +67,13 @@
   <header class="header">
     <div class="container">
       <div class="header-content">
-        <a href="/" class="logo">
-          <img src="./assets/images/Hecka.png" alt="HECKA Logo" style="height: 60px; width: auto;">
-          <h1>HECKA</h1>
+        <a href="/index" class="logo">
+          <img
+            src="./assets/images/Hecka.png"
+            alt="HECKA Logo"
+            style="height: 60px; width: auto"
+          />
+          <h1 data-lang-key="headerTitle">HECKA</h1>
         </a>
 
         <!-- Mobile menu toggle button -->
@@ -72,18 +84,26 @@
         <div class="nav-container">
           <nav class="nav">
             <ul class="nav-list">
-              <li><a href="/features" class="nav-link">Features</a></li>
-              <li><a href="/#commands" class="nav-link">Commands</a></li>
-              <li><a href="/premium" class="nav-link">Premium</a></li>
-              <li><a href="/#support" class="nav-link">Support</a></li>
+              <li><a href="/features" class="nav-link" data-lang-key="navFeatures">Features</a></li>
+              <li><a href="/#commands" class="nav-link" data-lang-key="navCommands">Commands</a></li>
+              <li><a href="/premium" class="nav-link" data-lang-key="navPremium">Premium</a></li>
+              <li><a href="/#support" class="nav-link" data-lang-key="navSupport">Support</a></li>
             </ul>
           </nav>
           <div class="header-buttons">
-            <a href="https://discord.gg/B4UNTBH2Ma" class="btn btn-secondary" target="_blank">
-              <i class="fab fa-discord"></i> <span>Support Server</span>
+            <a
+              href="https://discord.gg/B4UNTBH2Ma"
+              class="btn btn-secondary"
+              target="_blank"
+            >
+              <i class="fab fa-discord"></i> <span data-lang-key="btnSupportServer">Support Server</span>
             </a>
-            <a href="https://discord.com/oauth2/authorize?client_id=883842800368640041" class="btn btn-primary" target="_blank">
-              <i class="fas fa-plus"></i> <span>Add to Discord</span>
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=883842800368640041"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-plus"></i> <span data-lang-key="btnAddDiscord">Add to Discord</span>
             </a>
           </div>
         </div>
@@ -95,139 +115,274 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">DISCORD BOT</div>
-        <h1 class="hero-title">Elevate Your Discord Server with Premium Experience!</h1>
-        <p class="hero-description">Hey, I'm HECKA — A High-Quality BOT with Sweet Features and Smooth System.</p>
+        <div class="hero-badge" data-lang-key="heroBadge">DISCORD BOT</div>
+        <h1 class="hero-title" data-lang-key="heroTitle">
+          Elevate Your Discord Server with Premium Experience!
+        </h1>
+        <p class="hero-description" data-lang-key="heroDescription">
+          Hey, I'm HECKA — A High-Quality BOT with Sweet Features and Smooth System.
+        </p>
         <div class="hero-features">
-          <div class="hero-feature">
+          <div class="hero-feature" data-lang-key="featureEconomy">
             <i></i>🏦 Economy Integration
           </div>
-          <div class="hero-feature">
+          <div class="hero-feature" data-lang-key="featureFun">
             <i></i>🥳 Fun All Time
           </div>
           <div class="hero-feature">
-            <i class="fas fa-sliders-h"></i> Advanced Filters
+            <i class="fas fa-sliders-h"></i> <span data-lang-key="featureFilters">Advanced Filters</span>
           </div>
         </div>
         <div class="hero-buttons">
-          <a href="https://discord.com/oauth2/authorize?client_id=883842800368640041" class="btn btn-primary" target="_blank">
+          <a
+            href="https://discord.com/oauth2/authorize?client_id=883842800368640041"
+            class="btn btn-primary"
+            target="_blank"
+            data-lang-key="btnAddDiscord"
+          >
             <i class="fas fa-plus"></i> Add to Discord
           </a>
-          <a href="/features" class="btn btn-secondary">
+          <a href="/features" class="btn btn-secondary" data-lang-key="btnSeeFeatures">
             <i class="fas fa-arrow-down"></i> See Features
           </a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="./assets/images/Hecka.png" alt="HECKA Logo" class="floating">
+        <img
+          src="./assets/images/Hecka.png"
+          alt="HECKA Logo"
+          class="floating"
+        />
       </div>
     </div>
   </section>
 
-  <!-- Commands Section -->
-  <section class="commands" id="commands">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Flexible Controls & Commands</h2>
-        <p class="section-description">Control your discord experience with intuitive commands!</p>
+<!-- Commands Section -->
+<section class="commands" id="commands">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-lang-key="commandsTitle">
+        Flexible Controls & Commands
+      </h2>
+      <p class="section-description" data-lang-key="commandsDescription">
+        Control your discord experience with intuitive commands!
+      </p>
+    </div>
+    <div class="commands-showcase">
+      <div class="command-categories">
+        <div class="category active" data-category="economy">
+          <i class="fas fa-coins"></i> <span data-lang-key="catEconomy">Economy</span>
+        </div>
+        <div class="category" data-category="moderation">
+          <i class="fas fa-gavel"></i> <span data-lang-key="catModeration">Moderation</span>
+        </div>
+        <div class="category" data-category="entertainment">
+          <i class="fas fa-list"></i> <span data-lang-key="catEntertainment">Entertainment</span>
+        </div>
+        <div class="category" data-category="utility">
+          <i class="fas fa-tools"></i> <span data-lang-key="catUtility">Utility</span>
+        </div>
+        <div class="category-progress-container">
+          <div class="category-progress"></div>
+        </div>
       </div>
-      <div class="commands-showcase">
-        <div class="command-categories">
-          <div class="category active" data-category="economy"><i class="fas fa-coins"></i>Economy</div>
-          <div class="category" data-category="moderation"><i class="fas fa-gavel"></i>Moderation</div>
-          <div class="category" data-category="entertainment"><i class="fas fa-list"></i>Entertainment</div>
-          <div class="category" data-category="utility"><i class="fas fa-tools"></i>Utility</div>
-          <div class="category-progress-container">
-            <div class="category-progress"></div>
-          </div>
-        </div>
-        <div class="command-list">
-          <!-- Command groups will be generated with JavaScript -->
-        </div>
+      <div class="command-list">
+        <!-- Command groups will be generated with JavaScript -->
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Support Section -->
   <section class="support" id="support">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Join Our Community</h2>
-        <p class="section-description">Get help, share feedback, and connect with other server owners</p>
+        <h2 class="section-title" data-lang-key="supportTitle">Join Our Community</h2>
+        <p class="section-description" data-lang-key="supportDescription">
+          Get help, share feedback, and connect with other server owners
+        </p>
       </div>
       <div class="support-options">
         <div class="support-card">
           <div class="support-icon">
             <i class="fab fa-discord"></i>
           </div>
-          <h3 class="support-title">Support Server</h3>
-          <p class="support-description">Join our Discord community for instant support, updates, and to connect with other ARINO users.</p>
+          <h3 class="support-title" data-lang-key="supportServerTitle">Support Server</h3>
+           <p class="support-description" data-lang-key="supportServerDesc">Join our Discord community for instant support, updates, and to connect with other users.</p>
           <a href="https://discord.gg/B4UNTBH2Ma" class="btn btn-secondary" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Join Support Server
-          </a>
+           <i class="fas fa-external-link-alt"></i> <span data-lang-key="btnJoinSupport">Join Support Server</span></a>
         </div>
         <div class="support-card">
           <div class="support-icon">
             <i class="fas fa-vote-yea"></i>
           </div>
-          <h3 class="support-title">Vote Now</h3>
-          <p class="support-description">
+          <h3 class="support-title" data-lang-key="supportEmailTitle">Vote Now</h3>
+          <p class="support-description" data-lang-key="supportEmailDesc">
             Show your love for HECKA by voting for us! Every single vote helps us grow and deliver even better features to you.
           </p>
-          <a href="https://top.gg/bot/883842800368640041/vote" class="btn btn-secondary">
-            <i class="fas fa-external-link-alt"></i> Vote Now
-          </a>
-        </div>
+<a href="https://top.gg/bot/883842800368640041/vote" class="btn btn-secondary" >
+  <i class="fas fa-external-link-alt"></i> <span data-lang-key="btnEmailUs">Vote Now</span>
+</a>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="/" class="footer-logo">
-          <img src="./assets/images/Hecka.png" alt="HECKA Logo" style="height: 150px; width: auto;">
-        </a>
-        <div class="footer-links">
-          <div class="footer-column">
-            <h3><i class="fas fa-link"></i> Links</h3>
-            <ul>
-              <li><a href="/features"><i class="fas fa-chevron-right"></i> Features</a></li>
-              <li><a href="#commands"><i class="fas fa-chevron-right"></i> Commands</a></li>
-              <li><a href="/premium"><i class="fas fa-chevron-right"></i> Premium</a></li>
-              <li><a href="#support"><i class="fas fa-chevron-right"></i> Support</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3><i class="fas fa-gavel"></i> Legal</h3>
-            <ul>
-              <li><a href="/terms"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
-              <li><a href="/privacy"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3><i class="fas fa-globe"></i> Connect</h3>
-            <ul>
-              <li><a href="https://discord.gg/B4UNTBH2Ma" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-              <li><a href="https://top.gg/bot/883842800368640041/vote" target="_blank"><i class="fas fa-vote-yea"></i> Vote on Top.gg</a></li>
-            </ul>
-          </div>
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <a href="/index" class="footer-logo">
+        <img src="./assets/images/Hecka.png" alt="HECKA Logo" style="height: 150px; width: auto;">
+      </a>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3><i class="fas fa-link"></i> <span data-lang-key="footerLinksTitle">Links</span></h3>
+          <ul>
+            <li><a href="/features"><i class="fas fa-chevron-right"></i> <span data-lang-key="footerLinksFeatures">Features</span></a></li>
+            <li><a href="#commands"><i class="fas fa-chevron-right"></i> <span data-lang-key="footerLinksCommands">Commands</span></a></li>
+            <li><a href="/premium"><i class="fas fa-chevron-right"></i> <span data-lang-key="footerLinksPremium">Premium</span></a></li>
+            <li><a href="#support"><i class="fas fa-chevron-right"></i> <span data-lang-key="footerLinksSupport">Support</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3><i class="fas fa-gavel"></i> <span data-lang-key="footerLegalTitle">Legal</span></h3>
+          <ul>
+            <li><a href="/terms"><i class="fas fa-chevron-right"></i> <span data-lang-key="footerLegalTerms">Terms of Service</span></a></li>
+            <li><a href="/privacy"><i class="fas fa-chevron-right"></i> <span data-lang-key="footerLegalPrivacy">Privacy Policy</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3><i class="fas fa-globe"></i> <span data-lang-key="footerConnectTitle">Connect</span></h3>
+          <ul>
+            <li><a href="https://discord.gg/B4UNTBH2Ma" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> <span data-lang-key="footerConnectDiscord">Discord</span></a></li>
+            <li><a href="https://top.gg/bot/" target="_blank" rel="noopener noreferrer"><i class="fas fa-vote-yea"></i> <span data-lang-key="footerConnectVote">Vote on Top.gg</span></a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2021-2025 HECKA. All rights reserved.</p>
-      </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p><span data-lang-key="footerCopyright">© 2021-2025 HECKA. All rights reserved.</span></p>
+    </div>
+  </div>
+</footer>
 
-  <!-- Callback for Spotify Auth -->
-  <div id="spotify-callback" style="display: none;"></div>
+<!-- Tradução JS -->
+<script>
+  (() => {
+    const translations = {
+      pt: {
+        headerTitle: "HECKA",
+        navFeatures: "Funcionalidades",
+        navCommands: "Comandos",
+        navPremium: "Premium",
+        navSupport: "Suporte",
+        btnSupportServer: "Servidor Suporte",
+        btnAddDiscord: "Adicione ao Discord",
+        heroBadge: "BOT DISCORD",
+        heroTitle: "Eleve seu Servidor Discord com Experiência Premium!",
+        heroDescription: "Olá, eu sou o HECKA — Um BOT de Alta Qualidade com Funcionalidades Incríveis e Sistema Suave.",
+        featureEconomy: "🏦 Integração Econômica",
+        featureFun: "🥳 Diversão o Tempo Todo",
+        featureFilters: "Filtros Avançados",
+        btnSeeFeatures: "Ver Funcionalidades",
+        commandsTitle: "Controles & Comandos Flexíveis",
+        commandsDescription: "Controle sua experiência no discord com comandos intuitivos!",
+        catEconomy: "Economia",
+        catModeration: "Moderação",
+        catEntertainment: "Entretenimento",
+        catUtility: "Utilitários",
+        supportTitle: "Junte-se à Nossa Comunidade",
+        supportDescription: "Obtenha ajuda, compartilhe feedback e conecte-se com outros donos de servidores",
+        supportServerTitle: "Servidor Suporte",
+        supportServerDesc: "Junte-se à nossa comunidade Discord para obter suporte instantâneo, atualizações e para se conectar com outros usuários",
+        btnJoinSupport: "Entrar Agora",
+        supportEmailTitle: "Vote",
+        supportEmailDesc: "Mostre seu amor por HECKA votando em nós! Cada voto nos ajuda a crescer e oferecer recursos ainda melhores para você.",
+        btnEmailUs: "Vote Agora",
+        footerLinksTitle: "Links",
+        footerLinksFeatures: "Funcionalidades",
+        footerLinksCommands: "Comandos",
+        footerLinksPremium: "Premium",
+        footerLinksSupport: "Suporte",
+        footerLegalTitle: "Legal",
+        footerLegalTerms: "Termos de Serviço",
+        footerLegalPrivacy: "Política de Privacidade",
+        footerConnectTitle: "Conecte-se",
+        footerConnectDiscord: "Discord",
+        footerConnectVote: "Vote no Top.gg",
+        footerCopyright: "© 2021-2025 HECKA. Todos os direitos reservados."
+      },
+      es: {
+        headerTitle: "HECKA",
+        navFeatures: "Características",
+        navCommands: "Comandos",
+        navPremium: "Premium",
+        navSupport: "Soporte",
+        btnSupportServer: "Servidor de Soporte",
+        btnAddDiscord: "Añadir a Discord",
+        heroBadge: "BOT DE DISCORD",
+        heroTitle: "¡Eleva tu Servidor de Discord con Experiencia Premium!",
+        heroDescription: "Hola, soy HECKA — Un BOT de Alta Calidad con Funcionalidades Increíbles y Sistema Suave.",
+        featureEconomy: "🏦 Integración Económica",
+        featureFun: "🥳 Diversión Todo el Tiempo",
+        featureFilters: "Filtros Avanzados",
+        btnSeeFeatures: "Ver Características",
+        commandsTitle: "Controles y Comandos Flexibles",
+        commandsDescription: "¡Controla tu experiencia en Discord con comandos intuitivos!",
+        catEconomy: "Economía",
+        catModeration: "Moderación",
+        catEntertainment: "Entretenimiento",
+        catUtility: "Utilidades",
+        supportTitle: "Únete a Nuestra Comunidad",
+        supportDescription: "Obtén ayuda, comparte comentarios y conecta con otros dueños de servidores",
+        supportServerTitle: "Servidor de Soporte",
+        supportServerDesc: "Únete a nuestra comunidad de Discord para soporte instantáneo, actualizaciones y conversaciones.",
+        btnJoinSupport: "Unirse Ahora",
+        supportEmailTitle: "Vote",
+        supportEmailDesc: "Envíanos un correo electrónico para dudas y soporte.",
+        btnEmailUs: "Vota Ahora",
+        footerLinksTitle: "Links",
+        footerLinksFeatures: "Funcionalidades",
+        footerLinksCommands: "Comandos",
+        footerLinksPremium: "Premium",
+        footerLinksSupport: "Soporte",
+        footerLegalTitle: "Legal",
+        footerLegalTerms: "Términos de Servicio",
+        footerLegalPrivacy: "Política de Privacidad",
+        footerConnectTitle: "Conéctate",
+        footerConnectDiscord: "Discord",
+        footerConnectVote: "Vota en Top.gg",
+        footerCopyright: "© 2021-2025 HECKA. Todos los derechos reservados."
+      }
+    };
 
+    function detectLang() {
+      const lang = navigator.language || navigator.userLanguage;
+      if (!lang) return "en";
+      if (lang.startsWith("pt")) return "pt";
+      if (lang.startsWith("es")) return "es";
+      return "en";
+    }
+
+    function translatePage(lang) {
+      if (lang === "en") return; // mantém texto padrão (inglês)
+      const elements = document.querySelectorAll("[data-lang-key]");
+      elements.forEach((el) => {
+        const key = el.getAttribute("data-lang-key");
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    const userLang = detectLang();
+    translatePage(userLang);
+  })();
+</script>
   <!-- JavaScript Files -->
   <script src="./assets/js/preloader.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
-
