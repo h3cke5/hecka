@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,18 +62,18 @@
         <div class="nav-container">
           <nav class="nav">
             <ul class="nav-list">
-              <li><a href="/features" class="nav-link">Features</a></li>
-              <li><a href="/#commands" class="nav-link">Commands</a></li>
-              <li><a href="/premium" class="nav-link">Premium</a></li>
-              <li><a href="/#support" class="nav-link">Support</a></li>
+              <li><a href="/features" class="nav-link" data-lang-key="nav_features">Features</a></li>
+              <li><a href="/#commands" class="nav-link" data-lang-key="nav_commands">Commands</a></li>
+              <li><a href="/premium" class="nav-link" data-lang-key="nav_premium">Premium</a></li>
+              <li><a href="/#support" class="nav-link" data-lang-key="nav_support">Support</a></li>
             </ul>
           </nav>
           <div class="header-buttons">
             <a href="https://discord.gg/B4UNTBH2Ma" class="btn btn-secondary" target="_blank">
-              <i class="fab fa-discord"></i> <span>Support Server</span>
+              <i class="fab fa-discord"></i> <span data-lang-key="btn_support_server">Support Server</span>
             </a>
             <a href="https://discord.com/oauth2/authorize?client_id=883842800368640041" class="btn btn-primary" target="_blank">
-              <i class="fas fa-plus"></i> <span>Add To Discord</span>
+              <i class="fas fa-plus"></i> <span data-lang-key="btn_add_discord">Add To Discord</span>
             </a>
           </div>
         </div>
@@ -86,8 +86,8 @@
     <div class="container">
       <div class="section-header">
         <br><br><br>
-        <h2 class="section-title">Upgrade Your Server</h2>
-        <p class="section-description">Take your Discord music experience to the next level</p>
+        <h2 class="section-title" data-lang-key="premium_title">Upgrade Your Server</h2>
+        <p class="section-description" data-lang-key="premium_description">Take your Discord music experience to the next level</p>
       </div>
       <div class="pricing-cards">
         <div class="pricing-card">
@@ -95,41 +95,41 @@
             <div class="pricing-icon">
               <i class="fas fa-moon"></i>
             </div>
-            <h3 class="pricing-title">Free</h3>
+            <h3 class="pricing-title" data-lang-key="free_title">Free</h3>
             <div class="pricing-price">$0</div>
-            <p class="pricing-description">Great for casual servers</p>
+            <p class="pricing-description" data-lang-key="free_description">Great for casual servers</p>
           </div>
           <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> All basic commands</li>
-            <li><i class="fas fa-check"></i> Moderation</li>
-            <li><i class="fas fa-check"></i> Utility</li>
-            <li><i class="fas fa-check"></i> Fun</li>
-            <li><i class="fas fa-check"></i> 20+ commands</li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="free_feature1">All basic commands</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="free_feature2">Moderation</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="free_feature3">Utility</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="free_feature4">Fun</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="free_feature5">20+ commands</span></li>
           </ul>
           <a href="https://discord.gg/B4UNTBH2Ma" class="btn btn-secondary" target="_blank">
-            <i class="fas fa-rocket"></i> Add Free Version
+            <i class="fas fa-rocket"></i> <span data-lang-key="btn_add_free">Add Free Version</span>
           </a>
         </div>
         <div class="pricing-card premium-card">
-          <div class="pricing-badge">POPULAR</div>
+          <div class="pricing-badge" data-lang-key="badge_popular">POPULAR</div>
           <div class="pricing-header">
             <div class="pricing-icon">
               <i class="fas fa-gem"></i>
             </div>
-            <h3 class="pricing-title">Premium</h3>
-            <p class="pricing-description">Perfect for active communities</p>
+            <h3 class="pricing-title" data-lang-key="premium_title_card">Premium</h3>
+            <p class="pricing-description" data-lang-key="premium_description_card">Perfect for active communities</p>
           </div>
           <ul class="pricing-features">
-            <li><i class="fas fa-check"></i> All free features but better</li>
-            <li><i class="fas fa-check"></i> Advanced Moderation</li>
-            <li><i class="fas fa-check"></i> Advanced Utility</li>
-            <li><i class="fas fa-check"></i> Advanced Fun</li>
-            <li><i class="fas fa-check"></i> Always On 24/7</li>
-            <li><i class="fas fa-check"></i> Priority support</li>
-            <li><i class="fas fa-check"></i> 20+ Exclusive Commands</li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="premium_feature1">All free features but better</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="premium_feature2">Advanced Moderation</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="premium_feature3">Advanced Utility</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="premium_feature4">Advanced Fun</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="premium_feature5">Always On 24/7</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="premium_feature6">Priority support</span></li>
+            <li><i class="fas fa-check"></i> <span data-lang-key="premium_feature7">20+ Exclusive Commands</span></li>
           </ul>
           <a href="https://discord.gg/B4UNTBH2Ma" class="btn btn-primary" target="_blank">
-            <i class="fas fa-bolt"></i> Go Premium
+            <i class="fas fa-bolt"></i> <span data-lang-key="btn_go_premium">Go Premium</span>
           </a>
         </div>
       </div>
@@ -145,38 +145,133 @@
         </a>
         <div class="footer-links">
           <div class="footer-column">
-            <h3><i class="fas fa-link"></i> Links</h3>
+            <h3><i class="fas fa-link"></i> <span data-lang-key="footer_links">Links</span></h3>
             <ul>
-              <li><a href="/features"><i class="fas fa-chevron-right"></i> Features</a></li>
-              <li><a href="/#commands"><i class="fas fa-chevron-right"></i> Commands</a></li>
-              <li><a href="/premium"><i class="fas fa-chevron-right"></i> Premium</a></li>
-              <li><a href="/#support"><i class="fas fa-chevron-right"></i> Support</a></li>
+              <li><a href="/features"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_features">Features</span></a></li>
+              <li><a href="/#commands"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_commands">Commands</span></a></li>
+              <li><a href="/premium"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_premium">Premium</span></a></li>
+              <li><a href="/#support"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_support">Support</span></a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h3><i class="fas fa-gavel"></i> Legal</h3>
+            <h3><i class="fas fa-gavel"></i> <span data-lang-key="footer_legal">Legal</span></h3>
             <ul>
-              <li><a href="/terms"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
-              <li><a href="/privacy"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+              <li><a href="/terms"><i class="fas fa-chevron-right"></i> <span data-lang-key="footer_terms">Terms of Service</span></a></li>
+              <li><a href="/privacy"><i class="fas fa-chevron-right"></i> <span data-lang-key="footer_privacy">Privacy Policy</span></a></li>
             </ul>
           </div>
           <div class="footer-column">
-            <h3><i class="fas fa-globe"></i> Connect</h3>
+            <h3><i class="fas fa-globe"></i> <span data-lang-key="footer_connect">Connect</span></h3>
             <ul>
               <li><a href="https://discord.gg/B4UNTBH2Ma" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-              <li><a href="https://top.gg/bot/883842800368640041/vote" target="_blank"><i class="fas fa-vote-yea"></i> Vote on Top.gg</a></li>
+              <li><a href="https://top.gg/bot/883842800368640041"><i class="fas fa-vote-yea"></i> <span data-lang-key="footer_topgg">Vote on Top.gg</span></a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2021-2025 HECKA. All rights reserved.</p>
+        <p><span data-lang-key="footer_copy">© 2021-2025 HECKA. All rights reserved.</span></p>
       </div>
     </div>
   </footer>
 
   <!-- JS Scripts -->
   <script src="./assets/js/main.js"></script>
+
+  <script>
+    const translations = {
+      pt: {
+        nav_features: "Recursos",
+        nav_commands: "Comandos",
+        nav_premium: "Premium",
+        nav_support: "Suporte",
+        btn_support_server: "Servidor Suporte",
+        btn_add_discord: "Adicionar ao Discord",
+        premium_title: "Atualize seu Servidor",
+        premium_description: "Leve sua experiência musical no Discord para o próximo nível",
+        free_title: "Grátis",
+        free_description: "Ótimo para servidores casuais",
+        free_feature1: "Todos os comandos básicos",
+        free_feature2: "Moderação",
+        free_feature3: "Utilitários",
+        free_feature4: "Diversão",
+        free_feature5: "Mais de 20 comandos",
+        btn_add_free: "Adicionar Versão Grátis",
+        badge_popular: "POPULAR",
+        premium_title_card: "Premium",
+        premium_description_card: "Perfeito para comunidades ativas",
+        premium_feature1: "Todos os recursos grátis, mas melhores",
+        premium_feature2: "Moderação Avançada",
+        premium_feature3: "Utilitários Avançados",
+        premium_feature4: "Diversão Avançada",
+        premium_feature5: "Sempre Ativo 24/7",
+        premium_feature6: "Suporte Prioritário",
+        premium_feature7: "Mais de 20 comandos exclusivos",
+        btn_go_premium: "Seja Premium",
+        footer_links: "Links",
+        footer_legal: "Legal",
+        footer_terms: "Termos de Serviço",
+        footer_privacy: "Política de Privacidade",
+        footer_connect: "Conectar",
+        footer_topgg: "Vote no Top.gg",
+        footer_copy: "© 2021-2025 HECKA. Todos os direitos reservados."
+        
+      },
+      es: {
+        nav_features: "Características",
+        nav_commands: "Comandos",
+        nav_premium: "Premium",
+        nav_support: "Soporte",
+        btn_support_server: "Servidor de Soporte",
+        btn_add_discord: "Agregar a Discord",
+        premium_title: "Mejora tu Servidor",
+        premium_description: "Lleva tu experiencia musical de Discord al siguiente nivel",
+        free_title: "Gratis",
+        free_description: "Ideal para servidores casuales",
+        free_feature1: "Todos los comandos básicos",
+        free_feature2: "Moderación",
+        free_feature3: "Utilidad",
+        free_feature4: "Diversión",
+        free_feature5: "Más de 20 comandos",
+        btn_add_free: "Agregar Versión Gratis",
+        badge_popular: "POPULAR",
+        premium_title_card: "Premium",
+        premium_description_card: "Perfecto para comunidades activas",
+        premium_feature1: "Todas las funciones gratis pero mejoradas",
+        premium_feature2: "Moderación Avanzada",
+        premium_feature3: "Utilidad Avanzada",
+        premium_feature4: "Diversión Avanzada",
+        premium_feature5: "Siempre activo 24/7",
+        premium_feature6: "Soporte prioritario",
+        premium_feature7: "Más de 20 comandos exclusivos",
+        btn_go_premium: "Hazte Premium",
+        footer_links: "Enlaces",
+        footer_legal: "Legal",
+        footer_terms: "Términos de Servicio",
+        footer_privacy: "Política de Privacidad",
+        footer_connect: "Conectar",
+        footer_topgg: "Vota en Top.gg",
+        footer_copy: "© 2021-2025 HECKA. Todos los derechos reservados."
+      }
+    };
+
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-lang-key]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-lang-key');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    // Detect browser language, fallback to 'en'
+    const userLang = navigator.language || navigator.userLanguage;
+    const langCode = userLang.toLowerCase().startsWith('pt') ? 'pt' :
+                     userLang.toLowerCase().startsWith('es') ? 'es' : 'en';
+
+    setLanguage(langCode);
+  </script>
+
 </body>
 </html>
-
