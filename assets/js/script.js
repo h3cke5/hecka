@@ -250,7 +250,7 @@ en: {
     { name: "roulette", icon: "fas fa-dice", desc: "Play roulette and bet your coins" },
     { name: "transfers", icon: "fas fa-exchange-alt", desc: "Transfer money with security confirmation" },
     { name: "work", icon: "fas fa-briefcase", desc: "Work to earn money" },
-    { name: "leaderboard", icon: "fas fa-trophy", desc: "See the richest users in the server" }],
+    { name: "leaderboard", icon: "fas fa-trophy", desc: "See the richest users" }],
   moderationTitle: "Moderation Commands",
   moderationCommands: [
     { name: "ban", icon: "fas fa-hammer", desc: "Ban a user from the server" },
@@ -317,7 +317,7 @@ pt: {
     { name: "roulette", icon: "fas fa-dice", desc: "Jogue roleta e aposte suas moedas" },
     { name: "transfers", icon: "fas fa-exchange-alt", desc: "Transfira dinheiro com confirmação de segurança" },
     { name: "work", icon: "fas fa-briefcase", desc: "Trabalhe para ganhar dinheiro" },
-    { name: "leaderboard", icon: "fas fa-trophy", desc: "Veja os usuários mais ricos do servidor" }],
+    { name: "leaderboard", icon: "fas fa-trophy", desc: "Veja os usuários mais ricos" }],
   moderationTitle: "Comandos de Moderação",
   moderationCommands: [
     { name: "ban", icon: "fas fa-hammer", desc: "Banir um usuário do servidor" },
@@ -384,7 +384,7 @@ es: {
     { name: "roulette", icon: "fas fa-dice", desc: "Juega a la ruleta y apuesta tus monedas" },
     { name: "transfers", icon: "fas fa-exchange-alt", desc: "Transfiere dinero con confirmación de seguridad" },
     { name: "work", icon: "fas fa-briefcase", desc: "Trabaja para ganar dinero" },
-    { name: "leaderboard", icon: "fas fa-trophy", desc: "Consulta los usuarios más ricos del servidor" }],
+    { name: "leaderboard", icon: "fas fa-trophy", desc: "Consulta los usuarios más ricos" }],
   moderationTitle: "Comandos de Moderación",
   moderationCommands: [
     { name: "ban", icon: "fas fa-hammer", desc: "Prohibir a un usuario del servidor" },
