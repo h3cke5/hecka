@@ -1,0 +1,210 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting - HECKA</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/Hecka.png" type="image/x-icon" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/preloader.css" />
+  <link rel="stylesheet" href="./assets/css/theme.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: var(--background-color, #121212);
+    }
+
+    /* Centraliza o conteúdo da mensagem */
+    .redirect-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: var(--primary-color, #ffffff);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+
+    /* Caixa que envolve a mensagem e o loader */
+    .redirect-box {
+      background-color: rgba(30, 30, 30, 0.85);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+      padding: 40px 50px;
+      max-width: 900px; /* Aumentei para ampliar largura */
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .redirect-box img {
+      margin-bottom: 25px;
+      height: 120px; /* Logo maior */
+      width: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .redirect-message {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .redirect-description {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .redirect-loader {
+      font-size: 2rem;
+      animation: blink 1.5s infinite;
+      color: var(--primary-color, #ffffff);
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+
+  <script>
+    // Redireciona após 2 segundos
+    setTimeout(() => {
+      window.location.href = "https://discord.gg/B4UNTBH2Ma";
+    }, 2000);
+  </script>
+</head>
+<body>
+<!-- Preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+      <img src="./assets/images/Hecka.png" alt="HECKA Logo" class="loader-logo">
+    </div>
+  </div>
+  <!-- Header Section igual ao seu -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <img
+            src="./assets/images/Hecka.png"
+            alt="HECKA Logo"
+            style="height: 60px; width: auto"
+          />
+          <h1>HECKA</h1>
+        </a>
+        <!-- Mobile menu toggle button -->
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-container">
+          <nav class="nav">
+            <ul class="nav-list">
+              <li><a href="/features" class="nav-link" data-lang-key="nav_features">Features</a></li>
+              <li><a href="/#commands" class="nav-link" data-lang-key="nav_commands">Commands</a></li>
+              <li><a href="/premium" class="nav-link" data-lang-key="nav_premium">Premium</a></li>
+              <li><a href="/#support" class="nav-link" data-lang-key="nav_support">Support</a></li>
+            </ul>
+          </nav>
+          <div class="header-buttons">
+            <a href="/discord" class="btn btn-secondary" target="_blank">
+              <i class="fab fa-discord"></i> <span data-lang-key="btn_support_server">Support Server</span>
+            </a>
+            <a href="https://discord.com/oauth2/authorize?client_id=883842800368640041" class="btn btn-primary" target="_blank">
+              <i class="fas fa-plus"></i> <span data-lang-key="btn_add_discord">Add To Discord</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mensagem de redirecionamento dentro da caixa com logo e descrição -->
+  <main class="redirect-container">
+    <div class="redirect-box">
+      <img
+        src="./assets/images/Hecka.png"
+        alt="HECKA Logo"
+      />
+      <div class="redirect-message" data-lang-key="redirect_message">You are being redirected to our Support Server...</div>
+      <div class="redirect-description" data-lang-key="redirect_description">You will be redirected automatically in a few seconds.</div>
+      <div class="redirect-loader">
+        <i class="fas fa-spinner fa-pulse"></i>
+      </div>
+    </div>
+  </main>
+
+    <!-- JavaScript Files -->
+  <script src="./assets/js/preloader.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+    <script>
+    const translations = {
+      pt: {
+        nav_features: "Recursos",
+        nav_commands: "Comandos",
+        nav_premium: "Premium",
+        nav_support: "Suporte",
+        btn_support_server: "Servidor Suporte",
+        btn_add_discord: "Adicionar ao Discord",
+        redirect_message: "Você está sendo redirecionado ao nosso Servidor de Suporte...",
+        redirect_description: "Você será levado automaticamente em alguns segundos.",
+      },
+      es: {
+        nav_features: "Características",
+        nav_commands: "Comandos",
+        nav_premium: "Premium",
+        nav_support: "Soporte",
+        btn_support_server: "Servidor de Soporte",
+        btn_add_discord: "Agregar a Discord",
+        redirect_message: "Está siendo redirigido a nuestro Servidor de Soporte...",
+        redirect_description: "Será redirigido automáticamente en unos segundos.",
+      }
+    };
+
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-lang-key]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-lang-key');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    // Detect browser language, fallback to 'en'
+    const userLang = navigator.language || navigator.userLanguage;
+    const langCode = userLang.toLowerCase().startsWith('pt') ? 'pt' :
+                     userLang.toLowerCase().startsWith('es') ? 'es' : 'en';
+
+    setLanguage(langCode);
+  </script>
+</body>
+</html>
