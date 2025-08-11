@@ -212,8 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   generateCommandGroups();
 
-  generateIconGrid();
-
   initAnimations();
 
   setTimeout(() => {
@@ -236,339 +234,261 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 500);
 });
 
-function generateCommandGroups() {
-  const commandList = document.querySelector('.command-list');
-const economy = `
-<div class="command-group active" data-group="economy">
-  <h3 class="command-category-title"><i class="fas fa-coins"></i> Economy Commands</h3>
-  <div class="command-category-list">
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-wallet"></i> bal</div>
-      <div class="command-description">Check your current balance</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-gamepad"></i> blackjack</div>
-      <div class="command-description">Play a game of blackjack and bet your money</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-coins"></i> coinflip</div>
-      <div class="command-description">Flip a coin and gamble your balance</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-user-secret"></i> crime</div>
-      <div class="command-description">Commit a crime and risk losing or gaining money</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-calendar-day"></i> daily</div>
-      <div class="command-description">Claim your daily reward</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-hand-holding-usd"></i> pay</div>
-      <div class="command-description">Send money to another user</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-chart-line"></i> rank</div>
-      <div class="command-description">Check your economy rank</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-ticket-alt"></i> raspadinha</div>
-      <div class="command-description">Buy a scratch card and test your luck</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-skull-crossbones"></i> rob</div>
-      <div class="command-description">Attempt to rob another user</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-dice"></i> roulette</div>
-      <div class="command-description">Play roulette and bet your coins</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-exchange-alt"></i> transfers</div>
-      <div class="command-description">Securely transfer money with confirmation</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-briefcase"></i> work</div>
-      <div class="command-description">Work a job to earn some money</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-trophy"></i> leaderboard</div>
-      <div class="command-description">View the richest users in the server</div>
-    </div>
-  </div>
-</div>`;
-const moderation = `
-<div class="command-group" data-group="moderation">
-  <h3 class="command-category-title"><i class="fas fa-gavel"></i> Moderation Commands</h3>
-  <div class="command-category-list">
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-hammer"></i> ban</div>
-      <div class="command-description">Ban a user from the server.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-list"></i> banlist</div>
-      <div class="command-description">Show a list of banned users.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-broom"></i> clear</div>
-      <div class="command-description">Clear messages from a channel.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-cogs"></i> config</div>
-      <div class="command-description">Configure moderation settings.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-user-slash"></i> kick</div>
-      <div class="command-description">Kick a user from the server.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-lock"></i> lock</div>
-      <div class="command-description">Lock a channel to prevent messages.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-id-card-alt"></i> nick</div>
-      <div class="command-description">Change a user's nickname.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-shield-alt"></i> set-badwords</div>
-      <div class="command-description">Configure filtered bad words.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-shield-virus"></i> set-captcha</div>
-      <div class="command-description">Enable and configure captcha verification.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-door-open"></i> set-welcome</div>
-      <div class="command-description">Configure the welcome message and channel.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-hourglass-half"></i> slowmode</div>
-      <div class="command-description">Set slowmode duration for a channel.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-unlock"></i> unlock</div>
-      <div class="command-description">Unlock a previously locked channel.</div>
-    </div>
-  </div>
-</div>`;
-const entertainment = `
-  <div class="command-group" data-group="entertainment">
-    <h3 class="command-category-title"><i class="fas fa-icons"></i> Entertainment Commands</h3>
-    <div class="command-category-list">
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-circle-question"></i> 8ball</div>
-        <div class="command-description">Ask the magic 8ball a question.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-heart"></i> compliment</div>
-        <div class="command-description">Send someone a nice compliment.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-hand-holding-heart"></i> cuddle</div>
-        <div class="command-description">Send a cuddle to someone!</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-music"></i> dance</div>
-        <div class="command-description">Show off some dance moves.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-utensils"></i> feed</div>
-        <div class="command-description">Feed someone something tasty.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-rainbow"></i> gay</div>
-        <div class="command-description">Check someone's gay percentage (funny).</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-user-secret"></i> hack</div>
-        <div class="command-description">Fake hack a user (for fun).</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-hands-helping"></i> hug</div>
-        <div class="command-description">Give someone a warm hug.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-kiss-wink-heart"></i> kiss</div>
-        <div class="command-description">Send a kiss to someone!</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-hand-paper"></i> pat</div>
-        <div class="command-description">Pat someone's head.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-fingerprint"></i> poke</div>
-        <div class="command-description">Poke someone playfully.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-angry"></i> punch</div>
-        <div class="command-description">Throw a playful punch.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-fire"></i> roast</div>
-        <div class="command-description">Roast someone with humor.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-heart-broken"></i> ship</div>
-        <div class="command-description">Ship two users together.</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-hand-rock"></i> slap</div>
-        <div class="command-description">Give someone a slap!</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-feather"></i> tickle</div>
-        <div class="command-description">Tickle someone!</div>
-      </div>
-      <div class="command-item">
-        <div class="command-name"><i class="fas fa-question"></i> truth</div>
-        <div class="command-description">Ask a truth question!</div>
-      </div>
-    </div>
-  </div>`;
-const utility = `
-<div class="command-group" data-group="utility">
-  <h3 class="command-category-title"><i class="fas fa-tools"></i> Utility Commands</h3>
-  <div class="command-category-list">
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-moon"></i> afk</div>
-      <div class="command-description">Set your AFK status.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-user-circle"></i> avatar</div>
-      <div class="command-description">View your or someone else's avatar.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-image"></i> banner</div>
-      <div class="command-description">See your or someone else's banner.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-info-circle"></i> botinfo</div>
-      <div class="command-description">View detailed information about the bot.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-lightbulb"></i> botsuggest</div>
-      <div class="command-description">Send a suggestion for the bot.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-calculator"></i> calc</div>
-      <div class="command-description">Perform a simple calculation.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-hashtag"></i> channelinfo</div>
-      <div class="command-description">Show information about a channel.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-smile"></i> emojis</div>
-      <div class="command-description">List or search server emojis.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-question-circle"></i> help</div>
-      <div class="command-description">Display all available commands.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-robot"></i> ia</div>
-      <div class="command-description">Ask something to the bot AI.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-id-card"></i> perfil</div>
-      <div class="command-description">Show your user profile.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-stopwatch"></i> ping</div>
-      <div class="command-description">Check the bot's latency.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-server"></i> serverinfo</div>
-      <div class="command-description">Show information about the current server.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-id-badge"></i> userinfo</div>
-      <div class="command-description">Get information about a user.</div>
-    </div>
-    <div class="command-item">
-      <div class="command-name"><i class="fas fa-cloud-sun"></i> weather</div>
-      <div class="command-description">Check the weather in a specific location.</div>
-    </div>
-  </div>
-</div>`;
-  commandList.innerHTML = economy + moderation + entertainment + utility;
-}
+const translations = {
+en: {
+  economyTitle: "Economy Commands",
+  economyCommands: [
+    { name: "bal", icon: "fas fa-wallet", desc: "View your current balance" },
+    { name: "blackjack", icon: "fas fa-gamepad", desc: "Play blackjack and bet your money" },
+    { name: "coinflip", icon: "fas fa-coins", desc: "Play coinflip and bet your balance" },
+    { name: "crime", icon: "fas fa-user-secret", desc: "Commit a crime and risk losing or earning money" },
+    { name: "daily", icon: "fas fa-calendar-day", desc: "Claim your daily reward" },
+    { name: "pay", icon: "fas fa-hand-holding-usd", desc: "Send money to another user" },
+    { name: "rank", icon: "fas fa-chart-line", desc: "Check your economy ranking" },
+    { name: "raspadinha", icon: "fas fa-ticket-alt", desc: "Buy a scratch ticket and test your luck" },
+    { name: "rob", icon: "fas fa-skull-crossbones", desc: "Try to rob another user" },
+    { name: "roulette", icon: "fas fa-dice", desc: "Play roulette and bet your coins" },
+    { name: "transfers", icon: "fas fa-exchange-alt", desc: "Transfer money with security confirmation" },
+    { name: "work", icon: "fas fa-briefcase", desc: "Work to earn money" },
+    { name: "leaderboard", icon: "fas fa-trophy", desc: "See the richest users in the server" }],
+  moderationTitle: "Moderation Commands",
+  moderationCommands: [
+    { name: "ban", icon: "fas fa-hammer", desc: "Ban a user from the server" },
+    { name: "banlist", icon: "fas fa-list", desc: "Show a list of banned users" },
+    { name: "clear", icon: "fas fa-broom", desc: "Clear messages from a channel" },
+    { name: "config", icon: "fas fa-cogs", desc: "Configure moderation settings" },
+    { name: "kick", icon: "fas fa-user-slash", desc: "Kick a user from the server" },
+    { name: "lock", icon: "fas fa-lock", desc: "Lock a channel to prevent messages" },
+    { name: "nick", icon: "fas fa-id-card-alt", desc: "Change a user's nickname" },
+    { name: "set-badwords", icon: "fas fa-shield-alt", desc: "Configure filtered bad words" },
+    { name: "set-captcha", icon: "fas fa-shield-virus", desc: "Enable and configure captcha verification" },
+    { name: "set-welcome", icon: "fas fa-door-open", desc: "Configure the welcome message and channel" },
+    { name: "slowmode", icon: "fas fa-hourglass-half", desc: "Set slowmode duration for a channel" },
+    { name: "unlock", icon: "fas fa-unlock", desc: "Unlock a previously locked channel" }],
+  entertainmentTitle: "Entertainment Commands",
+  entertainmentCommands: [
+    { name: "8ball", icon: "fas fa-circle-question", desc: "Ask the magic 8ball a question" },
+    { name: "compliment", icon: "fas fa-heart", desc: "Send someone a nice compliment" },
+    { name: "cuddle", icon: "fas fa-hand-holding-heart", desc: "Send a cuddle to someone" },
+    { name: "dance", icon: "fas fa-music", desc: "Show off some dance moves" },
+    { name: "feed", icon: "fas fa-utensils", desc: "Feed someone something tasty" },
+    { name: "gay", icon: "fas fa-rainbow", desc: "Check someone's gay percentage (funny)" },
+    { name: "hack", icon: "fas fa-user-secret", desc: "Fake hack a user (for fun)" },
+    { name: "hug", icon: "fas fa-hands-helping", desc: "Give someone a warm hug" },
+    { name: "kiss", icon: "fas fa-kiss-wink-heart", desc: "Send a kiss to someone" },
+    { name: "pat", icon: "fas fa-hand-paper", desc: "Pat someone's head" },
+    { name: "poke", icon: "fas fa-fingerprint", desc: "Poke someone playfully" },
+    { name: "punch", icon: "fas fa-angry", desc: "Throw a playful punch" },
+    { name: "roast", icon: "fas fa-fire", desc: "Roast someone with humor" },
+    { name: "ship", icon: "fas fa-heart-broken", desc: "Ship two users together" },
+    { name: "slap", icon: "fas fa-hand-rock", desc: "Give someone a slap" },
+    { name: "tickle", icon: "fas fa-feather", desc: "Tickle someone" },
+    { name: "truth", icon: "fas fa-question", desc: "Ask a truth question" }],
+  utilityTitle: "Utility Commands",
+  utilityCommands: [
+    { name: "afk", icon: "fas fa-moon", desc: "Set your AFK status" },
+    { name: "avatar", icon: "fas fa-user-circle", desc: "View your or someone else's avatar" },
+    { name: "banner", icon: "fas fa-image", desc: "See your or someone else's banner" },
+    { name: "botinfo", icon: "fas fa-info-circle", desc: "View detailed information about the bot" },
+    { name: "botsuggest", icon: "fas fa-lightbulb", desc: "Send a suggestion for the bot" },
+    { name: "calc", icon: "fas fa-calculator", desc: "Perform a simple calculation" },
+    { name: "channelinfo", icon: "fas fa-hashtag", desc: "Show information about a channel" },
+    { name: "emojis", icon: "fas fa-smile", desc: "List or search server emojis" },
+    { name: "help", icon: "fas fa-question-circle", desc: "Display all available commands" },
+    { name: "ia", icon: "fas fa-robot", desc: "Ask something to the bot AI" },
+    { name: "perfil", icon: "fas fa-id-card", desc: "Show your user profile" },
+    { name: "ping", icon: "fas fa-stopwatch", desc: "Check the bot's latency" },
+    { name: "serverinfo", icon: "fas fa-server", desc: "Show information about the current server" },
+    { name: "userinfo", icon: "fas fa-id-badge", desc: "Get information about a user" },
+    { name: "weather", icon: "fas fa-cloud-sun", desc: "Check the weather in a specific location" }]
+},
+pt: {
+  economyTitle: "Comandos de Economia",
+  economyCommands: [
+    { name: "bal", icon: "fas fa-wallet", desc: "Veja seu saldo atual" },
+    { name: "blackjack", icon: "fas fa-gamepad", desc: "Jogue blackjack e aposte seu dinheiro" },
+    { name: "coinflip", icon: "fas fa-coins", desc: "Jogue cara ou coroa e aposte seu saldo" },
+    { name: "crime", icon: "fas fa-user-secret", desc: "Cometa um crime e arrisque perder ou ganhar dinheiro" },
+    { name: "daily", icon: "fas fa-calendar-day", desc: "Resgate sua recompensa diária" },
+    { name: "pay", icon: "fas fa-hand-holding-usd", desc: "Envie dinheiro para outro usuário" },
+    { name: "rank", icon: "fas fa-chart-line", desc: "Confira seu ranking na economia" },
+    { name: "raspadinha", icon: "fas fa-ticket-alt", desc: "Compre um bilhete raspadinha e teste sua sorte" },
+    { name: "rob", icon: "fas fa-skull-crossbones", desc: "Tente roubar outro usuário" },
+    { name: "roulette", icon: "fas fa-dice", desc: "Jogue roleta e aposte suas moedas" },
+    { name: "transfers", icon: "fas fa-exchange-alt", desc: "Transfira dinheiro com confirmação de segurança" },
+    { name: "work", icon: "fas fa-briefcase", desc: "Trabalhe para ganhar dinheiro" },
+    { name: "leaderboard", icon: "fas fa-trophy", desc: "Veja os usuários mais ricos do servidor" }],
+  moderationTitle: "Comandos de Moderação",
+  moderationCommands: [
+    { name: "ban", icon: "fas fa-hammer", desc: "Banir um usuário do servidor" },
+    { name: "banlist", icon: "fas fa-list", desc: "Mostrar lista de usuários banidos" },
+    { name: "clear", icon: "fas fa-broom", desc: "Limpar mensagens de um canal" },
+    { name: "config", icon: "fas fa-cogs", desc: "Configurar as definições de moderação" },
+    { name: "kick", icon: "fas fa-user-slash", desc: "Expulsar um usuário do servidor" },
+    { name: "lock", icon: "fas fa-lock", desc: "Trancar um canal para impedir mensagens" },
+    { name: "nick", icon: "fas fa-id-card-alt", desc: "Alterar o apelido de um usuário" },
+    { name: "set-badwords", icon: "fas fa-shield-alt", desc: "Configurar palavras proibidas filtradas" },
+    { name: "set-captcha", icon: "fas fa-shield-virus", desc: "Ativar e configurar verificação por captcha" },
+    { name: "set-welcome", icon: "fas fa-door-open", desc: "Configurar a mensagem e canal de boas-vindas" },
+    { name: "slowmode", icon: "fas fa-hourglass-half", desc: "Definir duração do modo lento para um canal" },
+    { name: "unlock", icon: "fas fa-unlock", desc: "Destrancar um canal previamente trancado" }],
+  entertainmentTitle: "Comandos de Entretenimento",
+  entertainmentCommands: [
+    { name: "8ball", icon: "fas fa-circle-question", desc: "Pergunte algo à bola mágica 8" },
+    { name: "compliment", icon: "fas fa-heart", desc: "Envie um elogio para alguém" },
+    { name: "cuddle", icon: "fas fa-hand-holding-heart", desc: "Envie um abraço aconchegante para alguém" },
+    { name: "dance", icon: "fas fa-music", desc: "Mostre alguns passos de dança" },
+    { name: "feed", icon: "fas fa-utensils", desc: "Alimente alguém com algo saboroso" },
+    { name: "gay", icon: "fas fa-rainbow", desc: "Verifique a porcentagem gay de alguém (diversão)" },
+    { name: "hack", icon: "fas fa-user-secret", desc: "Fingir hackear um usuário (brincadeira)" },
+    { name: "hug", icon: "fas fa-hands-helping", desc: "Dê um abraço caloroso em alguém" },
+    { name: "kiss", icon: "fas fa-kiss-wink-heart", desc: "Envie um beijo para alguém" },
+    { name: "pat", icon: "fas fa-hand-paper", desc: "Acaricie a cabeça de alguém" },
+    { name: "poke", icon: "fas fa-fingerprint", desc: "Cutucar alguém de forma divertida" },
+    { name: "punch", icon: "fas fa-angry", desc: "Dar um soco de brincadeira" },
+    { name: "roast", icon: "fas fa-fire", desc: "Zoe alguém com humor" },
+    { name: "ship", icon: "fas fa-heart-broken", desc: "Juntar dois usuários em um casal fictício" },
+    { name: "slap", icon: "fas fa-hand-rock", desc: "Dar um tapa em alguém" },
+    { name: "tickle", icon: "fas fa-feather", desc: "Fazer cócegas em alguém" },
+    { name: "truth", icon: "fas fa-question", desc: "Fazer uma pergunta de verdade" }],
+  utilityTitle: "Comandos de Utilidade",
+  utilityCommands: [
+    { name: "afk", icon: "fas fa-moon", desc: "Defina seu status de ausente (AFK)" },
+    { name: "avatar", icon: "fas fa-user-circle", desc: "Veja seu avatar ou o de outra pessoa" },
+    { name: "banner", icon: "fas fa-image", desc: "Veja seu banner ou o de outra pessoa" },
+    { name: "botinfo", icon: "fas fa-info-circle", desc: "Veja informações detalhadas sobre o bot" },
+    { name: "botsuggest", icon: "fas fa-lightbulb", desc: "Envie uma sugestão para o bot" },
+    { name: "calc", icon: "fas fa-calculator", desc: "Faça um cálculo simples" },
+    { name: "channelinfo", icon: "fas fa-hashtag", desc: "Mostre informações sobre um canal" },
+    { name: "emojis", icon: "fas fa-smile", desc: "Liste ou pesquise emojis do servidor" },
+    { name: "help", icon: "fas fa-question-circle", desc: "Mostre todos os comandos disponíveis" },
+    { name: "ia", icon: "fas fa-robot", desc: "Pergunte algo à IA do bot" },
+    { name: "perfil", icon: "fas fa-id-card", desc: "Mostre seu perfil de usuário" },
+    { name: "ping", icon: "fas fa-stopwatch", desc: "Verifique a latência do bot" },
+    { name: "serverinfo", icon: "fas fa-server", desc: "Mostre informações sobre o servidor atual" },
+    { name: "userinfo", icon: "fas fa-id-badge", desc: "Obtenha informações sobre um usuário" },
+    { name: "weather", icon: "fas fa-cloud-sun", desc: "Confira o clima em uma localização específica" }]
+},
+es: {
+  economyTitle: "Comandos de Economía",
+  economyCommands: [
+    { name: "bal", icon: "fas fa-wallet", desc: "Consulta tu saldo actual" },
+    { name: "blackjack", icon: "fas fa-gamepad", desc: "Juega blackjack y apuesta tu dinero" },
+    { name: "coinflip", icon: "fas fa-coins", desc: "Juega cara o cruz y apuesta tu saldo" },
+    { name: "crime", icon: "fas fa-user-secret", desc: "Comete un crimen y arriesga perder o ganar dinero" },
+    { name: "daily", icon: "fas fa-calendar-day", desc: "Reclama tu recompensa diaria" },
+    { name: "pay", icon: "fas fa-hand-holding-usd", desc: "Envía dinero a otro usuario" },
+    { name: "rank", icon: "fas fa-chart-line", desc: "Consulta tu clasificación en la economía" },
+    { name: "raspadinha", icon: "fas fa-ticket-alt", desc: "Compra un boleto de rasca y gana y prueba tu suerte" },
+    { name: "rob", icon: "fas fa-skull-crossbones", desc: "Intenta robar a otro usuario" },
+    { name: "roulette", icon: "fas fa-dice", desc: "Juega a la ruleta y apuesta tus monedas" },
+    { name: "transfers", icon: "fas fa-exchange-alt", desc: "Transfiere dinero con confirmación de seguridad" },
+    { name: "work", icon: "fas fa-briefcase", desc: "Trabaja para ganar dinero" },
+    { name: "leaderboard", icon: "fas fa-trophy", desc: "Consulta los usuarios más ricos del servidor" }],
+  moderationTitle: "Comandos de Moderación",
+  moderationCommands: [
+    { name: "ban", icon: "fas fa-hammer", desc: "Prohibir a un usuario del servidor" },
+    { name: "banlist", icon: "fas fa-list", desc: "Mostrar una lista de usuarios prohibidos" },
+    { name: "clear", icon: "fas fa-broom", desc: "Eliminar mensajes de un canal" },
+    { name: "config", icon: "fas fa-cogs", desc: "Configurar ajustes de moderación" },
+    { name: "kick", icon: "fas fa-user-slash", desc: "Expulsar a un usuario del servidor" },
+    { name: "lock", icon: "fas fa-lock", desc: "Bloquear un canal para evitar mensajes" },
+    { name: "nick", icon: "fas fa-id-card-alt", desc: "Cambiar el apodo de un usuario" },
+    { name: "set-badwords", icon: "fas fa-shield-alt", desc: "Configurar palabras prohibidas filtradas" },
+    { name: "set-captcha", icon: "fas fa-shield-virus", desc: "Habilitar y configurar verificación captcha" },
+    { name: "set-welcome", icon: "fas fa-door-open", desc: "Configurar el mensaje y canal de bienvenida" },
+    { name: "slowmode", icon: "fas fa-hourglass-half", desc: "Configurar duración del modo lento en un canal" },
+    { name: "unlock", icon: "fas fa-unlock", desc: "Desbloquear un canal previamente bloqueado" }],
+  entertainmentTitle: "Comandos de Entretenimiento",
+  entertainmentCommands: [
+    { name: "8ball", icon: "fas fa-circle-question", desc: "Hazle una pregunta a la bola 8 mágica" },
+    { name: "compliment", icon: "fas fa-heart", desc: "Envía un cumplido agradable a alguien" },
+    { name: "cuddle", icon: "fas fa-hand-holding-heart", desc: "Envía un abrazo cariñoso a alguien" },
+    { name: "dance", icon: "fas fa-music", desc: "Muestra algunos pasos de baile" },
+    { name: "feed", icon: "fas fa-utensils", desc: "Alimenta a alguien con algo delicioso" },
+    { name: "gay", icon: "fas fa-rainbow", desc: "Consulta el porcentaje gay de alguien (divertido)" },
+    { name: "hack", icon: "fas fa-user-secret", desc: "Hackea falsamente a un usuario (por diversión)" },
+    { name: "hug", icon: "fas fa-hands-helping", desc: "Da un abrazo cálido a alguien" },
+    { name: "kiss", icon: "fas fa-kiss-wink-heart", desc: "Envía un beso a alguien" },
+    { name: "pat", icon: "fas fa-hand-paper", desc: "Da una palmada en la cabeza a alguien" },
+    { name: "poke", icon: "fas fa-fingerprint", desc: "Toca a alguien de forma juguetona" },
+    { name: "punch", icon: "fas fa-angry", desc: "Da un golpe juguetón" },
+    { name: "roast", icon: "fas fa-fire", desc: "Haz una broma para molestar a alguien" },
+    { name: "ship", icon: "fas fa-heart-broken", desc: "Relaciona a dos usuarios" },
+    { name: "slap", icon: "fas fa-hand-rock", desc: "Da una bofetada a alguien" },
+    { name: "tickle", icon: "fas fa-feather", desc: "Haz cosquillas a alguien" },
+    { name: "truth", icon: "fas fa-question", desc: "Haz una pregunta de verdad" }],
+  utilityTitle: "Comandos de Utilidad",
+  utilityCommands: [
+    { name: "afk", icon: "fas fa-moon", desc: "Establece tu estado AFK" },
+    { name: "avatar", icon: "fas fa-user-circle", desc: "Ver tu avatar o el de otra persona" },
+    { name: "banner", icon: "fas fa-image", desc: "Ver tu banner o el de otra persona" },
+    { name: "botinfo", icon: "fas fa-info-circle", desc: "Ver información detallada del bot" },
+    { name: "botsuggest", icon: "fas fa-lightbulb", desc: "Enviar una sugerencia para el bot" },
+    { name: "calc", icon: "fas fa-calculator", desc: "Realizar un cálculo simple" },
+    { name: "channelinfo", icon: "fas fa-hashtag", desc: "Mostrar información sobre un canal" },
+    { name: "emojis", icon: "fas fa-smile", desc: "Listar o buscar emojis del servidor" },
+    { name: "help", icon: "fas fa-question-circle", desc: "Mostrar todos los comandos disponibles" },
+    { name: "ia", icon: "fas fa-robot", desc: "Preguntar algo a la IA del bot" },
+    { name: "perfil", icon: "fas fa-id-card", desc: "Mostrar tu perfil de usuario" },
+    { name: "ping", icon: "fas fa-stopwatch", desc: "Verificar la latencia del bot" },
+    { name: "serverinfo", icon: "fas fa-server", desc: "Mostrar información del servidor actual" },
+    { name: "userinfo", icon: "fas fa-id-badge", desc: "Obtener información sobre un usuario" },
+    { name: "weather", icon: "fas fa-cloud-sun", desc: "Consultar el clima en una ubicación específica" }]
+}};
 
-function generateIconGrid() {
-  const iconsContainer = document.querySelector('.icons-container');
+function generateCommandGroups(lang) {
+  const commandList = document.querySelector(".command-list");
+  const t = translations[lang] || translations.en;
 
-  const icons = [
-    { name: 'play', icon: 'fas fa-play' },
-    { name: 'pause', icon: 'fas fa-pause' },
-    { name: 'skip', icon: 'fas fa-forward' },
-    { name: 'previous', icon: 'fas fa-backward' },
-    { name: 'stop', icon: 'fas fa-stop' },
-    { name: 'loop', icon: 'fas fa-redo' },
-    { name: 'shuffle', icon: 'fas fa-random' },
-    { name: 'volume', icon: 'fas fa-volume-up' },
-    { name: 'mute', icon: 'fas fa-volume-mute' },
-    { name: 'playlist', icon: 'fas fa-list' },
-    { name: 'lyrics', icon: 'fas fa-file-alt' },
-    { name: 'filter', icon: 'fas fa-sliders-h' },
-    { name: 'spotify', icon: 'fab fa-spotify' },
-    { name: 'youtube', icon: 'fab fa-youtube' },
-    { name: 'soundcloud', icon: 'fab fa-soundcloud' },
-    { name: 'deezer', icon: 'fas fa-music' },
-    { name: 'apple', icon: 'fab fa-apple' },
-    { name: 'radio', icon: 'fas fa-broadcast-tower' },
-    { name: '24/7', icon: 'fas fa-clock' },
-    { name: 'queue', icon: 'fas fa-stream' },
-    { name: 'search', icon: 'fas fa-search' },
-    { name: 'grab', icon: 'fas fa-download' },
-    { name: 'vote', icon: 'fas fa-vote-yea' },
-    { name: 'premium', icon: 'fas fa-crown' },
-    { name: 'support', icon: 'fas fa-headset' },
-    { name: 'invite', icon: 'fas fa-user-plus' },
-    { name: 'help', icon: 'fas fa-question-circle' },
-    { name: 'settings', icon: 'fas fa-cog' },
-    { name: 'bassboost', icon: 'fas fa-volume-down' },
-    { name: 'nightcore', icon: 'fas fa-moon' },
-    { name: 'karaoke', icon: 'fas fa-microphone' },
-    { name: 'vaporwave', icon: 'fas fa-water' },
-    { name: 'equalizer', icon: 'fas fa-sliders-h' },
-    { name: 'volume_up', icon: 'fas fa-volume-up' },
-    { name: 'volume_down', icon: 'fas fa-volume-down' },
-    { name: 'discord', icon: 'fab fa-discord' },
-    { name: 'heart', icon: 'fas fa-heart' },
-    { name: 'star', icon: 'fas fa-star' },
-    { name: 'fire', icon: 'fas fa-fire' },
-    { name: 'bolt', icon: 'fas fa-bolt' },
-  ];
-
-  let iconsHTML = '';
-  icons.forEach(icon => {
-    iconsHTML += `
-      <div class="icon-item" data-name="${icon.name}" title="${icon.name}">
-        <span><i class="${icon.icon}"></i></span>
+  function createGroupHTML(title, commands, groupName, active = false) {
+    return `
+      <div class="command-group ${active ? "active" : ""}" data-group="${groupName}">
+        <h3 class="command-category-title"><i class="fas fa-${groupName === "economy" ? "coins" : groupName === "moderation" ? "gavel" : groupName === "entertainment" ? "gamepad" : "tools"}"></i> ${title}</h3>
+        <div class="command-category-list">
+          ${commands
+            .map(
+              (cmd) => `
+            <div class="command-item">
+              <div class="command-name"><i class="${cmd.icon}"></i> ${cmd.name}</div>
+              <div class="command-description">${cmd.desc}</div>
+            </div>
+          `
+            )
+            .join("")}
+        </div>
       </div>
     `;
-  });
+  }
 
-  iconsContainer.innerHTML = iconsHTML;
+  commandList.innerHTML =
+    createGroupHTML(t.economyTitle, t.economyCommands, "economy", true) +
+    createGroupHTML(t.moderationTitle, t.moderationCommands, "moderation") +
+    createGroupHTML(t.entertainmentTitle, t.entertainmentCommands, "entertainment") +
+    createGroupHTML(t.utilityTitle, t.utilityCommands, "utility");
 
-  const iconItems = document.querySelectorAll('.icon-item');
-  iconItems.forEach(item => {
-    const randomDelay = Math.random() * 2;
-    item.style.animationDelay = `${randomDelay}s`;
+  // Troca de categorias
+  const categories = document.querySelectorAll(".category");
+  const groups = document.querySelectorAll(".command-group");
 
-    item.addEventListener('mouseenter', () => {
-      const ripple = document.createElement('span');
-      ripple.className = 'ripple';
-      item.appendChild(ripple);
-
-      item.classList.add('glow');
-
-      setTimeout(() => {
-        ripple.remove();
-        item.classList.remove('glow');
-      }, 1000);
+  categories.forEach((category) => {
+    category.addEventListener("click", () => {
+      const target = category.dataset.category;
+      categories.forEach((c) => c.classList.remove("active"));
+      category.classList.add("active");
+      groups.forEach((g) => {
+        g.classList.toggle("active", g.dataset.group === target);
+      });
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const userLang = navigator.language.slice(0, 2);
+  const supportedLangs = ["en", "pt", "es"];
+  const lang = supportedLangs.includes(userLang) ? userLang : "en";
+  generateCommandGroups(lang);
+});
 
 function initAnimations() {
   const animateOnScroll = () => {
@@ -587,20 +507,4 @@ function initAnimations() {
   animateOnScroll();
 
   window.addEventListener('scroll', animateOnScroll);
-}
-
-function handleSpotifyAuth() {
-  const callbackElement = document.getElementById('spotify-callback');
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const code = urlParams.get('code');
-
-  if (code) {
-    callbackElement.innerHTML = `<p>Authentication successful You can close this window.</p>`;
-    callbackElement.style.display = 'block';
-
-    setTimeout(() => {
-      callbackElement.style.display = 'none';
-    }, 5000);
-  }
 }
