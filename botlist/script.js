@@ -1,3 +1,4 @@
+// URL de login do Discord
 const DISCORD_LOGIN_URL = "https://discord.com/oauth2/authorize?client_id=1014461610087174164&redirect_uri=https%3A%2F%2Fhecka.pt%2Fbotlist%2Fcallback.html&response_type=token&scope=identify";
 
 const loginBtn = document.getElementById("loginBtn");
@@ -8,7 +9,11 @@ const userMenu = document.getElementById("userMenu");
 
 loginBtn.href = DISCORD_LOGIN_URL;
 
+// Pegue o token do usuário logado (OAuth)
 let token = localStorage.getItem("discord_token");
+
+// Token do seu bot para pegar nome/avatar dos bots adicionados
+const BOT_TOKEN = "MTAxNDQ2MTYxMDA4NzE3NDE2NA.GEbMkF._DlmBWYaDHKLYn5VoZzSOxPHOoeLl2Odv7hLck";
 
 // Função para exibir usuário logado
 function setUserLogged(user) {
@@ -18,7 +23,7 @@ function setUserLogged(user) {
   userAvatar.style.display = "block";
 }
 
-// Se tiver token, busca dados do usuário
+// Se tiver token do usuário, busca dados dele
 if (token) {
   fetch("https://discord.com/api/users/@me", {
     headers: { "Authorization": `Bearer ${token}` }
@@ -40,12 +45,13 @@ if (token) {
   });
 });
 
+// Logout
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("discord_token");
   window.location.reload();
 });
 
-// Lista de bots
+// Lista de bots inicial
 let bots = JSON.parse(localStorage.getItem("bots")) || [
   { name: "Hey, Heckaツ!", avatar: "https://cdn.discordapp.com/embed/avatars/0.png", desc: "Pior bot", status: "Aprovado", date: "18/08/2025" }
 ];
@@ -91,19 +97,24 @@ window.addEventListener("click", e => {
   if (e.target === modal) modal.style.display = "none";
 });
 
-// Função para buscar dados do bot pelo ID
+// Função para buscar dados do bot pelo ID usando token do bot
 async function fetchBotData(botId) {
   try {
-    const res = await fetch(`https://discord.com/api/v10/users/${botId}`);
+    const res = await fetch(`https://discord.com/api/v10/users/${botId}`, {
+      headers: { "Authorization": `Bot ${BOT_TOKEN}` }
+    });
+
     if (!res.ok) throw new Error("Bot não encontrado");
     const data = await res.json();
+
     return {
       name: data.username,
-      avatar: data.avatar 
-        ? `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png` 
+      avatar: data.avatar
+        ? `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png`
         : "https://cdn.discordapp.com/embed/avatars/0.png"
     };
-  } catch {
+  } catch (err) {
+    console.error(err);
     return {
       name: `Bot ${botId}`,
       avatar: "https://cdn.discordapp.com/embed/avatars/0.png"
@@ -111,7 +122,7 @@ async function fetchBotData(botId) {
   }
 }
 
-// Submeter form
+// Submeter form para adicionar bot
 document.getElementById("botForm").addEventListener("submit", async e => {
   e.preventDefault();
 
