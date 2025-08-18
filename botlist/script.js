@@ -32,10 +32,12 @@ if (token) {
   });
 }
 
-// Toggle menu do usuário
-userInfo.addEventListener("click", () => {
-  if (!token) return;
-  userMenu.style.display = userMenu.style.display === "block" ? "none" : "block";
+// Toggle menu do usuário clicando no nick ou avatar
+[userName, userAvatar].forEach(el => {
+  el.addEventListener("click", () => {
+    if (!token) return;
+    userMenu.style.display = userMenu.style.display === "block" ? "none" : "block";
+  });
 });
 
 document.getElementById("logoutBtn").addEventListener("click", () => {
@@ -48,6 +50,7 @@ let bots = JSON.parse(localStorage.getItem("bots")) || [
   { name: "Hey, Heckaツ!", avatar: "https://cdn.discordapp.com/embed/avatars/0.png", desc: "Pior bot", status: "Aprovado", date: "18/08/2025" }
 ];
 
+// Renderizar lista de bots
 function renderBots() {
   const container = document.getElementById("botlist");
   container.innerHTML = "";
@@ -88,15 +91,42 @@ window.addEventListener("click", e => {
   if (e.target === modal) modal.style.display = "none";
 });
 
+// Função para buscar dados do bot pelo ID
+async function fetchBotData(botId) {
+  try {
+    const res = await fetch(`https://discord.com/api/v10/users/${botId}`);
+    if (!res.ok) throw new Error("Bot não encontrado");
+    const data = await res.json();
+    return {
+      name: data.username,
+      avatar: data.avatar 
+        ? `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png` 
+        : "https://cdn.discordapp.com/embed/avatars/0.png"
+    };
+  } catch {
+    return {
+      name: `Bot ${botId}`,
+      avatar: "https://cdn.discordapp.com/embed/avatars/0.png"
+    };
+  }
+}
+
 // Submeter form
-document.getElementById("botForm").addEventListener("submit", e => {
+document.getElementById("botForm").addEventListener("submit", async e => {
   e.preventDefault();
 
+  const botId = document.getElementById("botId").value;
+  const botPrefix = document.getElementById("botPrefix").value;
+  const botDesc = document.getElementById("botDesc").value;
+
+  const botData = await fetchBotData(botId);
+
   const bot = {
-    id: document.getElementById("botId").value,
-    prefix: document.getElementById("botPrefix").value,
-    desc: document.getElementById("botDesc").value,
-    avatar: "https://cdn.discordapp.com/embed/avatars/0.png",
+    id: botId,
+    prefix: botPrefix,
+    desc: botDesc,
+    avatar: botData.avatar,
+    name: botData.name,
     status: "Aprovado",
     date: new Date().toLocaleDateString("pt-BR")
   };
