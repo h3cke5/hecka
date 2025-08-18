@@ -2,33 +2,60 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HECKA - BOTLIST</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/css/preloader.css">
+  <link rel="stylesheet" href="./assets/css/theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<header>
-  <h1>Hecka<span class="dot">•</span></h1>
-  <div id="userArea">
-    <a id="loginBtn" class="btn-login">Login com Discord</a>
-    <div id="userInfo">
-      <span id="userName"></span>
-      <img id="userAvatar" class="avatar" style="display:none;">
-      <div id="userMenu" class="dropdown">
-        <button id="logoutBtn">Sair</button>
+
+<!-- Header do site principal -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <a href="/" class="logo">
+        <img src="./assets/images/Hecka.png" alt="HECKA Logo" style="height: 60px; width: auto" />
+        <h1>HECKA</h1>
+      </a>
+
+      <!-- Mobile menu toggle button -->
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="nav-container">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="/features" class="nav-link">Features</a></li>
+            <li><a href="/#commands" class="nav-link">Commands</a></li>
+            <li><a href="/premium" class="nav-link">Premium</a></li>
+            <li><a href="/#support" class="nav-link">Support</a></li>
+          </ul>
+        </nav>
+        <div class="header-buttons">
+          <a href="/discord" class="btn btn-secondary" target="_blank">
+            <i class="fab fa-discord"></i> Support Server
+          </a>
+          <a href="https://discord.com/oauth2/authorize?client_id=883842800368640041" class="btn btn-primary" target="_blank">
+            <i class="fas fa-plus"></i> Add to Discord
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
-  <main>
-    <h2 class="title">BOTLIST</h2>
+<main>
+  <h2 class="title">BOTLIST</h2>
 
-    <div id="botlist" class="botlist"></div>
+  <div id="botlist" class="botlist"></div>
 
-    <div class="add-bot-container">
-      <button id="addBotBtn" class="btn-add">Adicionar aplicação</button>
-    </div>
-  </main>
+  <div class="add-bot-container">
+    <button id="addBotBtn" class="btn-add">Adicionar aplicação</button>
+  </div>
+</main>
 
 <div id="botModal" class="modal">
   <div class="modal-content">
@@ -43,6 +70,6 @@
   </div>
 </div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
