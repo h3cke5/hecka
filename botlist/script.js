@@ -150,7 +150,7 @@ document.getElementById("botForm").addEventListener("submit", async e => {
 
   insertBot(bot);
 
-await fetch("https://apibotlist.vercel.app/send-webhook", {
+await fetch("https://apibotlist.vercel.app/send-webhook.js", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
@@ -172,3 +172,4 @@ await fetch("https://apibotlist.vercel.app/send-webhook", {
   modal.style.display = "none";
   document.getElementById("botForm").reset();
 });
+
