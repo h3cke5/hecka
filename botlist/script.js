@@ -46,7 +46,6 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 
 // === FUNÇÕES LOCALSTORAGE ===
 function getBots() {
-  // retorna um array de bots ou vazio
   return JSON.parse(localStorage.getItem("bots") || "[]");
 }
 
@@ -75,12 +74,11 @@ function renderBots() {
         <div class="dropdown-bot" style="display:none; margin-top:10px;">
           <p><b>Prefixo:</b> ${bot.prefix}</p>
           <p><b>Descrição:</b> ${bot.desc}</p>
-          ${bot.invite ? `<a href="${bot.invite}" target="_blank">[Adicionar Bot]</a>` : ""}
+          <a href="${bot.invite}" target="_blank">[Adicionar Bot]</a>
         </div>
       </div>
     `;
 
-    // toggle dropdown
     card.addEventListener("click", () => {
       const dd = card.querySelector(".dropdown-bot");
       dd.style.display = dd.style.display === "block" ? "none" : "block";
@@ -137,6 +135,8 @@ document.getElementById("botForm").addEventListener("submit", async e => {
 
   const botData = await fetchBotData(botId);
 
+  const inviteLink = `https://discord.com/oauth2/authorize?client_id=${botId}&scope=bot&permissions=0`;
+
   const bot = {
     id: botId,
     prefix: botPrefix,
@@ -144,13 +144,12 @@ document.getElementById("botForm").addEventListener("submit", async e => {
     avatar: botData.avatar,
     name: botData.name,
     status: "Pendente",
-    date: new Date().toLocaleDateString("pt-BR")
+    date: new Date().toLocaleDateString("pt-BR"),
+    invite: inviteLink
   };
 
-  // Salva no localStorage
   insertBot(bot);
 
-  // Enviar para Webhook staff
   await fetch(WEBHOOK_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -161,7 +160,8 @@ document.getElementById("botForm").addEventListener("submit", async e => {
         fields: [
           { name: "ID", value: bot.id },
           { name: "Prefixo", value: bot.prefix },
-          { name: "Descrição", value: bot.desc }
+          { name: "Descrição", value: bot.desc },
+          { name: "Link de Adição", value: bot.invite }
         ],
         color: 0xffcc00
       }]
