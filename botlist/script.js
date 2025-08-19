@@ -150,23 +150,23 @@ document.getElementById("botForm").addEventListener("submit", async e => {
 
   insertBot(bot);
 
-  await fetch(WEBHOOK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      embeds: [{
-        title: "📩 Novo Bot Enviado",
-        description: `**${bot.name}** foi enviado para análise.`,
-        fields: [
-          { name: "ID", value: bot.id },
-          { name: "Prefixo", value: bot.prefix },
-          { name: "Descrição", value: bot.desc },
-          { name: "Link de Adição", value: bot.invite }
-        ],
-        color: 0xffcc00
-      }]
-    })
-  });
+await fetch("https://apibotlist.vercel.app/send-webhook", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    embeds: [{
+      title: "📩 Novo Bot Enviado",
+      description: `**${bot.name}** foi enviado para análise.`,
+      fields: [
+        { name: "ID", value: bot.id },
+        { name: "Prefixo", value: bot.prefix },
+        { name: "Descrição", value: bot.desc },
+        { name: "Link de Adição", value: bot.invite }
+      ],
+      color: 0xffcc00
+    }]
+  })
+});
 
   renderBots();
   modal.style.display = "none";
