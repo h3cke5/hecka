@@ -1,21 +1,17 @@
-// URL de login do Discord
+// === CONFIG ===
 const DISCORD_LOGIN_URL = "https://discord.com/oauth2/authorize?client_id=1014461610087174164&redirect_uri=https%3A%2F%2Fhecka.pt%2Fbotlist%2Fcallback.html&response_type=token&scope=identify";
+const BOT_TOKEN = "MTAxNDQ2MTYxMDA4NzE3NDE2NA.GEbMkF._DlmBWYaDHKLYn5VoZzSOxPHOoeLl2Odv7hLck";
+const WEBHOOK_URL = "https://discord.com/api/webhooks/1407317507525578813/NVqEdhcxBiVaU9u_CO84mGH5m-0dkIcSoRwhSUyfqzJRytbYmGf";
 
+// === LOGIN DISCORD ===
 const loginBtn = document.getElementById("loginBtn");
 const userAvatar = document.getElementById("userAvatar");
 const userName = document.getElementById("userName");
-const userInfo = document.getElementById("userInfo");
 const userMenu = document.getElementById("userMenu");
 
 loginBtn.href = DISCORD_LOGIN_URL;
-
-// Pegue o token do usuário logado (OAuth)
 let token = localStorage.getItem("discord_token");
 
-// Token do seu bot para pegar nome/avatar dos bots adicionados
-const BOT_TOKEN = "MTAxNDQ2MTYxMDA4NzE3NDE2NA.GEbMkF._DlmBWYaDHKLYn5VoZzSOxPHOoeLl2Odv7hLck";
-
-// Função para exibir usuário logado
 function setUserLogged(user) {
   loginBtn.style.display = "none";
   userName.textContent = user.username;
@@ -23,7 +19,6 @@ function setUserLogged(user) {
   userAvatar.style.display = "block";
 }
 
-// Se tiver token do usuário, busca dados dele
 if (token) {
   fetch("https://discord.com/api/users/@me", {
     headers: { "Authorization": `Bearer ${token}` }
@@ -37,7 +32,6 @@ if (token) {
   });
 }
 
-// Toggle menu do usuário clicando no nick ou avatar
 [userName, userAvatar].forEach(el => {
   el.addEventListener("click", () => {
     if (!token) return;
@@ -45,39 +39,60 @@ if (token) {
   });
 });
 
-// Logout
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("discord_token");
   window.location.reload();
 });
 
-// Lista de bots inicial
-let bots = JSON.parse(localStorage.getItem("bots")) || [
-  { name: "Hey, Heckaツ!", avatar: "https://cdn.discordapp.com/embed/avatars/0.png", desc: "Pior bot", status: "Aprovado", date: "18/08/2025" }
-];
+// === FUNÇÕES LOCALSTORAGE ===
+function getBots() {
+  // retorna um array de bots ou vazio
+  return JSON.parse(localStorage.getItem("bots") || "[]");
+}
 
-// Renderizar lista de bots
+function insertBot(bot) {
+  const bots = getBots();
+  bots.push(bot);
+  localStorage.setItem("bots", JSON.stringify(bots));
+}
+
+// === RENDER BOTS ===
 function renderBots() {
+  const bots = getBots();
   const container = document.getElementById("botlist");
   container.innerHTML = "";
+
   bots.forEach(bot => {
-    container.innerHTML += `
-      <div class="bot-card">
-        <img src="${bot.avatar}" class="bot-avatar">
-        <div class="bot-info">
-          <h3>${bot.name}</h3>
-          <p>Status: ${bot.status}</p>
-          <p>Enviado em: ${bot.date}</p>
-          <p>${bot.desc}</p>
+    let card = document.createElement("div");
+    card.className = "bot-card";
+
+    card.innerHTML = `
+      <img src="${bot.avatar}" class="bot-avatar">
+      <div class="bot-info">
+        <h3>${bot.name}</h3>
+        <p>Status: ${bot.status}</p>
+        <p>Enviado em: ${bot.date}</p>
+        <div class="dropdown-bot" style="display:none; margin-top:10px;">
+          <p><b>Prefixo:</b> ${bot.prefix}</p>
+          <p><b>Descrição:</b> ${bot.desc}</p>
+          ${bot.invite ? `<a href="${bot.invite}" target="_blank">[Adicionar Bot]</a>` : ""}
         </div>
       </div>
     `;
+
+    // toggle dropdown
+    card.addEventListener("click", () => {
+      const dd = card.querySelector(".dropdown-bot");
+      dd.style.display = dd.style.display === "block" ? "none" : "block";
+    });
+
+    container.appendChild(card);
   });
 }
 
 renderBots();
 
-// Modal adicionar bot
+// === MODAL ===
 const modal = document.getElementById("botModal");
 const openModal = document.getElementById("addBotBtn");
 const closeModal = document.getElementById("closeModal");
@@ -91,38 +106,28 @@ openModal.addEventListener("click", () => {
 });
 
 closeModal.addEventListener("click", () => modal.style.display = "none");
+window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 
-// Fechar modal clicando fora
-window.addEventListener("click", e => {
-  if (e.target === modal) modal.style.display = "none";
-});
-
-// Função para buscar dados do bot pelo ID usando token do bot
+// === FETCH BOT DATA DISCORD ===
 async function fetchBotData(botId) {
   try {
     const res = await fetch(`https://discord.com/api/v10/users/${botId}`, {
       headers: { "Authorization": `Bot ${BOT_TOKEN}` }
     });
-
     if (!res.ok) throw new Error("Bot não encontrado");
     const data = await res.json();
-
     return {
       name: data.username,
       avatar: data.avatar
         ? `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png`
         : "https://cdn.discordapp.com/embed/avatars/0.png"
     };
-  } catch (err) {
-    console.error(err);
-    return {
-      name: `Bot ${botId}`,
-      avatar: "https://cdn.discordapp.com/embed/avatars/0.png"
-    };
+  } catch {
+    return { name: `Bot ${botId}`, avatar: "https://cdn.discordapp.com/embed/avatars/0.png" };
   }
 }
 
-// Submeter form para adicionar bot
+// === SUBMIT BOT ===
 document.getElementById("botForm").addEventListener("submit", async e => {
   e.preventDefault();
 
@@ -138,12 +143,31 @@ document.getElementById("botForm").addEventListener("submit", async e => {
     desc: botDesc,
     avatar: botData.avatar,
     name: botData.name,
-    status: "Aprovado",
+    status: "Pendente",
     date: new Date().toLocaleDateString("pt-BR")
   };
 
-  bots.push(bot);
-  localStorage.setItem("bots", JSON.stringify(bots));
+  // Salva no localStorage
+  insertBot(bot);
+
+  // Enviar para Webhook staff
+  await fetch(WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      embeds: [{
+        title: "📩 Novo Bot Enviado",
+        description: `**${bot.name}** foi enviado para análise.`,
+        fields: [
+          { name: "ID", value: bot.id },
+          { name: "Prefixo", value: bot.prefix },
+          { name: "Descrição", value: bot.desc }
+        ],
+        color: 0xffcc00
+      }]
+    })
+  });
+
   renderBots();
   modal.style.display = "none";
   document.getElementById("botForm").reset();
