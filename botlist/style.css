@@ -20,7 +20,7 @@ header h1 {
 }
 
 header .dot {
-  color: #e91e63;
+  color: #ffffff;
 }
 
 #userArea {
@@ -31,10 +31,10 @@ header .dot {
 }
 
 #loginBtn {
-  background: #e91e63;
+  background: #ffffff;
   padding: 8px 12px;
   border-radius: 6px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
 }
@@ -64,7 +64,7 @@ header .dot {
 }
 
 #userMenu button {
-  background: #ff5555;
+  background: #ffffff;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
@@ -75,7 +75,7 @@ header .dot {
 
 .title {
   text-align: center;
-  color: #e91e63;
+  color: #ffffff;
 }
 
 .botlist {
@@ -116,14 +116,14 @@ header .dot {
 }
 
 .btn-add {
-  background: #e91e63;
+  background: #ffffff;
   padding: 12px 18px;
   border: none;
   border-radius: 20px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .modal {
@@ -146,7 +146,7 @@ header .dot {
 
 .modal-content h3 {
   margin-top: 0;
-  color: #e91e63;
+  color: #ffffff;
 }
 
 .modal-content input,
@@ -168,3 +168,5 @@ header .dot {
 .close:hover {
   color: white;
 }
+
+
