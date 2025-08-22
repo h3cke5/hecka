@@ -78,7 +78,7 @@
 <script>
   // Redireciona após 2 segundos para adicionar bot
   setTimeout(() => {
-    window.location.href = "https://discord.gg/B4UNTBH2Ma";
+    window.location.href = "https://discord.com/oauth2/authorize?client_id=883842800368640041&scope=bot&permissions=8";
   }, 2000);
 </script>
 </head>
@@ -104,18 +104,18 @@
       <div class="nav-container">
         <nav class="nav">
           <ul class="nav-list">
-            <li><a href="/features" class="nav-link" data-lang="nav_features">Features</a></li>
-            <li><a href="/#commands" class="nav-link" data-lang="nav_commands">Commands</a></li>
-            <li><a href="/premium" class="nav-link" data-lang="nav_premium">Premium</a></li>
-            <li><a href="/#support" class="nav-link" data-lang="nav_support">Support</a></li>
+            <li><a href="/features" class="nav-link" data-lang="NAV_FEATURES">Features</a></li>
+            <li><a href="/#commands" class="nav-link" data-lang="NAV_COMMANDS">Commands</a></li>
+            <li><a href="/premium" class="nav-link" data-lang="NAV_PREMIUM">Premium</a></li>
+            <li><a href="/#support" class="nav-link" data-lang="NAV_SUPPORT">Support</a></li>
           </ul>
         </nav>
         <div class="header-buttons">
           <a href="/discord" class="btn btn-secondary" target="_blank">
-            <i class="fab fa-discord"></i> <span data-lang="btn_support_server">Support Server</span>
+            <i class="fab fa-discord"></i> <span data-lang="BTN_SUPPORT_SERVER">Support Server</span>
           </a>
           <a href="/add" class="btn btn-primary" target="_blank">
-            <i class="fas fa-plus"></i> <span data-lang="btn_add_discord">Add to Discord</span>
+            <i class="fas fa-plus"></i> <span data-lang="BTN_ADD_DISCORD">Add to Discord</span>
           </a>
         </div>
       </div>
@@ -126,8 +126,8 @@
 <main class="redirect-container">
   <div class="redirect-box">
     <img src="./assets/images/Hecka.png" alt="HECKA Logo" />
-    <div class="redirect-message" data-lang="redirect_message">You are being redirected to our Support Server...</div>
-    <div class="redirect-description" data-lang="redirect_description">You will be redirected automatically in a few seconds.</div>
+    <div class="redirect-message" data-lang="REDIRECT_MESSAGE">You are being redirected to add HECKA to your server...</div>
+    <div class="redirect-description" data-lang="REDIRECT_DESCRIPTION">You will be redirected automatically in a few seconds.</div>
     <div class="redirect-loader"><i class="fas fa-spinner fa-pulse"></i></div>
   </div>
 </main>
@@ -138,25 +138,25 @@
 <script>
 const langData = {
   pt: {
-    nav_features: "Recursos",
-    nav_commands: "Comandos",
-    nav_premium: "Premium",
-    nav_support: "Suporte",
-    btn_support_server: "Servidor Suporte",
-    btn_add_discord: "Adicionar ao Discord",
-    redirect_message: "Você está sendo redirecionado ao nosso Servidor de Suporte...",
-    redirect_description: "Você será levado automaticamente em alguns segundos."
-    },
+    NAV_FEATURES:"Recursos",
+    NAV_COMMANDS:"Comandos",
+    NAV_PREMIUM:"Premium",
+    NAV_SUPPORT:"Suporte",
+    BTN_SUPPORT_SERVER:"Servidor Suporte",
+    BTN_ADD_DISCORD:"Adicionar ao Discord",
+    REDIRECT_MESSAGE:"Você está sendo redirecionado para adicionar HECKA ao seu servidor...",
+    REDIRECT_DESCRIPTION:"Você será redirecionado automaticamente em alguns segundos."
+  },
   es: {
-    nav_features: "Características",
-    nav_commands: "Comandos",
-    nav_premium: "Premium",
-    nav_support: "Soporte",
-    btn_support_server: "Servidor de Soporte",
-    btn_add_discord: "Agregar a Discord",
-    redirect_message: "Está siendo redirigido a nuestro Servidor de Soporte...",
-    redirect_description: "Será redirigido automáticamente en unos segundos."
-    }
+    NAV_FEATURES:"Características",
+    NAV_COMMANDS:"Comandos",
+    NAV_PREMIUM:"Premium",
+    NAV_SUPPORT:"Soporte",
+    BTN_SUPPORT_SERVER:"Servidor de Soporte",
+    BTN_ADD_DISCORD:"Añadir a Discord",
+    REDIRECT_MESSAGE:"Está siendo redirigido para agregar HECKA a su servidor...",
+    REDIRECT_DESCRIPTION:"Será redirigido automáticamente en unos segundos."
+  }
 };
 
 let userLang = navigator.language || navigator.userLanguage || "en";
