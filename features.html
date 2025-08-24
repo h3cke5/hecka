@@ -175,87 +175,265 @@
   </script>
 
   <!-- Script multilíngue -->
-  <script>
-    const langData = {
-      pt: {
-        NAV_FEATURES: "Recursos",
-        NAV_COMMANDS: "Comandos",
-        NAV_PREMIUM: "Premium",
-        NAV_SUPPORT: "Suporte",
-        BTN_SUPPORT_SERVER: "Servidor Suporte",
-        BTN_ADD_DISCORD: "Adicione ao Discord",
-        FEATURES_TITLE: "Por que escolher HECKA?",
-        FEATURES_DESCRIPTION: "Melhore seu servidor Discord com esses recursos poderosos",
-        FEATURE_FUN_COMMANDS: "Comandos Divertidos",
-        FEATURE_FUN_DESC: "Mantenha sua comunidade entretida com memes, piadas, jogos, manipulação de imagens e mais.",
-        FEATURE_MOD_TOOLS: "Ferramentas de Moderação",
-        FEATURE_MOD_DESC: "Expulse, bane, mute, bloqueie canais e previna spam com ferramentas poderosas e fáceis de usar.",
-        FEATURE_ECONOMY: "Sistema de Economia",
-        FEATURE_ECONOMY_DESC: "Engaje usuários com uma economia virtual — ganhe moedas, trabalhe, colete recompensas diárias e envie pagamentos.",
-        FEATURE_UTILITY: "Recursos Utilitários",
-        FEATURE_UTILITY_DESC: "De clima e informações do servidor a tradutores, timers e lembretes — tudo que você precisa em um só lugar.",
-        FEATURE_CUSTOM_PROFILES: "Perfis Customizados",
-        FEATURE_CUSTOM_PROFILES_DESC: "Crie perfis ricos com bios, reputação, badges, banners e mais. Totalmente integrado ao seu servidor.",
-        FEATURE_LIVE_STATS: "Canais de Estatísticas Ao Vivo",
-        FEATURE_LIVE_STATS_DESC: "Atualize automaticamente canais de voz com estatísticas do servidor em tempo real como membros, bots e usuários online.",
-        FOOTER_LINKS: "Links",
-        FOOTER_LEGAL: "Legal",
-        FOOTER_TERMS: "Termos de Serviço",
-        FOOTER_POLICY: "Política de Privacidade",
-        FOOTER_CONNECT: "Conecte-se",
-        FOOTER_VOTE: "Vote no Top.gg",
-        FOOTER_COPY: "© 2021-2025 HECKA. Todos os direitos reservados."
-      },
-      es: {
-        NAV_FEATURES: "Características",
-        NAV_COMMANDS: "Comandos",
-        NAV_PREMIUM: "Premium",
-        NAV_SUPPORT: "Soporte",
-        BTN_SUPPORT_SERVER: "Servidor de Soporte",
-        BTN_ADD_DISCORD: "Añadir a Discord",
-        FEATURES_TITLE: "¿Por qué elegir HECKA?",
-        FEATURES_DESCRIPTION: "Mejora tu servidor de Discord con estas potentes características",
-        FEATURE_FUN_COMMANDS: "Comandos Divertidos",
-        FEATURE_FUN_DESC: "Mantén a tu comunidad entretenida con memes, bromas, juegos, manipulación de imágenes y más.",
-        FEATURE_MOD_TOOLS: "Herramientas de Moderación",
-        FEATURE_MOD_DESC: "Expulsa, banea, silencia, bloquea canales y previene spam con potentes y fáciles herramientas de moderación.",
-        FEATURE_ECONOMY: "Sistema de Economía",
-        FEATURE_ECONOMY_DESC: "Involucra a los usuarios con una economía virtual — gana monedas, trabaja, recoge recompensas diarias y envía pagos.",
-        FEATURE_UTILITY: "Funciones Utilitarias",
-        FEATURE_UTILITY_DESC: "Desde el clima e info del servidor hasta traductores, temporizadores y recordatorios — todo lo que necesitas en un solo lugar.",
-        FEATURE_CUSTOM_PROFILES: "Perfiles Personalizados",
-        FEATURE_CUSTOM_PROFILES_DESC: "Crea perfiles completos con biografías, reputación, insignias, banners y más. Totalmente integrado con tu servidor.",
-        FEATURE_LIVE_STATS: "Canales de Estadísticas en Vivo",
-        FEATURE_LIVE_STATS_DESC: "Actualiza automáticamente canales de voz con estadísticas en tiempo real como miembros, bots y usuarios en línea.",
-        FOOTER_LINKS: "Enlaces",
-        FOOTER_LEGAL: "Legal",
-        FOOTER_TERMS: "Términos de Servicio",
-        FOOTER_POLICY: "Política de Privacidad",
-        FOOTER_CONNECT: "Conéctate",
-        FOOTER_VOTE: "Vota en Top.gg",
-        FOOTER_COPY: "© 2021-2025 HECKA. Todos los derechos reservados."
-      }
-    };
+<script>
+const langData = {
+  en: {
+    NAV_FEATURES: "Features",
+    NAV_COMMANDS: "Commands",
+    NAV_PREMIUM: "Premium",
+    NAV_SUPPORT: "Support",
+    BTN_SUPPORT_SERVER: "Support Server",
+    BTN_ADD_DISCORD: "Add to Discord",
+    FEATURES_TITLE: "Why Choose HECKA?",
+    FEATURES_DESCRIPTION: "Enhance your Discord server with these powerful features",
+    FEATURE_FUN_COMMANDS: "Fun Commands",
+    FEATURE_FUN_DESC: "Keep your community entertained with memes, jokes, games, image manipulations, and more.",
+    FEATURE_MOD_TOOLS: "Moderation Tools",
+    FEATURE_MOD_DESC: "Kick, ban, mute, lock channels, and prevent spam with powerful and easy-to-use moderation features.",
+    FEATURE_ECONOMY: "Economy System",
+    FEATURE_ECONOMY_DESC: "Engage users with a virtual economy — earn coins, work jobs, collect daily rewards, and send payments.",
+    FEATURE_UTILITY: "Utility Features",
+    FEATURE_UTILITY_DESC: "From weather and server info to translators, timers, and reminders — everything you need in one place.",
+    FEATURE_CUSTOM_PROFILES: "Custom Profiles",
+    FEATURE_CUSTOM_PROFILES_DESC: "Create rich user profiles with bios, reputation, badges, banners, and more. Fully integrated with your server.",
+    FEATURE_LIVE_STATS: "Live Stats Channels",
+    FEATURE_LIVE_STATS_DESC: "Automatically update voice channels with real-time server stats like members, bots, and online users.",
+    FOOTER_LINKS: "Links",
+    FOOTER_LEGAL: "Legal",
+    FOOTER_TERMS: "Terms of Service",
+    FOOTER_POLICY: "Privacy Policy",
+    FOOTER_CONNECT: "Connect",
+    FOOTER_VOTE: "Vote on Top.gg",
+    FOOTER_COPY: "© 2021-2025 HECKA. All rights reserved."
+  },
+  pt: {
+    NAV_FEATURES: "Recursos",
+    NAV_COMMANDS: "Comandos",
+    NAV_PREMIUM: "Premium",
+    NAV_SUPPORT: "Suporte",
+    BTN_SUPPORT_SERVER: "Servidor Suporte",
+    BTN_ADD_DISCORD: "Adicione ao Discord",
+    FEATURES_TITLE: "Por que escolher HECKA?",
+    FEATURES_DESCRIPTION: "Melhore seu servidor Discord com esses recursos poderosos",
+    FEATURE_FUN_COMMANDS: "Comandos Divertidos",
+    FEATURE_FUN_DESC: "Mantenha sua comunidade entretida com memes, piadas, jogos, manipulação de imagens e mais.",
+    FEATURE_MOD_TOOLS: "Ferramentas de Moderação",
+    FEATURE_MOD_DESC: "Expulse, bane, mute, bloqueie canais e previna spam com ferramentas poderosas e fáceis de usar.",
+    FEATURE_ECONOMY: "Sistema de Economia",
+    FEATURE_ECONOMY_DESC: "Engaje usuários com uma economia virtual — ganhe moedas, trabalhe, colete recompensas diárias e envie pagamentos.",
+    FEATURE_UTILITY: "Recursos Utilitários",
+    FEATURE_UTILITY_DESC: "De clima e informações do servidor a tradutores, timers e lembretes — tudo que você precisa em um só lugar.",
+    FEATURE_CUSTOM_PROFILES: "Perfis Customizados",
+    FEATURE_CUSTOM_PROFILES_DESC: "Crie perfis ricos com bios, reputação, badges, banners e mais. Totalmente integrado ao seu servidor.",
+    FEATURE_LIVE_STATS: "Canais de Estatísticas Ao Vivo",
+    FEATURE_LIVE_STATS_DESC: "Atualize automaticamente canais de voz com estatísticas do servidor em tempo real como membros, bots e usuários online.",
+    FOOTER_LINKS: "Links",
+    FOOTER_LEGAL: "Legal",
+    FOOTER_TERMS: "Termos de Serviço",
+    FOOTER_POLICY: "Política de Privacidade",
+    FOOTER_CONNECT: "Conecte-se",
+    FOOTER_VOTE: "Vote no Top.gg",
+    FOOTER_COPY: "© 2021-2025 HECKA. Todos os direitos reservados."
+  },
+  es: {
+    NAV_FEATURES: "Características",
+    NAV_COMMANDS: "Comandos",
+    NAV_PREMIUM: "Premium",
+    NAV_SUPPORT: "Soporte",
+    BTN_SUPPORT_SERVER: "Servidor de Soporte",
+    BTN_ADD_DISCORD: "Añadir a Discord",
+    FEATURES_TITLE: "¿Por qué elegir HECKA?",
+    FEATURES_DESCRIPTION: "Mejora tu servidor de Discord con estas potentes características",
+    FEATURE_FUN_COMMANDS: "Comandos Divertidos",
+    FEATURE_FUN_DESC: "Mantén a tu comunidad entretenida con memes, bromas, juegos, manipulación de imágenes y más.",
+    FEATURE_MOD_TOOLS: "Herramientas de Moderación",
+    FEATURE_MOD_DESC: "Expulsa, banea, silencia, bloquea canales y previene spam con potentes y fáciles herramientas de moderación.",
+    FEATURE_ECONOMY: "Sistema de Economía",
+    FEATURE_ECONOMY_DESC: "Involucra a los usuarios con una economía virtual — gana monedas, trabaja, recoge recompensas diarias y envía pagos.",
+    FEATURE_UTILITY: "Funciones Utilitarias",
+    FEATURE_UTILITY_DESC: "Desde el clima e info del servidor hasta traductores, temporizadores y recordatorios — todo lo que necesitas en un solo lugar.",
+    FEATURE_CUSTOM_PROFILES: "Perfiles Personalizados",
+    FEATURE_CUSTOM_PROFILES_DESC: "Crea perfiles completos con biografías, reputación, insignias, banners y más. Totalmente integrado con tu servidor.",
+    FEATURE_LIVE_STATS: "Canales de Estadísticas en Vivo",
+    FEATURE_LIVE_STATS_DESC: "Actualiza automáticamente canales de voz con estadísticas en tiempo real como miembros, bots y usuarios en línea.",
+    FOOTER_LINKS: "Enlaces",
+    FOOTER_LEGAL: "Legal",
+    FOOTER_TERMS: "Términos de Servicio",
+    FOOTER_POLICY: "Política de Privacidad",
+    FOOTER_CONNECT: "Conéctate",
+    FOOTER_VOTE: "Vota en Top.gg",
+    FOOTER_COPY: "© 2021-2025 HECKA. Todos los derechos reservados."
+  },
+  fr: {
+    NAV_FEATURES: "Fonctionnalités",
+    NAV_COMMANDS: "Commandes",
+    NAV_PREMIUM: "Premium",
+    NAV_SUPPORT: "Support",
+    BTN_SUPPORT_SERVER: "Serveur d'assistance",
+    BTN_ADD_DISCORD: "Ajouter à Discord",
+    FEATURES_TITLE: "Pourquoi choisir HECKA ?",
+    FEATURES_DESCRIPTION: "Améliorez votre serveur Discord avec ces fonctionnalités puissantes",
+    FEATURE_FUN_COMMANDS: "Commandes Amusantes",
+    FEATURE_FUN_DESC: "Divertissez votre communauté avec des memes, blagues, jeux, manipulation d'images, et plus encore.",
+    FEATURE_MOD_TOOLS: "Outils de Modération",
+    FEATURE_MOD_DESC: "Expulsez, bannissez, mutez, verrouillez les salons et prévenez le spam avec des outils puissants et faciles à utiliser.",
+    FEATURE_ECONOMY: "Système Économique",
+    FEATURE_ECONOMY_DESC: "Engagez les utilisateurs avec une économie virtuelle — gagnez des pièces, travaillez, collectez des récompenses quotidiennes et envoyez des paiements.",
+    FEATURE_UTILITY: "Fonctionnalités Utilitaires",
+    FEATURE_UTILITY_DESC: "Du météo et infos serveur aux traducteurs, minuteurs et rappels — tout ce dont vous avez besoin au même endroit.",
+    FEATURE_CUSTOM_PROFILES: "Profils Personnalisés",
+    FEATURE_CUSTOM_PROFILES_DESC: "Créez des profils riches avec bios, réputation, badges, bannières et plus. Entièrement intégré à votre serveur.",
+    FEATURE_LIVE_STATS: "Canaux de Statistiques en Direct",
+    FEATURE_LIVE_STATS_DESC: "Mettez à jour automatiquement les salons vocaux avec les statistiques du serveur en temps réel comme les membres, bots et utilisateurs en ligne.",
+    FOOTER_LINKS: "Liens",
+    FOOTER_LEGAL: "Légal",
+    FOOTER_TERMS: "Conditions d'utilisation",
+    FOOTER_POLICY: "Politique de Confidentialité",
+    FOOTER_CONNECT: "Connectez-vous",
+    FOOTER_VOTE: "Votez sur Top.gg",
+    FOOTER_COPY: "© 2021-2025 HECKA. Tous droits réservés."
+  },
+  de: {
+    NAV_FEATURES: "Funktionen",
+    NAV_COMMANDS: "Befehle",
+    NAV_PREMIUM: "Premium",
+    NAV_SUPPORT: "Support",
+    BTN_SUPPORT_SERVER: "Support-Server",
+    BTN_ADD_DISCORD: "Zu Discord hinzufügen",
+    FEATURES_TITLE: "Warum HECKA wählen?",
+    FEATURES_DESCRIPTION: "Verbessere deinen Discord-Server mit diesen leistungsstarken Funktionen",
+    FEATURE_FUN_COMMANDS: "Spaßbefehle",
+    FEATURE_FUN_DESC: "Unterhalte deine Community mit Memes, Witzen, Spielen, Bildbearbeitung und mehr.",
+    FEATURE_MOD_TOOLS: "Moderationstools",
+    FEATURE_MOD_DESC: "Kicke, banne, mute, sperre Kanäle und verhindere Spam mit leistungsstarken und einfach zu bedienenden Moderationstools.",
+    FEATURE_ECONOMY: "Wirtschaftssystem",
+    FEATURE_ECONOMY_DESC: "Binde Nutzer mit einer virtuellen Wirtschaft ein — verdiene Münzen, arbeite, sammle tägliche Belohnungen und sende Zahlungen.",
+    FEATURE_UTILITY: "Dienstprogramme",
+    FEATURE_UTILITY_DESC: "Von Wetter- und Serverinfos bis hin zu Übersetzern, Timern und Erinnerungen — alles, was du brauchst an einem Ort.",
+    FEATURE_CUSTOM_PROFILES: "Benutzerdefinierte Profile",
+    FEATURE_CUSTOM_PROFILES_DESC: "Erstelle reichhaltige Profile mit Bio, Reputation, Abzeichen, Bannern und mehr. Vollständig in deinen Server integriert.",
+    FEATURE_LIVE_STATS: "Live-Statistiken Kanäle",
+    FEATURE_LIVE_STATS_DESC: "Aktualisiere automatisch Sprachkanäle mit Echtzeit-Serverstatistiken wie Mitglieder, Bots und Online-Nutzer.",
+    FOOTER_LINKS: "Links",
+    FOOTER_LEGAL: "Rechtliches",
+    FOOTER_TERMS: "Nutzungsbedingungen",
+    FOOTER_POLICY: "Datenschutzrichtlinie",
+    FOOTER_CONNECT: "Verbinden",
+    FOOTER_VOTE: "Vote auf Top.gg",
+    FOOTER_COPY: "© 2021-2025 HECKA. Alle Rechte vorbehalten."
+  },
+  ru: {
+    NAV_FEATURES: "Функции",
+    NAV_COMMANDS: "Команды",
+    NAV_PREMIUM: "Премиум",
+    NAV_SUPPORT: "Поддержка",
+    BTN_SUPPORT_SERVER: "Сервер поддержки",
+    BTN_ADD_DISCORD: "Добавить в Discord",
+    FEATURES_TITLE: "Почему выбирают HECKA?",
+    FEATURES_DESCRIPTION: "Улучшите свой сервер Discord с помощью этих мощных функций",
+    FEATURE_FUN_COMMANDS: "Развлекательные команды",
+    FEATURE_FUN_DESC: "Развлекайте сообщество мемами, шутками, играми, обработкой изображений и не только.",
+    FEATURE_MOD_TOOLS: "Инструменты модерации",
+    FEATURE_MOD_DESC: "Кикайте, баньте, делайте mute, блокируйте каналы и предотвращайте спам с мощными и простыми инструментами модерации.",
+    FEATURE_ECONOMY: "Экономическая система",
+    FEATURE_ECONOMY_DESC: "Вовлекайте пользователей с виртуальной экономикой — зарабатывайте монеты, выполняйте работы, собирайте ежедневные награды и отправляйте платежи.",
+    FEATURE_UTILITY: "Утилиты",
+    FEATURE_UTILITY_DESC: "От погоды и информации о сервере до переводчиков, таймеров и напоминаний — всё в одном месте.",
+    FEATURE_CUSTOM_PROFILES: "Пользовательские профили",
+    FEATURE_CUSTOM_PROFILES_DESC: "Создавайте полноценные профили с биографиями, репутацией, значками, баннерами и не только. Полностью интегрировано с сервером.",
+    FEATURE_LIVE_STATS: "Каналы с живой статистикой",
+    FEATURE_LIVE_STATS_DESC: "Автоматически обновляйте голосовые каналы с реальной статистикой сервера, включая участников, ботов и онлайн-пользователей.",
+    FOOTER_LINKS: "Ссылки",
+    FOOTER_LEGAL: "Право",
+    FOOTER_TERMS: "Условия использования",
+    FOOTER_POLICY: "Политика конфиденциальности",
+    FOOTER_CONNECT: "Подключение",
+    FOOTER_VOTE: "Голосовать на Top.gg",
+    FOOTER_COPY: "© 2021-2025 HECKA. Все права защищены."
+  },
+  ja: {
+    NAV_FEATURES: "機能",
+    NAV_COMMANDS: "コマンド",
+    NAV_PREMIUM: "プレミアム",
+    NAV_SUPPORT: "サポート",
+    BTN_SUPPORT_SERVER: "サポートサーバー",
+    BTN_ADD_DISCORD: "Discordに追加",
+    FEATURES_TITLE: "なぜHECKAを選ぶのか？",
+    FEATURES_DESCRIPTION: "これらの強力な機能であなたのDiscordサーバーを強化します",
+    FEATURE_FUN_COMMANDS: "楽しいコマンド",
+    FEATURE_FUN_DESC: "ミーム、ジョーク、ゲーム、画像操作などでコミュニティを楽しませましょう。",
+    FEATURE_MOD_TOOLS: "モデレーションツール",
+    FEATURE_MOD_DESC: "キック、BAN、ミュート、チャンネルロック、スパム防止を強力で使いやすいモデレーション機能で実現。",
+    FEATURE_ECONOMY: "経済システム",
+    FEATURE_ECONOMY_DESC: "仮想経済でユーザーを惹きつけましょう — コインを稼ぐ、仕事をする、デイリーボーナスを集める、支払いを送る。",
+    FEATURE_UTILITY: "ユーティリティ機能",
+    FEATURE_UTILITY_DESC: "天気やサーバー情報から翻訳、タイマー、リマインダーまで — 必要なものがすべて揃っています。",
+    FEATURE_CUSTOM_PROFILES: "カスタムプロフィール",
+    FEATURE_CUSTOM_PROFILES_DESC: "バイオ、評判、バッジ、バナーなど豊富なプロフィールを作成。サーバーと完全統合。",
+    FEATURE_LIVE_STATS: "ライブ統計チャンネル",
+    FEATURE_LIVE_STATS_DESC: "メンバー、ボット、オンラインユーザーなどのリアルタイム統計でボイスチャンネルを自動更新します。",
+    FOOTER_LINKS: "リンク",
+    FOOTER_LEGAL: "法的事項",
+    FOOTER_TERMS: "利用規約",
+    FOOTER_POLICY: "プライバシーポリシー",
+    FOOTER_CONNECT: "接続",
+    FOOTER_VOTE: "Top.ggで投票",
+    FOOTER_COPY: "© 2021-2025 HECKA. 無断転載禁止。"
+  },
+  it: {
+    NAV_FEATURES: "Funzionalità",
+    NAV_COMMANDS: "Comandi",
+    NAV_PREMIUM: "Premium",
+    NAV_SUPPORT: "Supporto",
+    BTN_SUPPORT_SERVER: "Server di supporto",
+    BTN_ADD_DISCORD: "Aggiungi a Discord",
+    FEATURES_TITLE: "Perché scegliere HECKA?",
+    FEATURES_DESCRIPTION: "Migliora il tuo server Discord con queste potenti funzionalità",
+    FEATURE_FUN_COMMANDS: "Comandi Divertenti",
+    FEATURE_FUN_DESC: "Intrattieni la tua community con meme, scherzi, giochi, manipolazione delle immagini e altro.",
+    FEATURE_MOD_TOOLS: "Strumenti di Moderazione",
+    FEATURE_MOD_DESC: "Espelli, banna, metti in mute, blocca canali e previeni lo spam con strumenti potenti e facili da usare.",
+    FEATURE_ECONOMY: "Sistema Economico",
+    FEATURE_ECONOMY_DESC: "Coinvolgi gli utenti con un'economia virtuale — guadagna monete, lavora, raccogli ricompense giornaliere e invia pagamenti.",
+    FEATURE_UTILITY: "Funzionalità Utilitarie",
+    FEATURE_UTILITY_DESC: "Da informazioni sul meteo e sul server a traduttori, timer e promemoria — tutto ciò di cui hai bisogno in un unico posto.",
+    FEATURE_CUSTOM_PROFILES: "Profili Personalizzati",
+    FEATURE_CUSTOM_PROFILES_DESC: "Crea profili completi con biografie, reputazione, badge, banner e altro. Completamente integrato nel tuo server.",
+    FEATURE_LIVE_STATS: "Canali Statistiche Live",
+    FEATURE_LIVE_STATS_DESC: "Aggiorna automaticamente i canali vocali con statistiche del server in tempo reale come membri, bot e utenti online.",
+    FOOTER_LINKS: "Link",
+    FOOTER_LEGAL: "Legale",
+    FOOTER_TERMS: "Termini di Servizio",
+    FOOTER_POLICY: "Privacy Policy",
+    FOOTER_CONNECT: "Connettiti",
+    FOOTER_VOTE: "Vota su Top.gg",
+    FOOTER_COPY: "© 2021-2025 HECKA. Tutti i diritti riservati."
+  }
+};
 
-    let userLang = navigator.language || navigator.userLanguage || "en";
-    userLang = userLang.toLowerCase();
-    if(userLang.startsWith("pt")) userLang = "pt";
-    else if(userLang.startsWith("es")) userLang = "es";
-    else userLang = "en";
+let userLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+if(userLang.startsWith("pt")) userLang = "pt";
+else if(userLang.startsWith("es")) userLang = "es";
+else if(userLang.startsWith("fr")) userLang = "fr";
+else if(userLang.startsWith("de")) userLang = "de";
+else if(userLang.startsWith("ru")) userLang = "ru";
+else if(userLang.startsWith("ja")) userLang = "ja";
+else if(userLang.startsWith("it")) userLang = "it";
+else userLang = "en";
 
-    function applyLangTexts() {
-      const elems = document.querySelectorAll('[data-lang]');
-      elems.forEach(elem => {
-        const key = elem.getAttribute('data-lang');
-        if(langData[userLang] && langData[userLang][key]) {
-          elem.textContent = langData[userLang][key];
-        } else if(langData.en[key]) {
-          elem.textContent = langData.en[key];
-        }
-      });
+function applyLangTexts() {
+  const elems = document.querySelectorAll('[data-lang]');
+  elems.forEach(elem => {
+    const key = elem.getAttribute('data-lang');
+    if(langData[userLang] && langData[userLang][key]) {
+      elem.textContent = langData[userLang][key];
+    } else if(langData.en[key]) {
+      elem.textContent = langData.en[key];
     }
+  });
+}
 
-    document.addEventListener("DOMContentLoaded", applyLangTexts);
-  </script>
+document.addEventListener("DOMContentLoaded", applyLangTexts);
+</script>
 </body>
 </html>

@@ -146,7 +146,7 @@ const langData = {
     btn_add_discord: "Adicionar ao Discord",
     redirect_message: "Você está sendo redirecionado ao nosso Servidor de Suporte...",
     redirect_description: "Você será levado automaticamente em alguns segundos."
-    },
+  },
   es: {
     nav_features: "Características",
     nav_commands: "Comandos",
@@ -156,21 +156,75 @@ const langData = {
     btn_add_discord: "Agregar a Discord",
     redirect_message: "Está siendo redirigido a nuestro Servidor de Soporte...",
     redirect_description: "Será redirigido automáticamente en unos segundos."
-    }
+  },
+  fr: {
+    nav_features: "Fonctionnalités",
+    nav_commands: "Commandes",
+    nav_premium: "Premium",
+    nav_support: "Support",
+    btn_support_server: "Serveur d'assistance",
+    btn_add_discord: "Ajouter à Discord",
+    redirect_message: "Vous êtes redirigé vers notre serveur de support...",
+    redirect_description: "Vous serez automatiquement redirigé dans quelques secondes."
+  },
+  de: {
+    nav_features: "Funktionen",
+    nav_commands: "Befehle",
+    nav_premium: "Premium",
+    nav_support: "Support",
+    btn_support_server: "Support-Server",
+    btn_add_discord: "Zu Discord hinzufügen",
+    redirect_message: "Sie werden zu unserem Support-Server weitergeleitet...",
+    redirect_description: "Sie werden in wenigen Sekunden automatisch weitergeleitet."
+  },
+  ru: {
+    nav_features: "Функции",
+    nav_commands: "Команды",
+    nav_premium: "Премиум",
+    nav_support: "Поддержка",
+    btn_support_server: "Сервер поддержки",
+    btn_add_discord: "Добавить в Discord",
+    redirect_message: "Вы перенаправляетесь на наш сервер поддержки...",
+    redirect_description: "Вы будете автоматически перенаправлены через несколько секунд."
+  },
+  ja: {
+    nav_features: "機能",
+    nav_commands: "コマンド",
+    nav_premium: "プレミアム",
+    nav_support: "サポート",
+    btn_support_server: "サポートサーバー",
+    btn_add_discord: "Discordに追加",
+    redirect_message: "サポートサーバーにリダイレクトされています...",
+    redirect_description: "数秒後に自動的にリダイレクトされます。"
+  },
+  it: {
+    nav_features: "Funzionalità",
+    nav_commands: "Comandi",
+    nav_premium: "Premium",
+    nav_support: "Supporto",
+    btn_support_server: "Server di supporto",
+    btn_add_discord: "Aggiungi a Discord",
+    redirect_message: "Stai per essere reindirizzato al nostro Server di Supporto...",
+    redirect_description: "Verrai reindirizzato automaticamente in pochi secondi."
+  }
 };
 
-let userLang = navigator.language || navigator.userLanguage || "en";
-userLang = userLang.toLowerCase();
+let userLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
 if(userLang.startsWith("pt")) userLang="pt";
 else if(userLang.startsWith("es")) userLang="es";
+else if(userLang.startsWith("fr")) userLang="fr";
+else if(userLang.startsWith("de")) userLang="de";
+else if(userLang.startsWith("ru")) userLang="ru";
+else if(userLang.startsWith("ja")) userLang="ja";
+else if(userLang.startsWith("it")) userLang="it";
 else userLang="en";
 
 function applyLangTexts(){
-  const elems=document.querySelectorAll('[data-lang]');
-  elems.forEach(elem=>{
-    const key=elem.getAttribute('data-lang');
+  const elems = document.querySelectorAll('[data-lang]');
+  elems.forEach(elem => {
+    const key = elem.getAttribute('data-lang');
     if(langData[userLang] && langData[userLang][key]){
-      elem.textContent=langData[userLang][key];
+      elem.textContent = langData[userLang][key];
     }
   });
 }

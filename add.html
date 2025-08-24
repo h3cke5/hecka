@@ -156,13 +156,67 @@ const langData = {
     BTN_ADD_DISCORD:"Añadir a Discord",
     REDIRECT_MESSAGE:"Está siendo redirigido para agregar HECKA a su servidor...",
     REDIRECT_DESCRIPTION:"Será redirigido automáticamente en unos segundos."
+  },
+  fr: {
+    NAV_FEATURES:"Fonctionnalités",
+    NAV_COMMANDS:"Commandes",
+    NAV_PREMIUM:"Premium",
+    NAV_SUPPORT:"Support",
+    BTN_SUPPORT_SERVER:"Serveur d'assistance",
+    BTN_ADD_DISCORD:"Ajouter à Discord",
+    REDIRECT_MESSAGE:"Vous êtes redirigé pour ajouter HECKA à votre serveur...",
+    REDIRECT_DESCRIPTION:"Vous serez automatiquement redirigé dans quelques secondes."
+  },
+  de: {
+    NAV_FEATURES:"Funktionen",
+    NAV_COMMANDS:"Befehle",
+    NAV_PREMIUM:"Premium",
+    NAV_SUPPORT:"Support",
+    BTN_SUPPORT_SERVER:"Support-Server",
+    BTN_ADD_DISCORD:"Zu Discord hinzufügen",
+    REDIRECT_MESSAGE:"Sie werden weitergeleitet, um HECKA zu Ihrem Server hinzuzufügen...",
+    REDIRECT_DESCRIPTION:"Sie werden in wenigen Sekunden automatisch weitergeleitet."
+  },
+  ru: {
+    NAV_FEATURES:"Функции",
+    NAV_COMMANDS:"Команды",
+    NAV_PREMIUM:"Премиум",
+    NAV_SUPPORT:"Поддержка",
+    BTN_SUPPORT_SERVER:"Сервер поддержки",
+    BTN_ADD_DISCORD:"Добавить в Discord",
+    REDIRECT_MESSAGE:"Вы перенаправляетесь для добавления HECKA на ваш сервер...",
+    REDIRECT_DESCRIPTION:"Вы будете автоматически перенаправлены через несколько секунд."
+  },
+  ja: {
+    NAV_FEATURES:"機能",
+    NAV_COMMANDS:"コマンド",
+    NAV_PREMIUM:"プレミアム",
+    NAV_SUPPORT:"サポート",
+    BTN_SUPPORT_SERVER:"サポートサーバー",
+    BTN_ADD_DISCORD:"Discordに追加",
+    REDIRECT_MESSAGE:"HECKAをサーバーに追加するためにリダイレクトされています...",
+    REDIRECT_DESCRIPTION:"数秒後に自動的にリダイレクトされます。"
+  },
+  it: {
+    NAV_FEATURES:"Funzionalità",
+    NAV_COMMANDS:"Comandi",
+    NAV_PREMIUM:"Premium",
+    NAV_SUPPORT:"Supporto",
+    BTN_SUPPORT_SERVER:"Server di supporto",
+    BTN_ADD_DISCORD:"Aggiungi a Discord",
+    REDIRECT_MESSAGE:"Stai per essere reindirizzato per aggiungere HECKA al tuo server...",
+    REDIRECT_DESCRIPTION:"Verrai reindirizzato automaticamente in pochi secondi."
   }
 };
 
-let userLang = navigator.language || navigator.userLanguage || "en";
-userLang = userLang.toLowerCase();
+let userLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
 if(userLang.startsWith("pt")) userLang="pt";
 else if(userLang.startsWith("es")) userLang="es";
+else if(userLang.startsWith("fr")) userLang="fr";
+else if(userLang.startsWith("de")) userLang="de";
+else if(userLang.startsWith("ru")) userLang="ru";
+else if(userLang.startsWith("ja")) userLang="ja";
+else if(userLang.startsWith("it")) userLang="it";
 else userLang="en";
 
 function applyLangTexts(){
