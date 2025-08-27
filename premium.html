@@ -444,8 +444,7 @@
         }
       });
     }
-
-    // Detect browser language, fallback to 'en'
+    
     const userLang = navigator.language || navigator.userLanguage;
     const langCode = userLang.toLowerCase().startsWith('pt') ? 'pt' :
                  userLang.toLowerCase().startsWith('es') ? 'es' :

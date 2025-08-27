@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Failed to load!</title>
+  <title data-lang="PAGE_TITLE">🚧 Hecka is down!</title>
   <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -24,9 +24,74 @@
   </style>
 </head>
 <body>
-  <h1>🚧 Mirastone fora do ar</h1>
-  <p>Nosso site está temporariamente fechado.<br>
-  Estamos fazendo melhorias!<br><br>
-  Agradecemos sua compreensão 💙</p>
+  <h1 data-lang="HEADING">🚧 Hecka is down</h1>
+  <p data-lang="DESCRIPTION">
+    Our website is temporarily closed.<br>
+    We are making improvements!<br><br>
+    Thank you for your understanding 🤍
+  </p>
+
+  <script>
+    const langData = {
+      pt: {
+        PAGE_TITLE: "Site fora do ar!",
+        HEADING: "🚧 Hecka fora do ar",
+        DESCRIPTION: "Nosso site está temporariamente fechado.<br>Estamos fazendo melhorias!<br><br>Agradecemos sua compreensão 🤍"
+      },
+      es: {
+        PAGE_TITLE: "¡Sitio fuera de servicio!",
+        HEADING: "🚧 Hecka fuera de servicio",
+        DESCRIPTION: "Nuestro sitio está temporalmente cerrado.<br>¡Estamos haciendo mejoras!<br><br>Agradecemos su comprensión 🤍"
+      },
+      fr: {
+        PAGE_TITLE: "Site hors ligne !",
+        HEADING: "🚧 Hecka hors ligne",
+        DESCRIPTION: "Notre site est temporairement fermé.<br>Nous faisons des améliorations !<br><br>Merci de votre compréhension 🤍"
+      },
+      de: {
+        PAGE_TITLE: "Seite nicht erreichbar!",
+        HEADING: "🚧 Hecka ist offline",
+        DESCRIPTION: "Unsere Seite ist vorübergehend geschlossen.<br>Wir führen Verbesserungen durch!<br><br>Vielen Dank für Ihr Verständnis 🤍"
+      },
+      ru: {
+        PAGE_TITLE: "Сайт недоступен!",
+        HEADING: "🚧 Hecka не работает",
+        DESCRIPTION: "Наш сайт временно закрыт.<br>Мы делаем улучшения!<br><br>Спасибо за понимание 🤍"
+      },
+      ja: {
+        PAGE_TITLE: "サイトは利用できません！",
+        HEADING: "🚧 Hecka は現在オフラインです",
+        DESCRIPTION: "当サイトは一時的に閉鎖されています。<br>改善作業中です！<br><br>ご理解ありがとうございます 🤍"
+      },
+      it: {
+        PAGE_TITLE: "Sito non disponibile!",
+        HEADING: "🚧 Hecka offline",
+        DESCRIPTION: "Il nostro sito è temporaneamente chiuso.<br>Stiamo effettuando dei miglioramenti!<br><br>Grazie per la comprensione 🤍"
+      }
+    };
+
+    let userLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+    if(userLang.startsWith("pt")) userLang="pt";
+    else if(userLang.startsWith("es")) userLang="es";
+    else if(userLang.startsWith("fr")) userLang="fr";
+    else if(userLang.startsWith("de")) userLang="de";
+    else if(userLang.startsWith("ru")) userLang="ru";
+    else if(userLang.startsWith("ja")) userLang="ja";
+    else if(userLang.startsWith("it")) userLang="it";
+    else userLang="en";
+
+    function applyLangTexts(){
+      if(userLang === "en") return;
+      const elems = document.querySelectorAll('[data-lang]');
+      elems.forEach(elem => {
+        const key = elem.getAttribute('data-lang');
+        if(langData[userLang] && langData[userLang][key]){
+          elem.innerHTML = langData[userLang][key];
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", applyLangTexts);
+  </script>
 </body>
 </html>

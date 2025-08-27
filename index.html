@@ -581,7 +581,7 @@
     }
 
     function translatePage(lang) {
-      if (lang === "en") return; // mantém texto padrão (inglês)
+      if (lang === "en") return;
       const elements = document.querySelectorAll("[data-lang-key]");
       elements.forEach((el) => {
         const key = el.getAttribute("data-lang-key");
