@@ -1,6 +1,7 @@
 // index.js
 const express = require("express");
 const Canvas = require("canvas");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,21 +10,21 @@ app.get("/wanted", async (req, res) => {
   const avatarUrl = req.query.avatar;
   const username = req.query.username || "Suspeito";
 
-  if (!avatarUrl) return res.status(400).send("Parâmetro 'avatar' é obrigatório");
+  if (!avatarUrl) return res.status(400).send("Parâmetro 'avatar' obrigatório.");
 
   try {
     const canvas = Canvas.createCanvas(600, 800);
     const ctx = canvas.getContext("2d");
 
-    // Template de fundo
-    const template = await Canvas.loadImage(__dirname + "/assets/wanted-template.png");
+    // Template do cartaz
+    const template = await Canvas.loadImage(path.join(__dirname, "wanted-template.png"));
     ctx.drawImage(template, 0, 0, canvas.width, canvas.height);
 
-    // Avatar
+    // Avatar do usuário
     const avatar = await Canvas.loadImage(avatarUrl);
-    ctx.drawImage(avatar, 150, 250, 300, 300);
+    ctx.drawImage(avatar, 150, 250, 300, 300); // Ajuste posição/tamanho conforme o template
 
-    // Nome
+    // Nome do usuário
     ctx.font = "bold 40px Arial";
     ctx.fillStyle = "#000";
     ctx.textAlign = "center";
@@ -31,10 +32,11 @@ app.get("/wanted", async (req, res) => {
 
     res.setHeader("Content-Type", "image/png");
     res.send(canvas.toBuffer());
+
   } catch (err) {
     console.error(err);
-    res.status(500).send("Erro ao gerar cartaz");
+    res.status(500).send("Erro ao gerar cartaz.");
   }
 });
 
-app.listen(PORT, () => console.log(`API rodando em http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`API de Wanted rodando em http://localhost:${PORT}`));
