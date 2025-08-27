@@ -1,488 +1,892 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service - HECKA</title>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - HECKA</title>
 
-  <meta name="description" content="Terms of Service for HECKA - A premium experience for your Discord server.">
-  <meta property="og:title" content="HECKA - Terms of Service">
-  <meta property="og:description" content="Terms of Service for HECKA Discord bot.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hecka.pt/terms">
-  <meta property="og:image" content="./assets/images/Hecka.png">
+    <meta name="description" content="Terms of Service for HECKA - A premium experience for your Discord server.">
+    <meta property="og:title" content="HECKA - Terms of Service">
+    <meta property="og:description" content="Terms of Service for HECKA Discord bot.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hecka.pt/terms">
+    <meta property="og:image" content="./assets/images/Hecka.png">
 
-  <link rel="shortcut icon" href="./assets/images/Hecka.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/Hecka.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/preloader.css">
-  <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/preloader.css">
+    <link rel="stylesheet" href="./assets/css/theme.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <style>
-    .legal-content {
-        
-      padding: var(--spacing-xxl) 0;
-      min-height: 70vh;
-    }
+    <style>
+      .legal-content {
+          
+        padding: var(--spacing-xxl) 0;
+        min-height: 70vh;
+      }
 
-    .legal-container {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: var(--spacing-xl);
-      box-shadow: var(--shadow-md);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      margin-top: var(--spacing-xl);
-    }
+      .legal-container {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-xl);
+        box-shadow: var(--shadow-md);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: var(--spacing-xl);
+      }
 
-    .legal-container h2 {
-      color: var(--primary);
-      margin-bottom: var(--spacing-lg);
-      font-size: 1.8rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      padding-bottom: var(--spacing-sm);
-    }
+      .legal-container h2 {
+        color: var(--primary);
+        margin-bottom: var(--spacing-lg);
+        font-size: 1.8rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: var(--spacing-sm);
+      }
 
-    .legal-container h3 {
-      color: var(--text-white);
-      margin: var(--spacing-lg) 0 var(--spacing-md);
-      font-size: 1.4rem;
-    }
+      .legal-container h3 {
+        color: var(--text-white);
+        margin: var(--spacing-lg) 0 var(--spacing-md);
+        font-size: 1.4rem;
+      }
 
-    .legal-container p, .legal-container ul, .legal-container ol {
-      margin-bottom: var(--spacing-md);
-      color: var(--text-gray);
-      line-height: 1.7;
-    }
+      .legal-container p, .legal-container ul, .legal-container ol {
+        margin-bottom: var(--spacing-md);
+        color: var(--text-gray);
+        line-height: 1.7;
+      }
 
-    .legal-container ul, .legal-container ol {
-      padding-left: var(--spacing-lg);
-    }
+      .legal-container ul, .legal-container ol {
+        padding-left: var(--spacing-lg);
+      }
 
-    .legal-container li {
-      margin-bottom: var(--spacing-sm);
-    }
+      .legal-container li {
+        margin-bottom: var(--spacing-sm);
+      }
 
-    .legal-container a {
-      color: var(--primary-light);
-      text-decoration: underline;
-      transition: color var(--transition-normal);
-    }
+      .legal-container a {
+        color: var(--primary-light);
+        text-decoration: underline;
+        transition: color var(--transition-normal);
+      }
 
-    .legal-container a:hover {
-      color: var(--primary);
-    }
+      .legal-container a:hover {
+        color: var(--primary);
+      }
 
-    .legal-date {
-      font-style: italic;
-      color: var(--text-dark);
-      margin-top: var(--spacing-xl);
-      text-align: right;
-    }
-  </style>
-</head>
-<body>
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="loader">
-      <div class="loader-circle"></div>
-      <div class="loader-circle"></div>
-      <img src="./assets/images/Hecka.png" alt="HECKA Logo" class="loader-logo">
+      .legal-date {
+        font-style: italic;
+        color: var(--text-dark);
+        margin-top: var(--spacing-xl);
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+        <img src="./assets/images/Hecka.png" alt="HECKA Logo" class="loader-logo">
+      </div>
     </div>
-  </div>
 
-  <!-- Header Section -->
-  <header class="header">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo">
+            <img src="./assets/images/Hecka.png" alt="HECKA Logo" style="height: 60px; width: auto;">
+            <h1>HECKA</h1>
+          </a>
+
+          <!-- Mobile menu toggle button -->
+          <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <div class="nav-container">
+            <nav class="nav">
+              <ul class="nav-list">
+                <li><a href="/features" class="nav-link" data-lang-key="nav_features">Features</a></li>
+                <li><a href="/#commands" class="nav-link" data-lang-key="nav_commands">Commands</a></li>
+                <li><a href="/premium" class="nav-link" data-lang-key="nav_premium">Premium</a></li>
+                <li><a href="/#support" class="nav-link" data-lang-key="nav_support">Support</a></li>
+              </ul>
+            </nav>
+            <div class="header-buttons">
+              <a href="/discord" class="btn btn-secondary" target="_blank">
+                <i class="fab fa-discord"></i> <span data-lang-key="btn_support_server">Support Server</span>
+              </a>
+              <a href="/add" class="btn btn-primary" target="_blank">
+                <i class="fas fa-plus"></i> <span data-lang-key="btn_add_discord">Add To Discord</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <!-- Legal Content Section -->
+  <section class="legal-content">
     <div class="container">
-      <div class="header-content">
-        <a href="/" class="logo">
-          <img src="./assets/images/Hecka.png" alt="HECKA Logo" style="height: 60px; width: auto;">
-          <h1>HECKA</h1>
-        </a>
-
-        <!-- Mobile menu toggle button -->
-        <div class="mobile-menu-toggle">
-          <i class="fas fa-bars"></i>
-        </div>
-
-        <div class="nav-container">
-          <nav class="nav">
-            <ul class="nav-list">
-              <li><a href="/features" class="nav-link" data-lang-key="nav_features">Features</a></li>
-              <li><a href="/#commands" class="nav-link" data-lang-key="nav_commands">Commands</a></li>
-              <li><a href="/premium" class="nav-link" data-lang-key="nav_premium">Premium</a></li>
-              <li><a href="/#support" class="nav-link" data-lang-key="nav_support">Support</a></li>
-            </ul>
-          </nav>
-          <div class="header-buttons">
-            <a href="/discord" class="btn btn-secondary" target="_blank">
-              <i class="fab fa-discord"></i> <span data-lang-key="btn_support_server">Support Server</span>
-            </a>
-            <a href="/add" class="btn btn-primary" target="_blank">
-              <i class="fas fa-plus"></i> <span data-lang-key="btn_add_discord">Add To Discord</span>
-            </a>
-          </div>
-        </div>
+      <div class="section-header">
+        <br><br><br>
+        <h2 class="section-title" data-lang-key="terms_title">Terms of Service</h2>
+        <p class="section-description" data-lang-key="terms_description">Please read these terms carefully before using HECKA</p>
       </div>
-    </div>
-  </header>
 
-<!-- Legal Content Section -->
-<section class="legal-content">
-  <div class="container">
-    <div class="section-header">
-      <br><br><br>
-      <h2 class="section-title" data-lang-key="terms_title">Terms of Service</h2>
-      <p class="section-description" data-lang-key="terms_description">Please read these terms carefully before using HECKA</p>
-    </div>
+      <div class="legal-container">
+        <h2 data-lang-key="terms_title">Terms of Service</h2>
 
-    <div class="legal-container">
-      <h2 data-lang-key="terms_title">Terms of Service</h2>
+        <p data-lang-key="intro">
+          Welcome to HECKA! These Terms of Service ("Terms") govern your access to and use of the HECKA Discord music bot ("Bot"), website, and related services (collectively, the "Services"). By using our Services, you agree to be bound by these Terms.
+        </p>
 
-      <p data-lang-key="intro">
-        Welcome to HECKA! These Terms of Service ("Terms") govern your access to and use of the HECKA Discord music bot ("Bot"), website, and related services (collectively, the "Services"). By using our Services, you agree to be bound by these Terms.
-      </p>
+        <h3 data-lang-key="section_1_title">1. Acceptance of Terms</h3>
+        <p data-lang-key="section_1_desc">
+          By inviting HECKA to your Discord server or using any of our Services, you agree to these Terms. If you do not agree to these Terms, you may not use our Services.
+        </p>
 
-      <h3 data-lang-key="section_1_title">1. Acceptance of Terms</h3>
-      <p data-lang-key="section_1_desc">
-        By inviting HECKA to your Discord server or using any of our Services, you agree to these Terms. If you do not agree to these Terms, you may not use our Services.
-      </p>
+        <h3 data-lang-key="section_2_title">2. Description of Services</h3>
+        <p data-lang-key="section_2_desc">
+          HECKA is a Discord music bot that provides music playback functionality within Discord servers. Features include:
+        </p>
+        <ul>
+          <li data-lang-key="section_2_li_1">Playing music from various sources including Spotify, Apple Music, Deezer, YouTube, SoundCloud.</li>
+          <li data-lang-key="section_2_li_2">Creating and managing playlists</li>
+          <li data-lang-key="section_2_li_3">Applying audio filters</li>
+          <li data-lang-key="section_2_li_4">Displaying lyrics</li>
+          <li data-lang-key="section_2_li_5">Other music-related features</li>
+        </ul>
 
-      <h3 data-lang-key="section_2_title">2. Description of Services</h3>
-      <p data-lang-key="section_2_desc">
-        HECKA is a Discord music bot that provides music playback functionality within Discord servers. Features include:
-      </p>
-      <ul>
-        <li data-lang-key="section_2_li_1">Playing music from various sources including Spotify, Apple Music, Deezer, YouTube, SoundCloud.</li>
-        <li data-lang-key="section_2_li_2">Creating and managing playlists</li>
-        <li data-lang-key="section_2_li_3">Applying audio filters</li>
-        <li data-lang-key="section_2_li_4">Displaying lyrics</li>
-        <li data-lang-key="section_2_li_5">Other music-related features</li>
-      </ul>
+        <h3 data-lang-key="section_3_title">3. User Requirements</h3>
+        <p data-lang-key="section_3_desc">
+          To use HECKA, you must:
+        </p>
+        <ul>
+          <li data-lang-key="section_3_li_1">Have a valid Discord account</li>
+          <li data-lang-key="section_3_li_2">Be at least 13 years old or the minimum age required in your country</li>
+          <li data-lang-key="section_3_li_3">Comply with Discord's Terms of Service and Community Guidelines</li>
+          <li data-lang-key="section_3_li_4">Have the necessary permissions to add bots to the Discord server</li>
+        </ul>
 
-      <h3 data-lang-key="section_3_title">3. User Requirements</h3>
-      <p data-lang-key="section_3_desc">
-        To use HECKA, you must:
-      </p>
-      <ul>
-        <li data-lang-key="section_3_li_1">Have a valid Discord account</li>
-        <li data-lang-key="section_3_li_2">Be at least 13 years old or the minimum age required in your country</li>
-        <li data-lang-key="section_3_li_3">Comply with Discord's Terms of Service and Community Guidelines</li>
-        <li data-lang-key="section_3_li_4">Have the necessary permissions to add bots to the Discord server</li>
-      </ul>
+        <h3 data-lang-key="section_4_title">4. Free and Premium Services</h3>
+        <p data-lang-key="section_4_desc">
+          HECKA offers both free and premium services:
+        </p>
+        <ul>
+          <li><strong data-lang-key="section_4_li_1_strong">Free Services:</strong> <span data-lang-key="section_4_li_1">Basic music playback features with standard limitations</span></li>
+          <li><strong data-lang-key="section_4_li_2_strong">Premium Services:</strong> <span data-lang-key="section_4_li_2">Enhanced features, higher quality audio, and additional functionality for a subscription fee</span></li>
+        </ul>
+        <p data-lang-key="section_4_note">
+          Premium subscriptions are subject to the payment terms outlined in Section 5.
+        </p>
 
-      <h3 data-lang-key="section_4_title">4. Free and Premium Services</h3>
-      <p data-lang-key="section_4_desc">
-        HECKA offers both free and premium services:
-      </p>
-      <ul>
-        <li><strong data-lang-key="section_4_li_1_strong">Free Services:</strong> <span data-lang-key="section_4_li_1">Basic music playback features with standard limitations</span></li>
-        <li><strong data-lang-key="section_4_li_2_strong">Premium Services:</strong> <span data-lang-key="section_4_li_2">Enhanced features, higher quality audio, and additional functionality for a subscription fee</span></li>
-      </ul>
-      <p data-lang-key="section_4_note">
-        Premium subscriptions are subject to the payment terms outlined in Section 5.
-      </p>
+        <h3 data-lang-key="section_5_title">5. Payment Terms</h3>
+        <p data-lang-key="section_5_desc">For Premium Services:</p>
+        <ul>
+          <li data-lang-key="section_5_li_1">Payments are processed through our authorized payment processors</li>
+          <li data-lang-key="section_5_li_2">Subscription fees are non-refundable except where required by law</li>
+          <li data-lang-key="section_5_li_3">Subscriptions automatically renew unless canceled before the renewal date</li>
+          <li data-lang-key="section_5_li_4">You may cancel your subscription at any time through our designated channels</li>
+          <li data-lang-key="section_5_li_5">Price changes will be communicated in advance</li>
+        </ul>
 
-      <h3 data-lang-key="section_5_title">5. Payment Terms</h3>
-      <p data-lang-key="section_5_desc">For Premium Services:</p>
-      <ul>
-        <li data-lang-key="section_5_li_1">Payments are processed through our authorized payment processors</li>
-        <li data-lang-key="section_5_li_2">Subscription fees are non-refundable except where required by law</li>
-        <li data-lang-key="section_5_li_3">Subscriptions automatically renew unless canceled before the renewal date</li>
-        <li data-lang-key="section_5_li_4">You may cancel your subscription at any time through our designated channels</li>
-        <li data-lang-key="section_5_li_5">Price changes will be communicated in advance</li>
-      </ul>
+        <h3 data-lang-key="section_6_title">6. User Conduct</h3>
+        <p data-lang-key="section_6_desc">When using HECKA, you agree not to:</p>
+        <ul>
+          <li data-lang-key="section_6_li_1">Use the bot to play or distribute content that infringes copyright or other intellectual property rights</li>
+          <li data-lang-key="section_6_li_2">Attempt to exploit, harm, or extract data from the bot</li>
+          <li data-lang-key="section_6_li_3">Use the bot for any illegal purposes</li>
+          <li data-lang-key="section_6_li_4">Interfere with the bot's operation or attempt to access it using methods other than the provided interface</li>
+          <li data-lang-key="section_6_li_5">Use the bot to distribute harmful content, including but not limited to malware, viruses, or phishing attempts</li>
+          <li data-lang-key="section_6_li_6">Resell or redistribute access to the bot</li>
+        </ul>
 
-      <h3 data-lang-key="section_6_title">6. User Conduct</h3>
-      <p data-lang-key="section_6_desc">When using HECKA, you agree not to:</p>
-      <ul>
-        <li data-lang-key="section_6_li_1">Use the bot to play or distribute content that infringes copyright or other intellectual property rights</li>
-        <li data-lang-key="section_6_li_2">Attempt to exploit, harm, or extract data from the bot</li>
-        <li data-lang-key="section_6_li_3">Use the bot for any illegal purposes</li>
-        <li data-lang-key="section_6_li_4">Interfere with the bot's operation or attempt to access it using methods other than the provided interface</li>
-        <li data-lang-key="section_6_li_5">Use the bot to distribute harmful content, including but not limited to malware, viruses, or phishing attempts</li>
-        <li data-lang-key="section_6_li_6">Resell or redistribute access to the bot</li>
-      </ul>
+        <h3 data-lang-key="section_7_title">7. Content and Copyright</h3>
+        <p data-lang-key="section_7_desc_1">
+          HECKA facilitates playback of content from third-party platforms. We do not host or distribute copyrighted content. Users are responsible for ensuring they have the right to play content in their Discord server.
+        </p>
+        <p data-lang-key="section_7_desc_2">
+          We respect copyright laws and will comply with valid DMCA takedown requests. If you believe your copyrighted work has been used inappropriately, please contact us.
+        </p>
 
-      <h3 data-lang-key="section_7_title">7. Content and Copyright</h3>
-      <p data-lang-key="section_7_desc_1">
-        HECKA facilitates playback of content from third-party platforms. We do not host or distribute copyrighted content. Users are responsible for ensuring they have the right to play content in their Discord server.
-      </p>
-      <p data-lang-key="section_7_desc_2">
-        We respect copyright laws and will comply with valid DMCA takedown requests. If you believe your copyrighted work has been used inappropriately, please contact us.
-      </p>
+        <h3 data-lang-key="section_8_title">8. Limitation of Liability</h3>
+        <p data-lang-key="section_8_desc">To the maximum extent permitted by law:</p>
+        <ul>
+          <li data-lang-key="section_8_li_1">HECKA is provided "as is" without warranties of any kind</li>
+          <li data-lang-key="section_8_li_2">We are not responsible for any damages or losses resulting from your use of the bot</li>
+          <li data-lang-key="section_8_li_3">We are not liable for any content played through the bot</li>
+          <li data-lang-key="section_8_li_4">We do not guarantee uninterrupted or error-free service</li>
+          <li data-lang-key="section_8_li_5">Our total liability for any claims is limited to the amount you paid for Premium Services in the past 12 months</li>
+        </ul>
 
-      <h3 data-lang-key="section_8_title">8. Limitation of Liability</h3>
-      <p data-lang-key="section_8_desc">To the maximum extent permitted by law:</p>
-      <ul>
-        <li data-lang-key="section_8_li_1">HECKA is provided "as is" without warranties of any kind</li>
-        <li data-lang-key="section_8_li_2">We are not responsible for any damages or losses resulting from your use of the bot</li>
-        <li data-lang-key="section_8_li_3">We are not liable for any content played through the bot</li>
-        <li data-lang-key="section_8_li_4">We do not guarantee uninterrupted or error-free service</li>
-        <li data-lang-key="section_8_li_5">Our total liability for any claims is limited to the amount you paid for Premium Services in the past 12 months</li>
-      </ul>
+        <h3 data-lang-key="section_9_title">9. Service Modifications and Termination</h3>
+        <p data-lang-key="section_9_desc">We reserve the right to:</p>
+        <ul>
+          <li data-lang-key="section_9_li_1">Modify, suspend, or discontinue any part of our Services at any time</li>
+          <li data-lang-key="section_9_li_2">Change these Terms with reasonable notice</li>
+          <li data-lang-key="section_9_li_3">Terminate or restrict access to our Services for violations of these Terms</li>
+        </ul>
 
-      <h3 data-lang-key="section_9_title">9. Service Modifications and Termination</h3>
-      <p data-lang-key="section_9_desc">We reserve the right to:</p>
-      <ul>
-        <li data-lang-key="section_9_li_1">Modify, suspend, or discontinue any part of our Services at any time</li>
-        <li data-lang-key="section_9_li_2">Change these Terms with reasonable notice</li>
-        <li data-lang-key="section_9_li_3">Terminate or restrict access to our Services for violations of these Terms</li>
-      </ul>
+        <h3 data-lang-key="section_10_title">10. Privacy</h3>
+        <p data-lang-key="section_10_desc">Our Privacy Policy explains how we collect, use, and protect your information. By using our Services, you also agree to our Privacy Policy.</p>
 
-      <h3 data-lang-key="section_10_title">10. Privacy</h3>
-      <p data-lang-key="section_10_desc">Our Privacy Policy explains how we collect, use, and protect your information. By using our Services, you also agree to our Privacy Policy.</p>
+        <h3 data-lang-key="section_11_title">11. Third-Party Services</h3>
+        <p data-lang-key="section_11_desc">
+          HECKA integrates with third-party services like Spotify, Apple Music, Deezer, YouTube, and SoundCloud. Your use of these services through our bot is also subject to their respective terms of service and privacy policies.
+        </p>
 
-      <h3 data-lang-key="section_11_title">11. Third-Party Services</h3>
-      <p data-lang-key="section_11_desc">
-        HECKA integrates with third-party services like Spotify, Apple Music, Deezer, YouTube, and SoundCloud. Your use of these services through our bot is also subject to their respective terms of service and privacy policies.
-      </p>
+        <h3 data-lang-key="section_12_title">12. Contact Information</h3>
+        <p data-lang-key="section_12_desc">
+          If you have questions about these Terms, please contact us through our <a href="/discord" target="_blank" data-lang-key="contact_link">Discord Support Server</a>.
+        </p>
 
-      <h3 data-lang-key="section_12_title">12. Contact Information</h3>
-      <p data-lang-key="section_12_desc">
-        If you have questions about these Terms, please contact us through our <a href="/discord" target="_blank" data-lang-key="contact_link">Discord Support Server</a>.
-      </p>
+        <h3 data-lang-key="section_13_title">13. Governing Law</h3>
+        <p data-lang-key="section_13_desc">
+          These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which we operate, without regard to its conflict of law provisions.
+        </p>
 
-      <h3 data-lang-key="section_13_title">13. Governing Law</h3>
-      <p data-lang-key="section_13_desc">
-        These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which we operate, without regard to its conflict of law provisions.
-      </p>
-
-      <div class="legal-date">
-        <p data-lang-key="last_updated">Last updated: June 24, 2025</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="/" class="footer-logo">
-          <img src="./assets/images/Hecka.png" alt="HECKA Logo" style="height: 150px; width: auto;">
-        </a>
-        <div class="footer-links">
-          <div class="footer-column">
-            <h3><i class="fas fa-link"></i> <span data-lang-key="footer_links">Links</span></h3>
-            <ul>
-              <li><a href="/features"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_features">Features</span></a></li>
-              <li><a href="/#commands"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_commands">Commands</span></a></li>
-              <li><a href="/premium"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_premium">Premium</span></a></li>
-              <li><a href="/#support"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_support">Support</span></a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3><i class="fas fa-gavel"></i> <span data-lang-key="footer_legal">Legal</span></h3>
-            <ul>
-              <li><a href="/terms"><i class="fas fa-chevron-right"></i> <span data-lang-key="footer_terms">Terms of Service</span></a></li>
-              <li><a href="/privacy"><i class="fas fa-chevron-right"></i> <span data-lang-key="footer_privacy">Privacy Policy</span></a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3><i class="fas fa-globe"></i> <span data-lang-key="footer_connect">Connect</span></h3>
-            <ul>
-              <li><a href="/discord" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-              <li><a href="https://top.gg/bot/883842800368640041"><i class="fas fa-vote-yea"></i> <span data-lang-key="footer_topgg">Vote on Top.gg</span></a></li>
-            </ul>
-          </div>
+        <div class="legal-date">
+          <p data-lang-key="last_updated">Last updated: June 24, 2025</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p><span data-lang-key="footer_copy">© 2021-2025 HECKA. All rights reserved.</span></p>
-      </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- JavaScript Files -->
-  <script src="./assets/js/preloader.js"></script>
-  <script src="./assets/js/script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <a href="/" class="footer-logo">
+            <img src="./assets/images/Hecka.png" alt="HECKA Logo" style="height: 150px; width: auto;">
+          </a>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3><i class="fas fa-link"></i> <span data-lang-key="footer_links">Links</span></h3>
+              <ul>
+                <li><a href="/features"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_features">Features</span></a></li>
+                <li><a href="/#commands"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_commands">Commands</span></a></li>
+                <li><a href="/premium"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_premium">Premium</span></a></li>
+                <li><a href="/#support"><i class="fas fa-chevron-right"></i> <span data-lang-key="nav_support">Support</span></a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3><i class="fas fa-gavel"></i> <span data-lang-key="footer_legal">Legal</span></h3>
+              <ul>
+                <li><a href="/terms"><i class="fas fa-chevron-right"></i> <span data-lang-key="footer_terms">Terms of Service</span></a></li>
+                <li><a href="/privacy"><i class="fas fa-chevron-right"></i> <span data-lang-key="footer_privacy">Privacy Policy</span></a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3><i class="fas fa-globe"></i> <span data-lang-key="footer_connect">Connect</span></h3>
+              <ul>
+                <li><a href="/discord" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                <li><a href="https://top.gg/bot/883842800368640041"><i class="fas fa-vote-yea"></i> <span data-lang-key="footer_topgg">Vote on Top.gg</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p><span data-lang-key="footer_copy">© 2021-2025 HECKA. All rights reserved.</span></p>
+        </div>
+      </div>
+    </footer>
 
-    <script>
-    const translations = {
-      pt: {
-        nav_features: "Recursos",
-        nav_commands: "Comandos",
-        nav_premium: "Premium",
-        nav_support: "Suporte",
-        btn_support_server: "Servidor Suporte",
-        btn_add_discord: "Adicionar ao Discord",
-      terms_title: "Termos de Serviço",
-      terms_description: "Por favor, leia estes termos cuidadosamente antes de usar o HECKA",
-      intro: "Bem-vindo ao HECKA! Estes Termos de Serviço (\"Termos\") regem seu acesso e uso do bot de música Discord HECKA (\"Bot\"), site e serviços relacionados (coletivamente, os \"Serviços\"). Ao usar nossos Serviços, você concorda em estar vinculado a estes Termos.",
-      section_1_title: "1. Aceitação dos Termos",
-      section_1_desc: "Ao convidar o HECKA para seu servidor Discord ou usar qualquer um de nossos Serviços, você concorda com estes Termos. Se não concordar com estes Termos, não use nossos Serviços.",
-      section_2_title: "2. Descrição dos Serviços",
-      section_2_desc: "HECKA é um bot de música para Discord que oferece funcionalidade de reprodução de música em servidores Discord. As funcionalidades incluem:",
-      section_2_li_1: "Reprodução de música de várias fontes, incluindo Spotify, Apple Music, Deezer, YouTube, SoundCloud.",
-      section_2_li_2: "Criação e gerenciamento de playlists",
-      section_2_li_3: "Aplicação de filtros de áudio",
-      section_2_li_4: "Exibição de letras",
-      section_2_li_5: "Outras funcionalidades relacionadas à música",
-      section_3_title: "3. Requisitos do Usuário",
-      section_3_desc: "Para usar o HECKA, você deve:",
-      section_3_li_1: "Possuir uma conta válida no Discord",
-      section_3_li_2: "Ter pelo menos 13 anos ou a idade mínima exigida no seu país",
-      section_3_li_3: "Cumprir os Termos de Serviço e Diretrizes da Comunidade do Discord",
-      section_3_li_4: "Ter as permissões necessárias para adicionar bots ao servidor Discord",
-      section_4_title: "4. Serviços Gratuitos e Premium",
-      section_4_desc: "HECKA oferece serviços gratuitos e premium:",
-      section_4_li_1_strong: "Serviços Gratuitos:",
-      section_4_li_1: "Funcionalidades básicas de reprodução de música com limitações padrão",
-      section_4_li_2_strong: "Serviços Premium:",
-      section_4_li_2: "Funcionalidades aprimoradas, áudio de maior qualidade e funcionalidades adicionais mediante assinatura",
-      section_4_note: "As assinaturas premium estão sujeitas aos termos de pagamento descritos na Seção 5.",
-      section_5_title: "5. Termos de Pagamento",
-      section_5_desc: "Para Serviços Premium:",
-      section_5_li_1: "Os pagamentos são processados por meio de nossos processadores autorizados",
-      section_5_li_2: "As taxas de assinatura não são reembolsáveis, exceto quando exigido por lei",
-      section_5_li_3: "As assinaturas são renovadas automaticamente, a menos que canceladas antes da data de renovação",
-      section_5_li_4: "Você pode cancelar sua assinatura a qualquer momento através dos canais designados",
-      section_5_li_5: "Mudanças de preço serão comunicadas com antecedência",
-      section_6_title: "6. Conduta do Usuário",
-      section_6_desc: "Ao usar o HECKA, você concorda em não:",
-      section_6_li_1: "Usar o bot para reproduzir ou distribuir conteúdo que infrinja direitos autorais ou outros direitos de propriedade intelectual",
-      section_6_li_2: "Tentar explorar, prejudicar ou extrair dados do bot",
-      section_6_li_3: "Usar o bot para quaisquer fins ilegais",
-      section_6_li_4: "Interferir na operação do bot ou tentar acessá-lo por métodos diferentes da interface fornecida",
-      section_6_li_5: "Usar o bot para distribuir conteúdo prejudicial, incluindo, mas não se limitando a malware, vírus ou tentativas de phishing",
-      section_6_li_6: "Revender ou redistribuir o acesso ao bot",
-      section_7_title: "7. Conteúdo e Direitos Autorais",
-      section_7_desc_1: "HECKA facilita a reprodução de conteúdo de plataformas terceiras. Não hospedamos nem distribuímos conteúdo protegido por direitos autorais. Os usuários são responsáveis por garantir que têm o direito de reproduzir o conteúdo em seu servidor Discord.",
-      section_7_desc_2: "Respeitamos as leis de direitos autorais e cumpriremos solicitações válidas de remoção conforme DMCA. Se você acredita que seu trabalho protegido por direitos autorais foi usado de forma inadequada, entre em contato conosco.",      section_8_title: "8. Limitação de Responsabilidade",
-      section_8_desc: "Na máxima extensão permitida por lei:",
-      section_8_li_1: "O HECKA é fornecido \"como está\" sem garantias de qualquer tipo",
-      section_8_li_2: "Não somos responsáveis por quaisquer danos ou perdas resultantes do uso do bot",
-      section_8_li_3: "Não somos responsáveis por qualquer conteúdo reproduzido através do bot",
-      section_8_li_4: "Não garantimos serviço ininterrupto ou livre de erros",
-      section_8_li_5: "Nossa responsabilidade total por quaisquer reclamações é limitada ao valor que você pagou pelos Serviços Premium nos últimos 12 meses",
-      section_9_title: "9. Modificações e Rescisão do Serviço",
-      section_9_desc: "Reservamo-nos o direito de:",
-      section_9_li_1: "Modificar, suspender ou descontinuar qualquer parte dos nossos Serviços a qualquer momento",
-      section_9_li_2: "Alterar estes Termos com aviso prévio razoável",
-      section_9_li_3: "Encerrar ou restringir o acesso aos nossos Serviços por violações destes Termos",
-      section_10_title: "10. Privacidade",
-      section_10_desc: "Nossa Política de Privacidade explica como coletamos, usamos e protegemos suas informações. Ao usar nossos Serviços, você também concorda com nossa Política de Privacidade.",
-      section_11_title: "11. Serviços de Terceiros",
-      section_11_desc: "HECKA integra serviços de terceiros como Spotify, Apple Music, Deezer, YouTube e SoundCloud. Seu uso desses serviços através do nosso bot também está sujeito aos respectivos termos de serviço e políticas de privacidade.",
-      section_12_title: "12. Informações de Contato",
-      section_12_desc: 'Se você tiver dúvidas sobre estes Termos, entre em contato conosco através do nosso <a href="/discord" target="_blank">Servidor de Suporte Discord</a>.',
-      contact_link: "Servidor de Suporte Discord",
-      section_13_title: "13. Lei Aplicável",
-      section_13_desc: "Estes Termos serão regidos e interpretados de acordo com as leis da jurisdição em que operamos, sem considerar seus conflitos de leis.",
-      last_updated: "Última atualização: 24 de Junho de 2025",
-        footer_links: "Links",
-        footer_legal: "Legal",
-        footer_terms: "Termos de Serviço",
-        footer_privacy: "Política de Privacidade",
-        footer_connect: "Conectar",
-        footer_topgg: "Vote no Top.gg",
-        footer_copy: "© 2021-2025 HECKA. Todos os direitos reservados."
-        
-      },
-es: {
-  nav_features: "Características",
-  nav_commands: "Comandos",
+    <!-- JavaScript Files -->
+    <script src="./assets/js/preloader.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+      <script>
+      const translations = {
+        pt: {
+          nav_features: "Recursos",
+          nav_commands: "Comandos",
+          nav_premium: "Premium",
+          nav_support: "Suporte",
+          btn_support_server: "Servidor Suporte",
+          btn_add_discord: "Adicionar ao Discord",
+        terms_title: "Termos de Serviço",
+        terms_description: "Por favor, leia estes termos cuidadosamente antes de usar o HECKA",
+        intro: "Bem-vindo ao HECKA! Estes Termos de Serviço (\"Termos\") regem seu acesso e uso do bot de música Discord HECKA (\"Bot\"), site e serviços relacionados (coletivamente, os \"Serviços\"). Ao usar nossos Serviços, você concorda em estar vinculado a estes Termos.",
+        section_1_title: "1. Aceitação dos Termos",
+        section_1_desc: "Ao convidar o HECKA para seu servidor Discord ou usar qualquer um de nossos Serviços, você concorda com estes Termos. Se não concordar com estes Termos, não use nossos Serviços.",
+        section_2_title: "2. Descrição dos Serviços",
+        section_2_desc: "HECKA é um bot de música para Discord que oferece funcionalidade de reprodução de música em servidores Discord. As funcionalidades incluem:",
+        section_2_li_1: "Reprodução de música de várias fontes, incluindo Spotify, Apple Music, Deezer, YouTube, SoundCloud.",
+        section_2_li_2: "Criação e gerenciamento de playlists",
+        section_2_li_3: "Aplicação de filtros de áudio",
+        section_2_li_4: "Exibição de letras",
+        section_2_li_5: "Outras funcionalidades relacionadas à música",
+        section_3_title: "3. Requisitos do Usuário",
+        section_3_desc: "Para usar o HECKA, você deve:",
+        section_3_li_1: "Possuir uma conta válida no Discord",
+        section_3_li_2: "Ter pelo menos 13 anos ou a idade mínima exigida no seu país",
+        section_3_li_3: "Cumprir os Termos de Serviço e Diretrizes da Comunidade do Discord",
+        section_3_li_4: "Ter as permissões necessárias para adicionar bots ao servidor Discord",
+        section_4_title: "4. Serviços Gratuitos e Premium",
+        section_4_desc: "HECKA oferece serviços gratuitos e premium:",
+        section_4_li_1_strong: "Serviços Gratuitos:",
+        section_4_li_1: "Funcionalidades básicas de reprodução de música com limitações padrão",
+        section_4_li_2_strong: "Serviços Premium:",
+        section_4_li_2: "Funcionalidades aprimoradas, áudio de maior qualidade e funcionalidades adicionais mediante assinatura",
+        section_4_note: "As assinaturas premium estão sujeitas aos termos de pagamento descritos na Seção 5.",
+        section_5_title: "5. Termos de Pagamento",
+        section_5_desc: "Para Serviços Premium:",
+        section_5_li_1: "Os pagamentos são processados por meio de nossos processadores autorizados",
+        section_5_li_2: "As taxas de assinatura não são reembolsáveis, exceto quando exigido por lei",
+        section_5_li_3: "As assinaturas são renovadas automaticamente, a menos que canceladas antes da data de renovação",
+        section_5_li_4: "Você pode cancelar sua assinatura a qualquer momento através dos canais designados",
+        section_5_li_5: "Mudanças de preço serão comunicadas com antecedência",
+        section_6_title: "6. Conduta do Usuário",
+        section_6_desc: "Ao usar o HECKA, você concorda em não:",
+        section_6_li_1: "Usar o bot para reproduzir ou distribuir conteúdo que infrinja direitos autorais ou outros direitos de propriedade intelectual",
+        section_6_li_2: "Tentar explorar, prejudicar ou extrair dados do bot",
+        section_6_li_3: "Usar o bot para quaisquer fins ilegais",
+        section_6_li_4: "Interferir na operação do bot ou tentar acessá-lo por métodos diferentes da interface fornecida",
+        section_6_li_5: "Usar o bot para distribuir conteúdo prejudicial, incluindo, mas não se limitando a malware, vírus ou tentativas de phishing",
+        section_6_li_6: "Revender ou redistribuir o acesso ao bot",
+        section_7_title: "7. Conteúdo e Direitos Autorais",
+        section_7_desc_1: "HECKA facilita a reprodução de conteúdo de plataformas terceiras. Não hospedamos nem distribuímos conteúdo protegido por direitos autorais. Os usuários são responsáveis por garantir que têm o direito de reproduzir o conteúdo em seu servidor Discord.",
+        section_7_desc_2: "Respeitamos as leis de direitos autorais e cumpriremos solicitações válidas de remoção conforme DMCA. Se você acredita que seu trabalho protegido por direitos autorais foi usado de forma inadequada, entre em contato conosco.",      section_8_title: "8. Limitação de Responsabilidade",
+        section_8_desc: "Na máxima extensão permitida por lei:",
+        section_8_li_1: "O HECKA é fornecido \"como está\" sem garantias de qualquer tipo",
+        section_8_li_2: "Não somos responsáveis por quaisquer danos ou perdas resultantes do uso do bot",
+        section_8_li_3: "Não somos responsáveis por qualquer conteúdo reproduzido através do bot",
+        section_8_li_4: "Não garantimos serviço ininterrupto ou livre de erros",
+        section_8_li_5: "Nossa responsabilidade total por quaisquer reclamações é limitada ao valor que você pagou pelos Serviços Premium nos últimos 12 meses",
+        section_9_title: "9. Modificações e Rescisão do Serviço",
+        section_9_desc: "Reservamo-nos o direito de:",
+        section_9_li_1: "Modificar, suspender ou descontinuar qualquer parte dos nossos Serviços a qualquer momento",
+        section_9_li_2: "Alterar estes Termos com aviso prévio razoável",
+        section_9_li_3: "Encerrar ou restringir o acesso aos nossos Serviços por violações destes Termos",
+        section_10_title: "10. Privacidade",
+        section_10_desc: "Nossa Política de Privacidade explica como coletamos, usamos e protegemos suas informações. Ao usar nossos Serviços, você também concorda com nossa Política de Privacidade.",
+        section_11_title: "11. Serviços de Terceiros",
+        section_11_desc: "HECKA integra serviços de terceiros como Spotify, Apple Music, Deezer, YouTube e SoundCloud. Seu uso desses serviços através do nosso bot também está sujeito aos respectivos termos de serviço e políticas de privacidade.",
+        section_12_title: "12. Informações de Contato",
+        section_12_desc: 'Se você tiver dúvidas sobre estes Termos, entre em contato conosco através do nosso <a href="/discord" target="_blank">Servidor de Suporte Discord</a>.',
+        contact_link: "Servidor de Suporte Discord",
+        section_13_title: "13. Lei Aplicável",
+        section_13_desc: "Estes Termos serão regidos e interpretados de acordo com as leis da jurisdição em que operamos, sem considerar seus conflitos de leis.",
+        last_updated: "Última atualização: 24 de Junho de 2025",
+          footer_links: "Links",
+          footer_legal: "Legal",
+          footer_terms: "Termos de Serviço",
+          footer_privacy: "Política de Privacidade",
+          footer_connect: "Conectar",
+          footer_topgg: "Vote no Top.gg",
+          footer_copy: "© 2021-2025 HECKA. Todos os direitos reservados."
+          
+        },
+  es: {
+    nav_features: "Características",
+    nav_commands: "Comandos",
+    nav_premium: "Premium",
+    nav_support: "Soporte",
+    btn_support_server: "Servidor de Soporte",
+    btn_add_discord: "Agregar a Discord",
+    terms_title: "Términos de Servicio",
+    terms_description: "Por favor, lea estos términos cuidadosamente antes de usar HECKA",
+    intro: "¡Bienvenido a HECKA! Estos Términos de Servicio (\"Términos\") regulan su acceso y uso del bot de música para Discord HECKA (\"Bot\"), sitio web y servicios relacionados (colectivamente, los \"Servicios\"). Al usar nuestros Servicios, usted acepta estar sujeto a estos Términos.",
+    section_1_title: "1. Aceptación de los Términos",
+    section_1_desc: "Al invitar a HECKA a su servidor de Discord o usar cualquiera de nuestros Servicios, usted acepta estos Términos. Si no está de acuerdo con estos Términos, no use nuestros Servicios.",
+    section_2_title: "2. Descripción de los Servicios",
+    section_2_desc: "HECKA es un bot de música para Discord que ofrece funcionalidad para reproducir música en servidores de Discord. Las funcionalidades incluyen:",
+    section_2_li_1: "Reproducción de música desde varias fuentes, incluyendo Spotify, Apple Music, Deezer, YouTube, SoundCloud.",
+    section_2_li_2: "Creación y gestión de listas de reproducción",
+    section_2_li_3: "Aplicación de filtros de audio",
+    section_2_li_4: "Visualización de letras",
+    section_2_li_5: "Otras funcionalidades relacionadas con la música",
+    section_3_title: "3. Requisitos del Usuario",
+    section_3_desc: "Para usar HECKA, debe:",
+    section_3_li_1: "Tener una cuenta válida en Discord",
+    section_3_li_2: "Tener al menos 13 años o la edad mínima requerida en su país",
+    section_3_li_3: "Cumplir con los Términos de Servicio y las Directrices de la Comunidad de Discord",
+    section_3_li_4: "Tener los permisos necesarios para añadir bots al servidor de Discord",
+    section_4_title: "4. Servicios Gratuitos y Premium",
+    section_4_desc: "HECKA ofrece servicios gratuitos y premium:",
+    section_4_li_1_strong: "Servicios Gratuitos:",
+    section_4_li_1: "Funciones básicas de reproducción de música con limitaciones estándar",
+    section_4_li_2_strong: "Servicios Premium:",
+    section_4_li_2: "Funciones mejoradas, audio de mayor calidad y funcionalidades adicionales mediante suscripción",
+    section_4_note: "Las suscripciones premium están sujetas a los términos de pago descritos en la Sección 5.",
+    section_5_title: "5. Términos de Pago",
+    section_5_desc: "Para Servicios Premium:",
+    section_5_li_1: "Los pagos se procesan a través de nuestros procesadores autorizados",
+    section_5_li_2: "Las tarifas de suscripción no son reembolsables, excepto cuando lo exija la ley",
+    section_5_li_3: "Las suscripciones se renuevan automáticamente, a menos que se cancelen antes de la fecha de renovación",
+    section_5_li_4: "Puede cancelar su suscripción en cualquier momento a través de los canales designados",
+    section_5_li_5: "Los cambios de precio serán comunicados con anticipación",
+    section_6_title: "6. Conducta del Usuario",
+    section_6_desc: "Al usar HECKA, usted acepta no:",
+    section_6_li_1: "Usar el bot para reproducir o distribuir contenido que infrinja derechos de autor u otros derechos de propiedad intelectual",
+    section_6_li_2: "Intentar explotar, dañar o extraer datos del bot",
+    section_6_li_3: "Usar el bot para fines ilegales",
+    section_6_li_4: "Interferir con la operación del bot o intentar acceder por medios distintos a la interfaz proporcionada",
+    section_6_li_5: "Usar el bot para distribuir contenido dañino, incluyendo malware, virus o intentos de phishing",
+    section_6_li_6: "Revender o redistribuir el acceso al bot",
+    section_7_title: "7. Contenido y Derechos de Autor",
+    section_7_desc_1: "HECKA facilita la reproducción de contenido de plataformas de terceros. No alojamos ni distribuimos contenido protegido por derechos de autor. Los usuarios son responsables de asegurar que tienen el derecho de reproducir el contenido en su servidor de Discord.",
+    section_7_desc_2: "Respetamos las leyes de derechos de autor y cumpliremos solicitudes válidas de eliminación conforme a DMCA. Si cree que su trabajo protegido ha sido usado de forma indebida, contáctenos.",
+    section_8_title: "8. Limitación de Responsabilidad",
+    section_8_desc: "En la máxima medida permitida por la ley:",
+    section_8_li_1: "HECKA se proporciona “tal cual” sin garantías de ningún tipo",
+    section_8_li_2: "No somos responsables por daños o pérdidas derivados del uso del bot",
+    section_8_li_3: "No somos responsables por ningún contenido reproducido a través del bot",
+    section_8_li_4: "No garantizamos servicio ininterrumpido o libre de errores",
+    section_8_li_5: "Nuestra responsabilidad total por cualquier reclamo está limitada al monto pagado por los Servicios Premium en los últimos 12 meses",
+    section_9_title: "9. Modificaciones y Terminación del Servicio",
+    section_9_desc: "Nos reservamos el derecho de:",
+    section_9_li_1: "Modificar, suspender o descontinuar cualquier parte de nuestros Servicios en cualquier momento",
+    section_9_li_2: "Cambiar estos Términos con aviso previo razonable",
+    section_9_li_3: "Terminar o restringir el acceso a nuestros Servicios por violaciones a estos Términos",
+    section_10_title: "10. Privacidad",
+    section_10_desc: "Nuestra Política de Privacidad explica cómo recopilamos, usamos y protegemos su información. Al usar nuestros Servicios, también acepta nuestra Política de Privacidad.",
+    section_11_title: "11. Servicios de Terceros",
+    section_11_desc: "HECKA integra servicios de terceros como Spotify, Apple Music, Deezer, YouTube y SoundCloud. El uso de estos servicios a través de nuestro bot también está sujeto a sus respectivos términos y políticas de privacidad.",
+    section_12_title: "12. Información de Contacto",
+    section_12_desc: 'Si tiene preguntas sobre estos Términos, contáctenos a través de nuestro <a href="/discord" target="_blank">Servidor de Soporte Discord</a>.',
+    contact_link: "Servidor de Soporte Discord",
+    section_13_title: "13. Ley Aplicable",
+    section_13_desc: "Estos Términos se regirán e interpretarán de acuerdo con las leyes de la jurisdicción donde operamos, sin considerar conflictos de leyes.",
+    last_updated: "Última actualización: 24 de junio de 2025",
+    footer_links: "Enlaces",
+    footer_legal: "Legal",
+    footer_terms: "Términos de Servicio",
+    footer_privacy: "Política de Privacidad",
+    footer_connect: "Conectar",
+    footer_topgg: "Votar en Top.gg",
+    footer_copy: "© 2021-2025 HECKA. Todos los derechos reservados."
+  },
+    fr: {
+    nav_features: "Fonctionnalités",
+    nav_commands: "Commandes",
+    nav_premium: "Premium",
+    nav_support: "Support",
+    btn_support_server: "Serveur d'assistance",
+    btn_add_discord: "Ajouter à Discord",
+    terms_title: "Conditions d'utilisation",
+    terms_description: "Veuillez lire attentivement ces conditions avant d'utiliser HECKA",
+    intro: "Bienvenue sur HECKA ! Ces Conditions d'utilisation (« Conditions ») régissent votre accès et votre utilisation du bot musical Discord HECKA (« Bot »), du site Web et des services associés (collectivement, les « Services »). En utilisant nos Services, vous acceptez d'être lié par ces Conditions.",
+    section_1_title: "1. Acceptation des Conditions",
+    section_1_desc: "En invitant HECKA sur votre serveur Discord ou en utilisant nos Services, vous acceptez ces Conditions. Si vous n'acceptez pas ces Conditions, n'utilisez pas nos Services.",
+    section_2_title: "2. Description des Services",
+    section_2_desc: "HECKA est un bot musical Discord qui offre des fonctionnalités de lecture musicale dans les serveurs Discord. Les fonctionnalités incluent :",
+    section_2_li_1: "Lecture de musique depuis diverses sources telles que Spotify, Apple Music, Deezer, YouTube, SoundCloud.",
+    section_2_li_2: "Création et gestion de playlists",
+    section_2_li_3: "Application de filtres audio",
+    section_2_li_4: "Affichage des paroles",
+    section_2_li_5: "Autres fonctionnalités musicales",
+    section_3_title: "3. Exigences de l'utilisateur",
+    section_3_desc: "Pour utiliser HECKA, vous devez :",
+    section_3_li_1: "Avoir un compte Discord valide",
+    section_3_li_2: "Avoir au moins 13 ans ou l'âge minimum requis dans votre pays",
+    section_3_li_3: "Respecter les Conditions d'utilisation et les directives de la communauté Discord",
+    section_3_li_4: "Avoir les permissions nécessaires pour ajouter des bots au serveur Discord",
+    section_4_title: "4. Services gratuits et premium",
+    section_4_desc: "HECKA propose des services gratuits et premium :",
+    section_4_li_1_strong: "Services gratuits :",
+    section_4_li_1: "Fonctionnalités de lecture musicale de base avec limitations standard",
+    section_4_li_2_strong: "Services Premium :",
+    section_4_li_2: "Fonctionnalités améliorées, audio de meilleure qualité et fonctionnalités supplémentaires avec abonnement",
+    section_4_note: "Les abonnements premium sont soumis aux conditions de paiement décrites à la section 5.",
+    section_5_title: "5. Conditions de paiement",
+    section_5_desc: "Pour les services premium :",
+    section_5_li_1: "Les paiements sont traités via nos prestataires autorisés",
+    section_5_li_2: "Les frais d'abonnement ne sont pas remboursables sauf si la loi l'exige",
+    section_5_li_3: "Les abonnements se renouvellent automatiquement sauf annulation avant la date de renouvellement",
+    section_5_li_4: "Vous pouvez annuler votre abonnement à tout moment via les canaux désignés",
+    section_5_li_5: "Les modifications de prix seront communiquées à l'avance",
+    section_6_title: "6. Conduite de l'utilisateur",
+    section_6_desc: "En utilisant HECKA, vous acceptez de ne pas :",
+    section_6_li_1: "Utiliser le bot pour jouer ou distribuer du contenu enfreignant les droits d'auteur ou autres droits de propriété intellectuelle",
+    section_6_li_2: "Tenter d'exploiter, d'endommager ou d'extraire des données du bot",
+    section_6_li_3: "Utiliser le bot à des fins illégales",
+    section_6_li_4: "Interférer avec le fonctionnement du bot ou tenter d'y accéder autrement que par l'interface fournie",
+    section_6_li_5: "Utiliser le bot pour distribuer du contenu nuisible, y compris logiciels malveillants, virus ou tentatives de phishing",
+    section_6_li_6: "Revendre ou redistribuer l'accès au bot",
+    section_7_title: "7. Contenu et droits d'auteur",
+    section_7_desc_1: "HECKA facilite la lecture de contenu provenant de plateformes tierces. Nous n'hébergeons ni ne distribuons de contenu protégé par le droit d'auteur. Les utilisateurs sont responsables de s'assurer qu'ils ont le droit de lire le contenu sur leur serveur Discord.",
+    section_7_desc_2: "Nous respectons les lois sur le droit d'auteur et nous conformerons aux demandes de retrait DMCA valides. Si vous pensez que votre travail protégé a été utilisé de manière inappropriée, contactez-nous.",
+    section_8_title: "8. Limitation de responsabilité",
+    section_8_desc: "Dans la mesure maximale permise par la loi :",
+    section_8_li_1: "HECKA est fourni « tel quel » sans aucune garantie",
+    section_8_li_2: "Nous ne sommes pas responsables des dommages ou pertes résultant de l'utilisation du bot",
+    section_8_li_3: "Nous ne sommes pas responsables du contenu joué via le bot",
+    section_8_li_4: "Nous ne garantissons pas un service ininterrompu ou exempt d'erreurs",
+    section_8_li_5: "Notre responsabilité totale pour toute réclamation est limitée au montant payé pour les services premium au cours des 12 derniers mois",
+    section_9_title: "9. Modifications et résiliation des services",
+    section_9_desc: "Nous nous réservons le droit de :",
+    section_9_li_1: "Modifier, suspendre ou interrompre toute partie de nos Services à tout moment",
+    section_9_li_2: "Modifier ces Conditions avec un préavis raisonnable",
+    section_9_li_3: "Résilier ou restreindre l'accès à nos Services en cas de violation de ces Conditions",
+    section_10_title: "10. Confidentialité",
+    section_10_desc: "Notre politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations. En utilisant nos Services, vous acceptez également notre politique de confidentialité.",
+    section_11_title: "11. Services tiers",
+    section_11_desc: "HECKA s'intègre à des services tiers tels que Spotify, Apple Music, Deezer, YouTube et SoundCloud. Votre utilisation de ces services via notre bot est également soumise à leurs conditions et politiques de confidentialité respectives.",
+    section_12_title: "12. Informations de contact",
+    section_12_desc: 'Pour toute question concernant ces Conditions, contactez-nous via notre <a href="/discord" target="_blank">serveur d\'assistance Discord</a>.',
+    contact_link: "Serveur d'assistance Discord",
+    section_13_title: "13. Droit applicable",
+    section_13_desc: "Ces Conditions sont régies et interprétées conformément aux lois de la juridiction dans laquelle nous opérons, sans tenir compte des conflits de lois.",
+    last_updated: "Dernière mise à jour : 24 juin 2025",
+    footer_links: "Liens",
+    footer_legal: "Légal",
+    footer_terms: "Conditions d'utilisation",
+    footer_privacy: "Politique de confidentialité",
+    footer_connect: "Connecter",
+    footer_topgg: "Votez sur Top.gg",
+    footer_copy: "© 2021-2025 HECKA. Tous droits réservés."
+  },
+  de: {
+  nav_features: "Funktionen",
+  nav_commands: "Befehle",
   nav_premium: "Premium",
-  nav_support: "Soporte",
-  btn_support_server: "Servidor de Soporte",
-  btn_add_discord: "Agregar a Discord",
-  terms_title: "Términos de Servicio",
-  terms_description: "Por favor, lea estos términos cuidadosamente antes de usar HECKA",
-  intro: "¡Bienvenido a HECKA! Estos Términos de Servicio (\"Términos\") regulan su acceso y uso del bot de música para Discord HECKA (\"Bot\"), sitio web y servicios relacionados (colectivamente, los \"Servicios\"). Al usar nuestros Servicios, usted acepta estar sujeto a estos Términos.",
-  section_1_title: "1. Aceptación de los Términos",
-  section_1_desc: "Al invitar a HECKA a su servidor de Discord o usar cualquiera de nuestros Servicios, usted acepta estos Términos. Si no está de acuerdo con estos Términos, no use nuestros Servicios.",
-  section_2_title: "2. Descripción de los Servicios",
-  section_2_desc: "HECKA es un bot de música para Discord que ofrece funcionalidad para reproducir música en servidores de Discord. Las funcionalidades incluyen:",
-  section_2_li_1: "Reproducción de música desde varias fuentes, incluyendo Spotify, Apple Music, Deezer, YouTube, SoundCloud.",
-  section_2_li_2: "Creación y gestión de listas de reproducción",
-  section_2_li_3: "Aplicación de filtros de audio",
-  section_2_li_4: "Visualización de letras",
-  section_2_li_5: "Otras funcionalidades relacionadas con la música",
-  section_3_title: "3. Requisitos del Usuario",
-  section_3_desc: "Para usar HECKA, debe:",
-  section_3_li_1: "Tener una cuenta válida en Discord",
-  section_3_li_2: "Tener al menos 13 años o la edad mínima requerida en su país",
-  section_3_li_3: "Cumplir con los Términos de Servicio y las Directrices de la Comunidad de Discord",
-  section_3_li_4: "Tener los permisos necesarios para añadir bots al servidor de Discord",
-  section_4_title: "4. Servicios Gratuitos y Premium",
-  section_4_desc: "HECKA ofrece servicios gratuitos y premium:",
-  section_4_li_1_strong: "Servicios Gratuitos:",
-  section_4_li_1: "Funciones básicas de reproducción de música con limitaciones estándar",
-  section_4_li_2_strong: "Servicios Premium:",
-  section_4_li_2: "Funciones mejoradas, audio de mayor calidad y funcionalidades adicionales mediante suscripción",
-  section_4_note: "Las suscripciones premium están sujetas a los términos de pago descritos en la Sección 5.",
-  section_5_title: "5. Términos de Pago",
-  section_5_desc: "Para Servicios Premium:",
-  section_5_li_1: "Los pagos se procesan a través de nuestros procesadores autorizados",
-  section_5_li_2: "Las tarifas de suscripción no son reembolsables, excepto cuando lo exija la ley",
-  section_5_li_3: "Las suscripciones se renuevan automáticamente, a menos que se cancelen antes de la fecha de renovación",
-  section_5_li_4: "Puede cancelar su suscripción en cualquier momento a través de los canales designados",
-  section_5_li_5: "Los cambios de precio serán comunicados con anticipación",
-  section_6_title: "6. Conducta del Usuario",
-  section_6_desc: "Al usar HECKA, usted acepta no:",
-  section_6_li_1: "Usar el bot para reproducir o distribuir contenido que infrinja derechos de autor u otros derechos de propiedad intelectual",
-  section_6_li_2: "Intentar explotar, dañar o extraer datos del bot",
-  section_6_li_3: "Usar el bot para fines ilegales",
-  section_6_li_4: "Interferir con la operación del bot o intentar acceder por medios distintos a la interfaz proporcionada",
-  section_6_li_5: "Usar el bot para distribuir contenido dañino, incluyendo malware, virus o intentos de phishing",
-  section_6_li_6: "Revender o redistribuir el acceso al bot",
-  section_7_title: "7. Contenido y Derechos de Autor",
-  section_7_desc_1: "HECKA facilita la reproducción de contenido de plataformas de terceros. No alojamos ni distribuimos contenido protegido por derechos de autor. Los usuarios son responsables de asegurar que tienen el derecho de reproducir el contenido en su servidor de Discord.",
-  section_7_desc_2: "Respetamos las leyes de derechos de autor y cumpliremos solicitudes válidas de eliminación conforme a DMCA. Si cree que su trabajo protegido ha sido usado de forma indebida, contáctenos.",
-  section_8_title: "8. Limitación de Responsabilidad",
-  section_8_desc: "En la máxima medida permitida por la ley:",
-  section_8_li_1: "HECKA se proporciona “tal cual” sin garantías de ningún tipo",
-  section_8_li_2: "No somos responsables por daños o pérdidas derivados del uso del bot",
-  section_8_li_3: "No somos responsables por ningún contenido reproducido a través del bot",
-  section_8_li_4: "No garantizamos servicio ininterrumpido o libre de errores",
-  section_8_li_5: "Nuestra responsabilidad total por cualquier reclamo está limitada al monto pagado por los Servicios Premium en los últimos 12 meses",
-  section_9_title: "9. Modificaciones y Terminación del Servicio",
-  section_9_desc: "Nos reservamos el derecho de:",
-  section_9_li_1: "Modificar, suspender o descontinuar cualquier parte de nuestros Servicios en cualquier momento",
-  section_9_li_2: "Cambiar estos Términos con aviso previo razonable",
-  section_9_li_3: "Terminar o restringir el acceso a nuestros Servicios por violaciones a estos Términos",
-  section_10_title: "10. Privacidad",
-  section_10_desc: "Nuestra Política de Privacidad explica cómo recopilamos, usamos y protegemos su información. Al usar nuestros Servicios, también acepta nuestra Política de Privacidad.",
-  section_11_title: "11. Servicios de Terceros",
-  section_11_desc: "HECKA integra servicios de terceros como Spotify, Apple Music, Deezer, YouTube y SoundCloud. El uso de estos servicios a través de nuestro bot también está sujeto a sus respectivos términos y políticas de privacidad.",
-  section_12_title: "12. Información de Contacto",
-  section_12_desc: 'Si tiene preguntas sobre estos Términos, contáctenos a través de nuestro <a href="/discord" target="_blank">Servidor de Soporte Discord</a>.',
-  contact_link: "Servidor de Soporte Discord",
-  section_13_title: "13. Ley Aplicable",
-  section_13_desc: "Estos Términos se regirán e interpretarán de acuerdo con las leyes de la jurisdicción donde operamos, sin considerar conflictos de leyes.",
-  last_updated: "Última actualización: 24 de junio de 2025",
-  footer_links: "Enlaces",
-  footer_legal: "Legal",
-  footer_terms: "Términos de Servicio",
-  footer_privacy: "Política de Privacidad",
-  footer_connect: "Conectar",
-  footer_topgg: "Votar en Top.gg",
-  footer_copy: "© 2021-2025 HECKA. Todos los derechos reservados."
+  nav_support: "Support",
+  btn_support_server: "Support-Server",
+  btn_add_discord: "Zu Discord hinzufügen",
+  terms_title: "Nutzungsbedingungen",
+  terms_description: "Bitte lesen Sie diese Bedingungen sorgfältig, bevor Sie HECKA verwenden",
+  intro: "Willkommen bei HECKA! Diese Nutzungsbedingungen („Bedingungen“) regeln Ihren Zugriff auf und die Nutzung des HECKA Discord-Musikbots („Bot“), der Website und verwandter Dienste (zusammen die „Dienste“). Durch die Nutzung unserer Dienste erklären Sie sich mit diesen Bedingungen einverstanden.",
+  section_1_title: "1. Zustimmung zu den Bedingungen",
+  section_1_desc: "Indem Sie HECKA zu Ihrem Discord-Server einladen oder unsere Dienste nutzen, stimmen Sie diesen Bedingungen zu. Wenn Sie diesen Bedingungen nicht zustimmen, dürfen Sie unsere Dienste nicht verwenden.",
+  section_2_title: "2. Beschreibung der Dienste",
+  section_2_desc: "HECKA ist ein Discord-Musikbot, der Musikfunktionen auf Discord-Servern bereitstellt. Funktionen umfassen:",
+  section_2_li_1: "Musikwiedergabe aus verschiedenen Quellen wie Spotify, Apple Music, Deezer, YouTube, SoundCloud.",
+  section_2_li_2: "Erstellen und Verwalten von Playlists",
+  section_2_li_3: "Anwenden von Audiofiltern",
+  section_2_li_4: "Anzeige von Songtexten",
+  section_2_li_5: "Weitere musikbezogene Funktionen",
+  section_3_title: "3. Benutzeranforderungen",
+  section_3_desc: "Um HECKA zu verwenden, müssen Sie:",
+  section_3_li_1: "Ein gültiges Discord-Konto besitzen",
+  section_3_li_2: "Mindestens 13 Jahre alt oder das gesetzlich vorgeschriebene Mindestalter in Ihrem Land sein",
+  section_3_li_3: "Die Nutzungsbedingungen und Community-Richtlinien von Discord einhalten",
+  section_3_li_4: "Die erforderlichen Berechtigungen haben, um Bots zum Discord-Server hinzuzufügen",
+  section_4_title: "4. Kostenlose und Premium-Dienste",
+  section_4_desc: "HECKA bietet kostenlose und Premium-Dienste:",
+  section_4_li_1_strong: "Kostenlose Dienste:",
+  section_4_li_1: "Basisfunktionen zur Musikwiedergabe mit Standardbeschränkungen",
+  section_4_li_2_strong: "Premium-Dienste:",
+  section_4_li_2: "Erweiterte Funktionen, höhere Audioqualität und zusätzliche Funktionen gegen Abonnement",
+  section_4_note: "Premium-Abonnements unterliegen den Zahlungsbedingungen in Abschnitt 5.",
+  section_5_title: "5. Zahlungsbedingungen",
+  section_5_desc: "Für Premium-Dienste:",
+  section_5_li_1: "Zahlungen werden über autorisierte Zahlungsdienstleister abgewickelt",
+  section_5_li_2: "Abonnementgebühren sind nicht erstattungsfähig, außer gesetzlich vorgeschrieben",
+  section_5_li_3: "Abonnements verlängern sich automatisch, sofern sie nicht vor dem Verlängerungsdatum gekündigt werden",
+  section_5_li_4: "Sie können Ihr Abonnement jederzeit über die vorgesehenen Kanäle kündigen",
+  section_5_li_5: "Preisänderungen werden im Voraus mitgeteilt",
+  section_6_title: "6. Benutzerverhalten",
+  section_6_desc: "Bei der Nutzung von HECKA stimmen Sie zu, Folgendes nicht zu tun:",
+  section_6_li_1: "Den Bot verwenden, um Inhalte zu spielen oder zu verbreiten, die Urheberrechte oder andere geistige Eigentumsrechte verletzen",
+  section_6_li_2: "Versuchen, den Bot auszunutzen, zu beschädigen oder Daten daraus zu extrahieren",
+  section_6_li_3: "Den Bot für illegale Zwecke zu verwenden",
+  section_6_li_4: "Den Betrieb des Bots zu stören oder auf andere Weise als über die bereitgestellte Schnittstelle darauf zuzugreifen",
+  section_6_li_5: "Den Bot zur Verbreitung schädlicher Inhalte zu verwenden, einschließlich Malware, Viren oder Phishing-Versuche",
+  section_6_li_6: "Zugang zum Bot weiterzuverkaufen oder neu zu verteilen",
+  section_7_title: "7. Inhalte und Urheberrechte",
+  section_7_desc_1: "HECKA ermöglicht die Wiedergabe von Inhalten Dritter. Wir hosten oder verteilen keine urheberrechtlich geschützten Inhalte. Benutzer sind verantwortlich dafür, dass sie die Rechte haben, Inhalte auf ihrem Discord-Server abzuspielen.",
+  section_7_desc_2: "Wir respektieren Urheberrechtsgesetze und erfüllen gültige DMCA-Entfernungsanforderungen. Wenn Sie glauben, dass Ihre urheberrechtlich geschützte Arbeit unangemessen verwendet wurde, kontaktieren Sie uns.",
+  section_8_title: "8. Haftungsbeschränkung",
+  section_8_desc: "Im gesetzlich zulässigen Umfang:",
+  section_8_li_1: "HECKA wird „wie besehen“ ohne jegliche Garantie bereitgestellt",
+  section_8_li_2: "Wir haften nicht für Schäden oder Verluste, die durch die Nutzung des Bots entstehen",
+  section_8_li_3: "Wir haften nicht für Inhalte, die über den Bot abgespielt werden",
+  section_8_li_4: "Wir garantieren keinen ununterbrochenen oder fehlerfreien Dienst",
+  section_8_li_5: "Unsere Gesamthaftung für Ansprüche ist auf den Betrag begrenzt, den Sie in den letzten 12 Monaten für Premium-Dienste bezahlt haben",
+  section_9_title: "9. Änderungen und Beendigung des Dienstes",
+  section_9_desc: "Wir behalten uns das Recht vor:",
+  section_9_li_1: "Jeden Teil unserer Dienste jederzeit zu ändern, auszusetzen oder einzustellen",
+  section_9_li_2: "Diese Bedingungen mit angemessener Vorankündigung zu ändern",
+  section_9_li_3: "Den Zugriff auf unsere Dienste bei Verstößen gegen diese Bedingungen zu beenden oder einzuschränken",
+  section_10_title: "10. Datenschutz",
+  section_10_desc: "Unsere Datenschutzrichtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen. Durch die Nutzung unserer Dienste stimmen Sie auch unserer Datenschutzrichtlinie zu.",
+  section_11_title: "11. Drittanbieterdienste",
+  section_11_desc: "HECKA integriert Drittanbieterdienste wie Spotify, Apple Music, Deezer, YouTube und SoundCloud. Die Nutzung dieser Dienste über unseren Bot unterliegt ebenfalls deren jeweiligen Nutzungsbedingungen und Datenschutzrichtlinien.",
+  section_12_title: "12. Kontaktinformationen",
+  section_12_desc: 'Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns über unseren <a href="/discord" target="_blank">Discord-Support-Server</a>.',
+  contact_link: "Discord-Support-Server",
+  section_13_title: "13. Anwendbares Recht",
+  section_13_desc: "Diese Bedingungen unterliegen den Gesetzen der Gerichtsbarkeit, in der wir tätig sind, ohne Rücksicht auf kollidierende Rechtsvorschriften.",
+  last_updated: "Zuletzt aktualisiert: 24. Juni 2025",
+  footer_links: "Links",
+  footer_legal: "Rechtliches",
+  footer_terms: "Nutzungsbedingungen",
+  footer_privacy: "Datenschutzrichtlinie",
+  footer_connect: "Verbinden",
+  footer_topgg: "Auf Top.gg abstimmen",
+  footer_copy: "© 2021-2025 HECKA. Alle Rechte vorbehalten."
+},
+ru: {
+  nav_features: "Функции",
+  nav_commands: "Команды",
+  nav_premium: "Премиум",
+  nav_support: "Поддержка",
+  btn_support_server: "Сервер поддержки",
+  btn_add_discord: "Добавить в Discord",
+  terms_title: "Условия использования",
+  terms_description: "Пожалуйста, внимательно прочтите эти условия перед использованием HECKA",
+  intro: "Добро пожаловать в HECKA! Эти Условия использования («Условия») регулируют ваш доступ к Discord-боту HECKA («Бот»), веб-сайту и сопутствующим сервисам (совместно — «Сервисы»). Используя наши Сервисы, вы соглашаетесь с этими Условиями.",
+  section_1_title: "1. Принятие условий",
+  section_1_desc: "Приглашая HECKA на ваш Discord-сервер или используя наши Сервисы, вы соглашаетесь с этими Условиями. Если вы не согласны, не используйте наши Сервисы.",
+  section_2_title: "2. Описание сервисов",
+  section_2_desc: "HECKA — это Discord-бот для воспроизведения музыки с функциями для серверов Discord. Функции включают:",
+  section_2_li_1: "Воспроизведение музыки из различных источников, включая Spotify, Apple Music, Deezer, YouTube, SoundCloud.",
+  section_2_li_2: "Создание и управление плейлистами",
+  section_2_li_3: "Применение аудиофильтров",
+  section_2_li_4: "Отображение текста песен",
+  section_2_li_5: "Другие функции, связанные с музыкой",
+  section_3_title: "3. Требования к пользователю",
+  section_3_desc: "Для использования HECKA вы должны:",
+  section_3_li_1: "Иметь действующую учетную запись Discord",
+  section_3_li_2: "Быть не младше 13 лет или соответствующего минимального возраста в вашей стране",
+  section_3_li_3: "Соблюдать Условия использования и правила сообщества Discord",
+  section_3_li_4: "Иметь необходимые права для добавления ботов на сервер Discord",
+  section_4_title: "4. Бесплатные и премиум-сервисы",
+  section_4_desc: "HECKA предлагает бесплатные и премиум-сервисы:",
+  section_4_li_1_strong: "Бесплатные сервисы:",
+  section_4_li_1: "Базовые функции воспроизведения музыки с ограничениями",
+  section_4_li_2_strong: "Премиум-сервисы:",
+  section_4_li_2: "Расширенные функции, более качественное аудио и дополнительные возможности по подписке",
+  section_4_note: "Премиум-подписки подчиняются условиям оплаты в разделе 5.",
+  section_5_title: "5. Условия оплаты",
+  section_5_desc: "Для премиум-сервисов:",
+  section_5_li_1: "Платежи обрабатываются через авторизованных платежных провайдеров",
+  section_5_li_2: "Плата за подписку не возвращается, кроме случаев, предусмотренных законом",
+  section_5_li_3: "Подписки автоматически продлеваются, если не отменены до даты продления",
+  section_5_li_4: "Вы можете отменить подписку в любое время через предусмотренные каналы",
+  section_5_li_5: "Изменения цены будут заранее сообщены",
+  section_6_title: "6. Поведение пользователя",
+  section_6_desc: "Используя HECKA, вы соглашаетесь не:",
+  section_6_li_1: "Использовать бота для воспроизведения или распространения контента, нарушающего авторские права или права интеллектуальной собственности",
+  section_6_li_2: "Пытаться эксплуатировать, повредить или извлечь данные из бота",
+  section_6_li_3: "Использовать бота для незаконной деятельности",
+  section_6_li_4: "Вмешиваться в работу бота или пытаться получить доступ другими способами, кроме предоставленного интерфейса",
+  section_6_li_5: "Использовать бота для распространения вредоносного контента, включая вирусы, вредоносное ПО или фишинг",
+  section_6_li_6: "Перепродавать или перераспределять доступ к боту",
+  section_7_title: "7. Контент и авторские права",
+  section_7_desc_1: "HECKA обеспечивает воспроизведение контента с платформ третьих сторон. Мы не храним и не распространяем защищённый авторским правом контент. Пользователи несут ответственность за право воспроизведения контента на своём сервере Discord.",
+  section_7_desc_2: "Мы соблюдаем законы об авторских правах и исполняем действительные DMCA-запросы на удаление. Если вы считаете, что ваш контент был использован неправомерно, свяжитесь с нами.",
+  section_8_title: "8. Ограничение ответственности",
+  section_8_desc: "В максимально разрешённой законом степени:",
+  section_8_li_1: "HECKA предоставляется «как есть» без каких-либо гарантий",
+  section_8_li_2: "Мы не несём ответственности за ущерб или потери от использования бота",
+  section_8_li_3: "Мы не несём ответственности за любой контент, воспроизводимый через бота",
+  section_8_li_4: "Мы не гарантируем непрерывность или безошибочную работу сервиса",
+  section_8_li_5: "Наша общая ответственность ограничена суммой, уплаченной вами за премиум-сервисы за последние 12 месяцев",
+  section_9_title: "9. Изменения и прекращение сервиса",
+  section_9_desc: "Мы оставляем за собой право:",
+  section_9_li_1: "Изменять, приостанавливать или прекращать любую часть наших сервисов в любое время",
+  section_9_li_2: "Изменять эти условия с разумным уведомлением",
+  section_9_li_3: "Прекращать или ограничивать доступ к нашим сервисам при нарушении условий",
+  section_10_title: "10. Конфиденциальность",
+  section_10_desc: "Наша Политика конфиденциальности объясняет, как мы собираем, используем и защищаем вашу информацию. Используя наши сервисы, вы соглашаетесь с нашей Политикой конфиденциальности.",
+  section_11_title: "11. Сервисы третьих сторон",
+  section_11_desc: "HECKA интегрируется с сервисами третьих сторон, такими как Spotify, Apple Music, Deezer, YouTube и SoundCloud. Использование этих сервисов через нашего бота также подчиняется их условиям и политике конфиденциальности.",
+  section_12_title: "12. Контактная информация",
+  section_12_desc: 'Если у вас есть вопросы относительно этих условий, свяжитесь с нами через наш <a href="/discord" target="_blank">Сервер поддержки Discord</a>.',
+  contact_link: "Сервер поддержки Discord",
+  section_13_title: "13. Применимое право",
+  section_13_desc: "Эти условия регулируются законами юрисдикции, в которой мы осуществляем деятельность, без учета коллизий законов.",
+  last_updated: "Последнее обновление: 24 июня 2025",
+  footer_links: "Ссылки",
+  footer_legal: "Право",
+  footer_terms: "Условия использования",
+  footer_privacy: "Политика конфиденциальности",
+  footer_connect: "Подключение",
+  footer_topgg: "Голосовать на Top.gg",
+  footer_copy: "© 2021-2025 HECKA. Все права защищены."
+},
+ja: {
+  nav_features: "機能",
+  nav_commands: "コマンド",
+  nav_premium: "プレミアム",
+  nav_support: "サポート",
+  btn_support_server: "サポートサーバー",
+  btn_add_discord: "Discordに追加",
+  terms_title: "利用規約",
+  terms_description: "HECKAを使用する前に、これらの条件をよくお読みください",
+  intro: "HECKAへようこそ！この利用規約（「規約」）は、HECKA Discord音楽ボット（「ボット」）、ウェブサイト、および関連サービス（総称して「サービス」）の利用を規定するものです。サービスを利用することで、これらの規約に同意したことになります。",
+  section_1_title: "1. 規約の承諾",
+  section_1_desc: "HECKAをDiscordサーバーに招待するか、サービスを使用することで、本規約に同意したものとみなされます。規約に同意しない場合、サービスを利用できません。",
+  section_2_title: "2. サービスの説明",
+  section_2_desc: "HECKAは、Discordサーバーで音楽再生機能を提供するDiscord音楽ボットです。機能には以下が含まれます：",
+  section_2_li_1: "Spotify、Apple Music、Deezer、YouTube、SoundCloudなど、さまざまなソースからの音楽再生",
+  section_2_li_2: "プレイリストの作成と管理",
+  section_2_li_3: "オーディオフィルターの適用",
+  section_2_li_4: "歌詞の表示",
+  section_2_li_5: "その他音楽関連の機能",
+  section_3_title: "3. ユーザー要件",
+  section_3_desc: "HECKAを使用するには、以下を満たす必要があります：",
+  section_3_li_1: "有効なDiscordアカウントを持っていること",
+  section_3_li_2: "13歳以上または居住国の最低年齢を満たしていること",
+  section_3_li_3: "Discordの利用規約およびコミュニティガイドラインを遵守すること",
+  section_3_li_4: "Discordサーバーにボットを追加する権限を持っていること",
+  section_4_title: "4. 無料およびプレミアムサービス",
+  section_4_desc: "HECKAは無料およびプレミアムサービスを提供します：",
+  section_4_li_1_strong: "無料サービス：",
+  section_4_li_1: "標準制限付きの基本音楽再生機能",
+  section_4_li_2_strong: "プレミアムサービス：",
+  section_4_li_2: "拡張機能、高音質、追加機能をサブスクリプションで提供",
+  section_4_note: "プレミアムサブスクリプションは、第5節に記載された支払条件の対象となります。",
+  section_5_title: "5. 支払い条件",
+  section_5_desc: "プレミアムサービスの場合：",
+  section_5_li_1: "支払いは認可された支払い処理業者を通じて行われます",
+  section_5_li_2: "サブスクリプション料金は法律で定められている場合を除き返金不可です",
+  section_5_li_3: "サブスクリプションは、更新日前にキャンセルされない限り自動更新されます",
+  section_5_li_4: "指定されたチャネルを通じていつでもサブスクリプションをキャンセルできます",
+  section_5_li_5: "料金の変更は事前に通知されます",
+  section_6_title: "6. ユーザー行動",
+  section_6_desc: "HECKAを使用する際、次の行為を行わないことに同意するものとします：",
+  section_6_li_1: "著作権や知的財産権を侵害するコンテンツを再生または配布するためにボットを使用すること",
+  section_6_li_2: "ボットを不正利用、破壊、またはデータ抽出することを試みること",
+  section_6_li_3: "違法な目的でボットを使用すること",
+  section_6_li_4: "提供されたインターフェース以外の方法でボットにアクセスしようとすること",
+  section_6_li_5: "マルウェア、ウイルス、フィッシングなどの有害なコンテンツを配布するためにボットを使用すること",
+  section_6_li_6: "ボットへのアクセスを再販または再配布すること",
+  section_7_title: "7. コンテンツと著作権",
+  section_7_desc_1: "HECKAはサードパーティのプラットフォームからのコンテンツ再生をサポートします。著作権で保護されたコンテンツはホストまたは配布しません。ユーザーは、自分のDiscordサーバーでコンテンツを再生する権利を持っていることを保証する責任があります。",
+  section_7_desc_2: "著作権法を尊重し、有効なDMCA削除リクエストに従います。著作権保護された作品が不適切に使用されたと思われる場合はお問い合わせください。",
+  section_8_title: "8. 責任の制限",
+  section_8_desc: "法律で許可される最大限の範囲で：",
+  section_8_li_1: "HECKAは「現状のまま」提供され、いかなる保証もありません",
+  section_8_li_2: "ボットの使用による損害や損失について責任を負いません",
+  section_8_li_3: "ボットを通じて再生されたコンテンツについて責任を負いません",
+  section_8_li_4: "サービスの中断やエラーのない動作を保証しません",
+  section_8_li_5: "当社の総責任は、過去12か月間にプレミアムサービスに支払った金額に制限されます",
+  section_9_title: "9. サービスの変更および終了",
+  section_9_desc: "当社は以下の権利を留保します：",
+  section_9_li_1: "サービスの一部をいつでも変更、停止、または中止すること",
+  section_9_li_2: "合理的な通知のもとでこれらの規約を変更すること",
+  section_9_li_3: "規約違反に対してサービスへのアクセスを終了または制限すること",
+  section_10_title: "10. プライバシー",
+  section_10_desc: "当社のプライバシーポリシーは、情報の収集、使用、保護方法について説明しています。サービスを使用することで、プライバシーポリシーにも同意したものとみなされます。",
+  section_11_title: "11. サードパーティサービス",
+  section_11_desc: "HECKAはSpotify、Apple Music、Deezer、YouTube、SoundCloudなどのサードパーティサービスと統合されています。これらのサービスをボット経由で利用する場合も、それぞれの利用規約とプライバシーポリシーが適用されます。",
+  section_12_title: "12. 連絡先情報",
+  section_12_desc: 'これらの規約について質問がある場合は、<a href="/discord" target="_blank">Discordサポートサーバー</a>を通じてお問い合わせください。',
+  contact_link: "Discordサポートサーバー",
+  section_13_title: "13. 準拠法",
+  section_13_desc: "これらの規約は、当社が運営する管轄地域の法律に従い、法の抵触規定にかかわらず解釈されます。",
+  last_updated: "最終更新日: 2025年6月24日",
+  footer_links: "リンク",
+  footer_legal: "法的情報",
+  footer_terms: "利用規約",
+  footer_privacy: "プライバシーポリシー",
+  footer_connect: "接続",
+  footer_topgg: "Top.ggで投票",
+  footer_copy: "© 2021-2025 HECKA. 無断転載禁止。"
+},
+it: {
+  nav_features: "Funzionalità",
+  nav_commands: "Comandi",
+  nav_premium: "Premium",
+  nav_support: "Supporto",
+  btn_support_server: "Server di Supporto",
+  btn_add_discord: "Aggiungi a Discord",
+  terms_title: "Termini di Servizio",
+  terms_description: "Si prega di leggere attentamente questi termini prima di utilizzare HECKA",
+  intro: "Benvenuto in HECKA! Questi Termini di Servizio (“Termini”) regolano il tuo accesso e utilizzo del bot musicale Discord HECKA (“Bot”), del sito web e dei servizi correlati (collettivamente, i “Servizi”). Utilizzando i nostri Servizi, accetti di rispettare questi Termini.",
+  section_1_title: "1. Accettazione dei Termini",
+  section_1_desc: "Invitando HECKA al tuo server Discord o utilizzando i nostri Servizi, accetti questi Termini. Se non accetti questi Termini, non puoi utilizzare i nostri Servizi.",
+  section_2_title: "2. Descrizione dei Servizi",
+  section_2_desc: "HECKA è un bot musicale per Discord che fornisce funzionalità musicali sui server Discord. Le funzionalità includono:",
+  section_2_li_1: "Riproduzione di musica da varie fonti come Spotify, Apple Music, Deezer, YouTube, SoundCloud.",
+  section_2_li_2: "Creazione e gestione di playlist",
+  section_2_li_3: "Applicazione di filtri audio",
+  section_2_li_4: "Visualizzazione dei testi delle canzoni",
+  section_2_li_5: "Altre funzionalità correlate alla musica",
+  section_3_title: "3. Requisiti dell'utente",
+  section_3_desc: "Per utilizzare HECKA, devi:",
+  section_3_li_1: "Avere un account Discord valido",
+  section_3_li_2: "Avere almeno 13 anni o l'età minima legale nel tuo paese",
+  section_3_li_3: "Rispettare i Termini e le Linee guida della community di Discord",
+  section_3_li_4: "Avere le autorizzazioni necessarie per aggiungere bot al server Discord",
+  section_4_title: "4. Servizi gratuiti e Premium",
+  section_4_desc: "HECKA offre servizi gratuiti e Premium:",
+  section_4_li_1_strong: "Servizi gratuiti:",
+  section_4_li_1: "Funzioni di base per la riproduzione musicale con limitazioni standard",
+  section_4_li_2_strong: "Servizi Premium:",
+  section_4_li_2: "Funzioni avanzate, qualità audio superiore e funzionalità aggiuntive tramite abbonamento",
+  section_4_note: "Gli abbonamenti Premium sono soggetti ai termini di pagamento della Sezione 5.",
+  section_5_title: "5. Termini di pagamento",
+  section_5_desc: "Per i servizi Premium:",
+  section_5_li_1: "I pagamenti vengono elaborati tramite fornitori di pagamento autorizzati",
+  section_5_li_2: "Le tariffe dell'abbonamento non sono rimborsabili, salvo quanto previsto dalla legge",
+  section_5_li_3: "Gli abbonamenti si rinnovano automaticamente se non cancellati prima della data di rinnovo",
+  section_5_li_4: "Puoi annullare il tuo abbonamento in qualsiasi momento tramite i canali previsti",
+  section_5_li_5: "Le modifiche ai prezzi saranno comunicate in anticipo",
+  section_6_title: "6. Comportamento dell'utente",
+  section_6_desc: "Utilizzando HECKA, accetti di non:",
+  section_6_li_1: "Usare il bot per riprodurre o distribuire contenuti che violano copyright o altri diritti di proprietà intellettuale",
+  section_6_li_2: "Tentare di sfruttare, danneggiare o estrarre dati dal bot",
+  section_6_li_3: "Usare il bot per scopi illegali",
+  section_6_li_4: "Interferire con il funzionamento del bot o accedervi in modi diversi dall'interfaccia fornita",
+  section_6_li_5: "Usare il bot per diffondere contenuti dannosi, inclusi malware, virus o tentativi di phishing",
+  section_6_li_6: "Rivendere o ridistribuire l'accesso al bot",
+  section_7_title: "7. Contenuti e Copyright",
+  section_7_desc_1: "HECKA consente la riproduzione di contenuti di terze parti. Non ospitiamo né distribuiamo contenuti protetti da copyright. Gli utenti sono responsabili di avere i diritti per riprodurre contenuti sul proprio server Discord.",
+  section_7_desc_2: "Rispettiamo le leggi sul copyright e soddisfiamo le richieste DMCA valide. Se ritieni che la tua opera protetta da copyright sia stata utilizzata in modo improprio, contattaci.",
+  section_8_title: "8. Limitazione di responsabilità",
+  section_8_desc: "Nella misura massima consentita dalla legge:",
+  section_8_li_1: "HECKA è fornito “così com’è” senza alcuna garanzia",
+  section_8_li_2: "Non siamo responsabili per danni o perdite derivanti dall'uso del bot",
+  section_8_li_3: "Non siamo responsabili per i contenuti riprodotti tramite il bot",
+  section_8_li_4: "Non garantiamo un servizio ininterrotto o privo di errori",
+  section_8_li_5: "La nostra responsabilità complessiva per eventuali reclami è limitata all'importo pagato nei 12 mesi precedenti per i servizi Premium",
+  section_9_title: "9. Modifiche e interruzione del servizio",
+  section_9_desc: "Ci riserviamo il diritto di:",
+  section_9_li_1: "Modificare, sospendere o interrompere qualsiasi parte dei nostri servizi in qualsiasi momento",
+  section_9_li_2: "Modificare questi Termini con preavviso ragionevole",
+  section_9_li_3: "Terminare o limitare l'accesso ai nostri servizi in caso di violazione di questi Termini",
+  section_10_title: "10. Privacy",
+  section_10_desc: "La nostra Informativa sulla privacy spiega come raccogliamo, utilizziamo e proteggiamo le tue informazioni. Utilizzando i nostri servizi, accetti anche la nostra Informativa sulla privacy.",
+  section_11_title: "11. Servizi di terze parti",
+  section_11_desc: "HECKA integra servizi di terze parti come Spotify, Apple Music, Deezer, YouTube e SoundCloud. L'uso di questi servizi tramite il nostro bot è soggetto anche ai rispettivi Termini di servizio e Informative sulla privacy.",
+  section_12_title: "12. Informazioni di contatto",
+  section_12_desc: 'Se hai domande su questi Termini, contattaci tramite il nostro <a href="/discord" target="_blank">Server di supporto Discord</a>.',
+  contact_link: "Server di supporto Discord",
+  section_13_title: "13. Legge applicabile",
+  section_13_desc: "Questi Termini sono regolati dalle leggi della giurisdizione in cui operiamo, senza riguardo ai conflitti di legge.",
+  last_updated: "Ultimo aggiornamento: 24 giugno 2025",
+  footer_links: "Link",
+  footer_legal: "Legale",
+  footer_terms: "Termini di servizio",
+  footer_privacy: "Privacy",
+  footer_connect: "Connetti",
+  footer_topgg: "Vota su Top.gg",
+  footer_copy: "© 2021-2025 HECKA. Tutti i diritti riservati."
 }
+};
 
-    };
+      function setLanguage(lang) {
+        const elements = document.querySelectorAll('[data-lang-key]');
+        elements.forEach(el => {
+          const key = el.getAttribute('data-lang-key');
+          if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+        });
+      }
 
-    function setLanguage(lang) {
-      const elements = document.querySelectorAll('[data-lang-key]');
-      elements.forEach(el => {
-        const key = el.getAttribute('data-lang-key');
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-    }
+      // Detect browser language, fallback to 'en'
+      const userLang = navigator.language || navigator.userLanguage;
+      const langCode = userLang.toLowerCase().startsWith('pt') ? 'pt' :
+                 userLang.toLowerCase().startsWith('es') ? 'es' :
+                 userLang.toLowerCase().startsWith('fr') ? 'fr' :
+                 userLang.toLowerCase().startsWith('de') ? 'de' :
+                 userLang.toLowerCase().startsWith('ru') ? 'ru' :
+                 userLang.toLowerCase().startsWith('ja') ? 'ja' :
+                 userLang.toLowerCase().startsWith('it') ? 'it' : 'en';
 
-    // Detect browser language, fallback to 'en'
-    const userLang = navigator.language || navigator.userLanguage;
-    const langCode = userLang.toLowerCase().startsWith('pt') ? 'pt' :
-                     userLang.toLowerCase().startsWith('es') ? 'es' : 'en';
-
-    setLanguage(langCode);
-  </script>
-</body>
-</html>
+      setLanguage(langCode);
+    </script>
+  </body>
+  </html>
